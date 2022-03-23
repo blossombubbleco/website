@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blossom Bubble | Homepage</title>
+    <link rel="shortcut icon" href="assets/bubbly_blossom_favicon.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/core.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/index_page.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+    <header class="header_section">
+        <div class="header_logo">
+            <a href="index.html">
+                <h1 class="header_brand">Blossom.</h1>
+            </a>
+        </div>
+        <div class="header_btn">
+            <a href="#">
+                <div class="header_faq-btn">FAQs</div>
+            </a>
+            <button class="header_customize">
+                <div class="header_customize-btn">
+                    <img src="assets/header/Edit_Pencil_01.svg" alt="Customize logo" class="customize_btn-logo">
+                    <p class="customize_btn">Customize</p>
+                    <div class="header_customize-dropdown-menu">
+                        <div class="change_theme">
+                            <p class="customize_title">Dark Mode</p>
+                            <div class="customize_dark-light_theme">
+                                <input type="checkbox" name="Checkbox" id="checkbox">
+                                <label for="checkbox" class="label">
+                                    <div class="check_ball"></div>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="customize_changefont">
+                            <p class="customize_title">Change Font</p>
+                            <div class="customize_font-btns">
+                                <div class="fontChange-btn f-small active">Aa</div>
+                                <div class="fontChange-btn f-medium">Aa</div>
+                                <div class="fontChange-btn f-large">Aa</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </button>
+        </div>
+    </header>
+
+    <section class="hero_section">
+        <div class="hero_leftContent">
+            <div class="hero_tagline">
+                <h1>Blooming relationships one
+                    <span class="tagline_highlight">Neurodiverse Family</span>
+                    at a time.
+                </h1>
+            </div>
+            <div class="hero_taglineDesc">
+                some small description will be added in this below tagline text. and below it buttons are not necessary.
+                some small description will be added in this below tagline text. and below it buttons are not necessary
+            </div>
+            <div class="hero_inputfield">
+                <!-- <form action="" method="get" class="hero_inputForm"> -->
+                <img src="assets/hero_section/Email_icon.svg" alt="Email Us Icon" class="input_mailIcon">
+                <input type="email" name="Enter Email" id="hero_email" placeholder="Enter Email Address" required>
+                <button value="Join Us" id="joinUs_btn" onclick="joinUs()">Join Us </button>
+                <!-- </form> -->
+            </div>
+            <div class="hero_socialIcons">
+                <p class="social_iconTag">Follow Us:</p>
+                <div class="social_icons">
+                    <a href="#">
+                        <img src="assets/hero_section/social_metaLink.svg" alt="Meta social tag" class="socialTag">
+                    </a>
+                    <a href="#">
+                        <img src="assets/hero_section/social_twitterLink.svg" alt="Twitter Social tag"
+                            class="socialTag">
+                    </a>
+                    <a href="#">
+                        <img src="assets/hero_section/social_igLink.svg" alt="Instagram Social tag" class="socialTag">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+        <div class="hero_rightIllustration">
+            <img src="assets/hero_section/hero_rightIllustration.svg" alt="Bubbly blossom co Illustration">
+        </div>
+    </section>
+
+    <section class="mobile_previews">
+        <div class="section_heading bg-white">
+            <p class="section_title">How It works?</p>
+            <p class="section_title-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+            </p>
+        </div>
+        <div class="transition_area">
+            <img src="assets/preview_section/transition_00_background.svg" alt="Transition background image"
+                class="transition_background">
+            <div class="mobile_sticky-middle">
+                <div class="pos_sticky">
+                    <div class="frame_withImage">
+                        <img src="assets/preview_section/mobile_frame.svg" alt="" class="phone-frame">
+                        <div class="abs_container">
+                            <div class="preview_images">
+                                <img src="assets/preview_section/mobile_preview01.svg" alt="" style="opacity: 1;"
+                                    class="mobile_preview active">
+                                <img src="assets/preview_section/mobile_preview02.svg" alt="" class="mobile_preview">
+                                <img src="assets/preview_section/mobile_preview03.svg" alt="" class="mobile_preview">
+                                <img src="assets/preview_section/mobile_preview04.svg" alt="" class="mobile_preview">
+                                <img src="assets/preview_section/mobile_preview05.svg" alt="" class="mobile_preview">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="transition_container_01"></div>
+            <div class="transition_container_02"></div>
+            <div class="transition_container_03"></div>
+            <div class="transition_container_04"></div>
+        </div>
+    </section>
+
+    <section class="signIn-section">
+        <p class="signIn-text">Join Our <span class="highlight">Neurodiverse Community</span></p>
+        <form action="" method="get" class="hero_inputForm wid">
+            <img src="assets/hero_section/Email_icon.svg" alt="Email Us Icon" class="input_mailIcon">
+            <input type="email" name="Enter Email" id="hero_email" placeholder="Enter Email Address" class="full">
+            <input type="submit" value="Join Us" id="joinUs_btn">
+        </form>
+    </section>
+
+    <section class="feature_section">
+        <div class="section_heading">
+            <p class="section_title">What We Do</p>
+            <p class="section_title-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
+            </p>
+        </div>
+        <div class="feature_cards">
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+            <div class="feature">
+                <img src="assets/feature_card/feature-Ico.svg" alt="Feature Card Icon" class="card-icon">
+                <p class="feature_heading left">Card-heading</p>
+                <p class="feature_heading-desc left">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="vision_section">
+        <div class="vision_left-illustration">
+            <img src="assets/vision_section/vision_left-illustration.svg" alt="Vision section Illustration"
+                class="vision_leftIllustration">
+        </div>
+        <div class="right_content">
+            <p class="vision_heading">Our Vision</p>
+            <hr class="below_heading">
+            <p class="text_content top-mr">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi cupiditate
+                tempore
+                repudiandae ducimus vitae nulla est similique. Animi, mollitia, nam velit sunt nesciunt magni quas natus
+                ratione aperiam nemo assumenda?
+                Delectus magnam rerum obcaecati fugit nam quasi velit nesciunt deserunt cum iste tempora exercitationem
+                ipsum dolore enim quibusdam ipsa rem tempore accusamus, commodi deleniti! Id cumque nostrum ea vitae
+                reiciendis?
+                Reiciendis, itaque saepe. Omnis nisi aliquid blanditiis rerum ea aliquam possimus. Atque, sed? Ipsam
+                quasi architecto tenetur blanditiis fuga libero. Nisi, nulla iste quia tempora aliquid quo atque ullam
+                aspernatur.
+                Quis aperiam nam commodi itaque officia, eaque quo natus iusto saepe odio et quidem porro laborum ad
+                facilis explicabo hic? Provident laborum incidunt illo id qui autem harum facilis optio.</p>
+            <p class="text_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi cupiditate tempore
+                repudiandae ducimus vitae nulla est similique. Animi, mollitia, nam velit sunt nesciunt magni quas natus
+                ratione aperiam nemo assumenda?
+                Delectus magnam rerum obcaecati fugit nam quasi velit nesciunt deserunt cum iste tempora exercitationem
+                ipsum dolore enim quibusdam ipsa rem tempore accusamus</p>
+        </div>
+    </section>
+
+    <footer class="footer_section">
+        <div class="footer_social-icon">
+            <a href="#">
+                <img src="assets/footer_section/social_instagram-whiteIcon.svg" alt="Social Instagram Icon"
+                    class="socialTag">
+            </a>
+            <a href="#">
+                <img src="assets/footer_section/social_meta-whiteIcon.svg" alt="Social Meta Icon" class="socialTag">
+            </a>
+            <a href="#">
+                <img src="assets/footer_section/social_twitter-whiteIcon.svg" alt="Social Twitter Icon"
+                    class="socialTag">
+            </a>
+            <a href="#">
+                <img src="assets/footer_section/social_pintrest-whiteIcon.svg" alt="Social Pintrest Icon"
+                    class="socialTag">
+            </a>
+            <a href="#">
+                <img src="assets/footer_section/social_linkdin-whiteIcon.svg" alt="Social LinkdIn Icon"
+                    class="socialTag">
+            </a>
+        </div>
+        <div class="footer_brand"><a href="index.html">Blossom.</a></div>
+        <div class="footer_copyright">@ Copyright 2021-2022 All rights reserved. Powered by Blossom</div>
+    </footer>
+
+
+
+
+    <script src="js/highlight_text.js"></script>
+    <script src="js/header-section.js"></script>
+    <script src="js/transition.js"></script>
+
+    <script>
+
+
+    </script>
+
+
+
+</body>
+
+</html>

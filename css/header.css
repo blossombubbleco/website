@@ -1,0 +1,228 @@
+/*******************************************Header styling*******************************************/
+.header_section{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 120px;
+}
+.header_brand{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--clr-primary);
+}
+.header_faq-btn{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--clr-primary);
+    border: 3px solid var(--clr-primary);
+    padding: 4px 22px;
+    border-radius: 12px;
+}
+.header_btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.header_customize{
+    background: var(--clr-primary);
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.header_customize-btn{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 15px;
+}
+.label{
+    position: relative;
+    display: flex;
+    background-color: var(--per-white);
+    border-radius: 20px;
+    height: 32px;
+    width: 60px;
+}
+#checkbox:checked + .label .check_ball{
+    background-color: rgb(177, 177, 177);
+    transform: translateX(24px);
+    transition: all 0.5s ease;
+}
+#checkbox + .label .check_ball{
+    transition: all 0.5s ease;
+}
+.change_theme{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0px;
+}
+.customize_title{
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--clr-clear);
+}
+.check_ball{
+    position: absolute;
+    background-color: black;
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    top: 4px;
+    left: 5px;
+}
+#checkbox{
+    display: none;
+}
+.customize_dark-light_theme{
+    position: relative;
+}
+.customize_font-btns,.customize_changefont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.customize_font-btns{
+    width: 51%;
+}
+.header_customize-dropdown-menu{
+    display: none;
+    position: absolute;
+    top: 3.2rem;
+    right: 0;
+    height: 10rem;
+    width: 20rem;
+    background-color: grey;
+    padding: 0px 20px;
+}
+.fontChange-btn{
+    color: var(--per-white);
+    padding: 8px;
+    border-radius: 6px;
+}
+.f-small{
+    font-size: 18px;
+}
+.f-medium{
+    font-size: 24px;
+}
+.f-large{
+    font-size: 28px;
+}
+.fontChange-btn:hover{
+    border: 1px solid var(--per-white);
+}
+.fontChange-btn.active{
+    border: 1px solid var(--per-white);
+}
+.header_customize-dropdown-menu.is-active{
+    display: block;
+}
+.customize_btn-logo{
+    margin-right: 8px;
+}
+.customize_btn{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 33px;
+    color: var(--per-white);
+}
+
+
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:1401px) and (max-width:1600px){
+    .header_section {
+        padding: 35px 110px;
+    }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:1201px) and (max-width:1400px){
+    .header_section {
+        padding: 30px 90px;
+    }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:993px) and (max-width:1200px){
+    .header_section {
+        padding: 30px 55px;
+    }
+    .customize_btn,.header_faq-btn {
+        font-size: 20px;
+    }
+}
+ /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[768px-992px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+ @media (min-width:768px) and (max-width:992px){
+    .header_section {
+        padding: 25px 40px;
+    }
+    .customize_btn,.header_faq-btn {
+        font-size: 20px;
+    }
+    .header_faq-btn {
+        padding: 5px 15px;
+    }
+    .header_customize {
+        margin-left: 12px;
+    }
+ }
+
+  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[568px-767px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:568px) and (max-width:767px){
+    .header_section {
+        padding: 25px 30px;
+    }
+    .header_brand {
+        font-size: 35px;
+    }
+    .customize_btn,.header_faq-btn {
+        font-size: 18px;
+    }
+    .header_faq-btn {
+        padding: 5px 12px;
+    }
+    .customize_btn-logo {
+        margin-right: 0px;
+    }
+    .header_customize-btn {
+        padding: 6px 10px;
+    }
+    .header_customize {
+        margin-left: 10px;
+    }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[567px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media screen and (max-width:567px){
+    .header_section {
+        padding: 10px 16px 20px;
+    }
+    .header_brand {
+        font-size: 32px;
+    }
+    .header_faq-btn {
+        font-size: 18px;
+    }
+    .customize_btn{
+        display: none;
+    }
+    .header_faq-btn {
+        padding: 1px 12px;
+    }
+    .customize_btn-logo {
+        margin-right: 0px;
+    }
+    .header_customize-btn {
+        padding: 8px 10px;
+    }
+    .header_customize {
+        margin-left: 5px;
+    }
+}

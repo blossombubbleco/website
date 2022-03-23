@@ -1,0 +1,79 @@
+/*******************************************Header styling*******************************************/
+.footer_section{
+    background: url(../assets/footer_section/Footer-background.svg);
+    background-size:cover;
+    padding: 70px 240px 40px;
+    text-align: center;
+}
+.footer_brand{
+    padding: 30px 0px;
+}
+.footer_brand a{
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 72px;
+    color: var(--clr-primary);
+}
+.footer_social-icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 35%;
+    margin: auto;
+}
+.footer_copyright{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: var(--clr-tertiory);
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:1201px) and (max-width:1400px){
+    .footer_section {
+        padding: 70px 90px 40px;
+    }
+
+}
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:993px) and (max-width:1200px){
+    .footer_section {
+        padding: 60px 40px 40px;
+    }
+}
+ /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[768px-992px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+ @media (min-width:768px) and (max-width:992px){
+    .footer_section {
+        padding: 60px 40px 40px;
+    }
+    .footer_social-icon {
+        width: 58%;
+    }
+}
+ /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[568px-767px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+ @media (min-width:568px) and (max-width:767px){
+    .footer_section {
+        padding: 60px 30px 40px;
+    }
+    .footer_social-icon {
+        width: 58%;
+    }
+ }
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[567px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media screen and (max-width:567px){
+    .footer_section {
+        padding: 60px 16px 40px;
+    }
+    .footer_social-icon {
+        width: 88%;
+    }
+    .footer_brand a {
+        font-size: 32px;
+    }    
+    .footer_copyright {
+        font-size: 14px;
+        line-height: 20px;
+    }    
+}

@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+}
+:root{
+    --clr-primary:#F15BB5;
+    --clr-secondry:#3477F5;
+    --clr-tertiory:#DFE6F1;
+    --clr-clear:#ffffff;
+    --text-heading:#1A1A40;
+    --text-heading-desc:#9595a3;;
+    --text-section_heading-desc:#424264;
+    --input-text:#ACB5C4;
+    --per-white:#ffffff;
+    --per-card:#ffffff;
+}
+.dark_mode{
+    background-color: #131627;
+    --text-heading:#b8b8be;
+    --text-heading-desc:#828286;
+    --text-section_heading-desc:#b8b8be;
+    --per-card:#25253f;
+    --clr-clear:#ACB5C4;
+}
+body.dark_mode.feature{
+    background-color: rgb(30 40 60 / 3%);
+}
