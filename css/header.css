@@ -5,14 +5,17 @@
     justify-content: space-between;
     padding: 40px 120px;
 }
+.ff{
+    font-family: 'Arizonia', cursive;
+}
 .header_brand{
-    font-weight: 700;
+    font-weight: 500;
     font-size: 48px;
     line-height: 72px;
     color: var(--clr-primary);
 }
 .header_faq-btn{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     line-height: 33px;
     color: var(--clr-primary);
@@ -102,17 +105,19 @@
 }
 .fontChange-btn{
     color: var(--per-white);
-    padding: 8px;
     border-radius: 6px;
 }
 .f-small{
     font-size: 18px;
+    padding: 8px;
 }
 .f-medium{
     font-size: 24px;
+    padding: 5px;
 }
 .f-large{
     font-size: 28px;
+    padding: 3px;
 }
 .fontChange-btn:hover{
     border: 1px solid var(--per-white);
@@ -124,10 +129,10 @@
     display: block;
 }
 .customize_btn-logo{
-    margin-right: 8px;
+    margin-right: 4px;
 }
 .customize_btn{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 22px;
     line-height: 33px;
     color: var(--per-white);

@@ -6,6 +6,21 @@ const container_04 = document.querySelector('.transition_container_04');
 
 const image = document.querySelectorAll('.mobile_preview');
 
+const lightImage = document.querySelector('.display')
+const darkImage = document.querySelector('.darkModeActive')
+check.addEventListener('change', () => {
+    if (check.checked) {
+        lightImage.style.display = 'none';
+        darkImage.style.display = 'block';
+    }
+    else {
+        lightImage.style.display = 'block';
+        darkImage.style.display = 'none';
+    }
+
+})
+
+
 
 // options00 = {
 //     root: null,
@@ -26,7 +41,7 @@ const image = document.querySelectorAll('.mobile_preview');
 
 options01 = {
     root: null,
-    threshold: 0.3
+    threshold: 1
 }
 observer01 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -83,7 +98,6 @@ options04 = {
     threshold: 0.1
 }
 observer04 = new IntersectionObserver((entries) => {
-    console.log('in ', entries)
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             image[3].classList.remove('active');

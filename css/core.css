@@ -18,15 +18,25 @@ a{
     --input-text:#ACB5C4;
     --per-white:#ffffff;
     --per-card:#ffffff;
+    --per-card-textHead:#1A1A40
+    --per-card-textHead-desc:#626877;
+    --transition_lightMode:#F4DCDB;
+    --clr-tertiory-footer:#1A1A40;
 }
 .dark_mode{
-    background-color: #131627;
-    --text-heading:#b8b8be;
-    --text-heading-desc:#828286;
-    --text-section_heading-desc:#b8b8be;
-    --per-card:#25253f;
+    /* background-color: #131627; */
+    background-color: #0C0F37;
+    --text-heading:#F3F3F3;
+    --text-heading-desc:#C0C0C0;
+    --text-section_heading-desc:#C0C0C0;
+    --per-card:#252B77;
+    --per-card-textHead:#FFFFFF;
+    --per-card-textHead-desc:#D6D6D6;
     --clr-clear:#ACB5C4;
+    --transition_lightMode:#060930;
+    --clr-tertiory-footer:#ffffff;
+    
 }
-body.dark_mode.feature{
-    background-color: rgb(30 40 60 / 3%);
+body.dark_mode.feature:hover{
+    background-color: rgba(255, 255, 255);
 }
