@@ -20,11 +20,20 @@ var computedFontSize = document.querySelector('.body_fontSize');
 
 size1.addEventListener('click', () => {
     computedFontSize.style.fontSize = '16px';
+    size1.classList.add('active');
+    size2.classList.remove('active');
+    size3.classList.remove('active');
 })
 size2.addEventListener('click', () => {
+    size1.classList.remove('active');
+    size3.classList.remove('active');
     computedFontSize.style.fontSize = '17.5px';
+    size2.classList.add('active');
 })
 size3.addEventListener('click', () => {
     computedFontSize.style.fontSize = '19px';
+    size1.classList.remove('active');
+    size2.classList.remove('active');
+    size3.classList.add('active');
 })
 
