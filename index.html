@@ -7,23 +7,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blossom Bubble | Homepage</title>
     <link rel="shortcut icon" href="assets/bubbly_blossom_favicon.svg" type="image/x-icon">
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
-        rel="stylesheet"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Josefin+Sans:wght@300;400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Oswald:wght@300&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dela+Gothic+One&family=Merienda:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index_page.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXC3MSHQ04"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-MXC3MSHQ04');
+    </script>
 </head>
 
-<body>
+<body class="body_fontSize">
     <header class="header_section">
         <div class="header_logo">
             <a href="index.html">
@@ -136,10 +141,26 @@
                 <img src="assets/preview_section/transition_DarkMode_background.svg" alt="dark Mode color mountain"
                     class="background_transition darkModeActive">
             </div>
-            <div class="transition_container_01"></div>
-            <div class="transition_container_02"></div>
-            <div class="transition_container_03"></div>
-            <div class="transition_container_04"></div>
+            <div class="transition_container_01">
+                <div class="transition_feature" data-aos="fade-up-right" data-aos-duration="4000">
+                    <p class="feature-head">Feature Shown</p>
+                </div>
+            </div>
+            <div class="transition_container_02">
+                <div class="transition_feature reverse" data-aos="fade-up-left" data-aos-duration="4000">
+                    <p class="feature-head">Feature Shown</p>
+                </div>
+            </div>
+            <div class="transition_container_03">
+                <div class="transition_feature" data-aos="fade-up-right" data-aos-duration="4000">
+                    <p class="feature-head">Feature Shown</p>
+                </div>
+            </div>
+            <div class="transition_container_04 reverse">
+                <div class="transition_feature" data-aos="fade-up-left" data-aos-duration="4000">
+                    <p class="feature-head">Feature Shown</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -270,6 +291,10 @@
     <script src="js/header-section.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/footer.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 
 
 

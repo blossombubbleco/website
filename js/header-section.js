@@ -15,39 +15,16 @@ check.addEventListener('change', () => {
 const size1 = document.querySelector('.f-small');
 const size2 = document.querySelector('.f-medium');
 const size3 = document.querySelector('.f-large');
-const btnArray = { size1, size2, size3 };
-
-// btnArray.forEach(element => {
-//   btnArray[element].addEventListener('click',()=>{
-//       body.style.fontSize=
-//   })
-// });
-//on click add font size acording to the size
+var computedFontSize = document.querySelector('.body_fontSize');
 
 
+size1.addEventListener('click', () => {
+    computedFontSize.style.fontSize = '16px';
+})
+size2.addEventListener('click', () => {
+    computedFontSize.style.fontSize = '17.5px';
+})
+size3.addEventListener('click', () => {
+    computedFontSize.style.fontSize = '19px';
+})
 
-// function joinUs(e) {
-
-//     debugger;
-
-
-//     var emailVal = document.getElementById('hero_email').value;
-
-//     console.log('in email', emailVal)
-
-//     if (emailVal.indexOf("@") > 2 && emailVal.indexOf('.') > 3) {
-
-
-//         fetch('address db', {
-//             method: "POST",
-//             body: JSON.stringify(emailVal),
-//             headers: { "Content-Type": "application/json; charset=UTF-8" }
-//         })
-//             .then(response => response.json())
-//             .then(json => console.log(json))
-//             .catch(err => console.log(err));
-
-//     }
-
-
-// }

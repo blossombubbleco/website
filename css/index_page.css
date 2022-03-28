@@ -12,7 +12,7 @@
 }
 .hero_tagline{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 85px;
     letter-spacing: 0.02em;
     color: var(--text-heading);
@@ -22,7 +22,7 @@
     color: var(--clr-primary) ;
 }
 .hero_taglineDesc{
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 30px;
     color: var(--text-heading-desc);
     margin-bottom: 40px;
@@ -39,7 +39,7 @@
 
 #hero_email{
     font-weight: 500;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 30px;
     color: var(--input-text);
     border: none;
@@ -67,7 +67,7 @@
     margin-left: 10px;
     height: 3rem;
     border: none;
-    font-size: 18px;
+    font-size: 1.125em;
     font-weight: 600;
     line-height: 33px;
     color: var(--per-white);
@@ -84,7 +84,7 @@
 }
 .social_iconTag{
     font-weight: 500;
-    font-size: 24px;
+    font-size: 1.5em;
     line-height: 39px;
     color: var(--text-heading);
 }
@@ -114,7 +114,7 @@
 }
 .section_title{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 85px;
     text-align: center;
     letter-spacing: 0.02em;
@@ -123,8 +123,19 @@
 .section_heading{
     margin-bottom: 3rem;
 }
+.transition_feature{
+    display: flex;
+    flex-direction: column;
+}
+.feature-head{
+    font-size: 3.75em;
+    font-weight: 900;
+    color: var(--text-heading);
+}
+.reverse{
+    flex-direction: row-reverse;
+}
 .transition_area{
-    /* height: 260rem; */
     position: relative;
     padding: 5rem 0rem 0rem;
 }
@@ -147,7 +158,7 @@
     margin: auto;
     width: 50%;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 34px;
     text-align: center;
     color: var(--text-section_heading-desc);
@@ -219,6 +230,7 @@
 }
 .transition_container_01,.transition_container_02,.transition_container_03,.transition_container_04{
     background-color: var(--transition_lightMode);
+    padding: 0px 110px;
 }
 
 
@@ -233,7 +245,7 @@
 }
 .signIn-text{
     font-weight: 700;
-    font-size: 45px;
+    font-size: 2.8125em;
     line-height: 81px;
     color: #FFFFFF;
 }
@@ -267,14 +279,14 @@
 }
 .feature_heading{
     font-weight: 500;
-    font-size: 22px;
+    font-size: 1.375em;
     line-height: 36px;
     letter-spacing: 0.02em;
     margin: 12px 0px;
     color: var(--per-card-textHead);
 }
 .feature_heading-desc{
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 27px;
     color: var(--per-card-textHead-desc);
 }
@@ -303,7 +315,7 @@
 }
 .vision_heading{
     font-weight: 700;
-    font-size: 40px;
+    font-size: 2.5em;
     line-height: 50px;
     color: var(--text-heading);
 }
@@ -315,7 +327,7 @@
 }
 .text_content{
     font-weight: 400;
-    font-size: 18px;
+    font-size: 1.125em;
     line-height: 31px;
     margin-top: 10px;
     color: var(--text-section_heading-desc)
@@ -339,7 +351,7 @@
         width: 55%;
     }
     .hero_tagline {
-        font-size: 34px;
+        font-size:  2.125em;
     }
     .hero_rightIllustration img {
         margin-top: 20px;
@@ -371,7 +383,10 @@
         line-height: 28px;
     }
     .feature_heading {
-        font-size: 24px;
+        font-size: 1.5em;
+    }
+    .feature-head {
+        font-size: 3.125em;
     }
 }
 
@@ -384,7 +399,7 @@
         width: 55%;
     }
     .hero_tagline {
-        font-size: 32px;
+        font-size: 2em;
         line-height: 62px;
     }
     .hero_rightIllustration img {
@@ -404,7 +419,7 @@
     }
     .signIn-text {
         line-height: 50px;
-        font-size: 40px;
+        font-size:  2.5em;
     }
     .feature_section {
         padding: 90px 110px 130px;
@@ -426,13 +441,19 @@
         line-height: 28px;
     }
     .feature_heading {
-        font-size: 24px;
+        font-size: 1.5em;
     }
     .vision_section{
         padding: 90px 110px;
     }
     .vision_left-illustration {
         width: 50%;
+    }
+    .transition_container_01,.transition_container_02,.transition_container_03,.transition_container_04{
+        padding: 0px 50px;
+    }
+    .feature-head {
+        font-size: 2.8125em;
     }
 }
 
@@ -448,7 +469,7 @@
         width: 47%;
     }
     .hero_tagline {
-        font-size: 32px;
+        font-size: 2em;
         line-height: 62px;
     }
     .hero_rightIllustration img {
@@ -473,7 +494,7 @@
     }
     .signIn-text {
         line-height: 42px;
-        font-size: 40px;
+        font-size: 2.5em;
         margin-bottom: 35px;
         text-align: center;
     }
@@ -482,7 +503,7 @@
     }
     .section_title-desc {
         width: 88%;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 28px;
     }
     .feature_cards {
@@ -498,10 +519,10 @@
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
-        font-size: 16px;
+        font-size: 1em;
     }
     .feature_heading {
-        font-size: 22px;
+        font-size:  1.375em;
     }
     .vision_section{
         padding: 0px 55px 100px;
@@ -512,6 +533,9 @@
     }
     .right_content {
         width: 100%;
+    }
+    .transition_feature{
+        display: none;
     }
     
 }
@@ -530,7 +554,7 @@
         width: 80%;
     }
     .hero_tagline {
-        font-size: 25px;
+        font-size: 1.5625em;
         line-height: 50px;
     }
     #hero_email {
@@ -553,7 +577,7 @@
     }
     .signIn-text {
         line-height: 48px;
-        font-size: 40px;
+        font-size: 2.5em;
         margin-bottom: 35px;
         text-align: center;
     }
@@ -562,7 +586,7 @@
     }
     .section_title-desc {
         width: 88%;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 28px;
     }
     .feature_cards {
@@ -578,10 +602,10 @@
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
-        font-size: 16px;
+        font-size: 1em;
     }
     .feature_heading {
-        font-size: 22px;
+        font-size: 1.375em;
     }
     .vision_section{
         padding: 0px 40px 100px;
@@ -592,6 +616,9 @@
     }
     .right_content {
         width: 100%;
+    }
+    .transition_feature{
+        display: none;
     }
 }
 
@@ -611,7 +638,7 @@
         width: 85%;
     }
     .hero_tagline {
-        font-size: 25px;
+        font-size: 1.5625em;
         line-height: 50px;
     }
     #hero_email {
@@ -646,7 +673,7 @@
     }
     .signIn-text {
         line-height: 48px;
-        font-size: 36px;
+        font-size: 2.25em;
         margin-bottom: 25px;
         text-align: center;
     }
@@ -655,7 +682,7 @@
     }
     .section_title-desc {
         width: 100%;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 28px;
     }
     .feature_cards {
@@ -676,10 +703,10 @@
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
-        font-size: 16px;
+        font-size: 1em;
     }
     .feature_heading {
-        font-size: 22px;
+        font-size: 1.375em;
     }
     .vision_section{
         padding: 0px 30px 100px;
@@ -690,6 +717,9 @@
     }
     .right_content {
         width: 100%;
+    }
+    .transition_feature{
+        display: none;
     }
 }
 
@@ -709,12 +739,12 @@
         width: 85%;
     }
     .hero_tagline {
-        font-size: 25px;
+        font-size: 1.5625em;
         line-height: 50px;
     }
     #hero_email {
         width: 80%;
-        font-size: 16px;
+        font-size: 1em;
     }
     .social_icons {
         width: 45%;
@@ -725,12 +755,12 @@
     }
     #joinUs_btn {
         padding: 0px 12px;
-        font-size: 16px;
+        font-size: 1em;
         margin-left: 5px;
     }
     .hero_taglineDesc {
         margin-bottom: 25px;
-        font-size: 16px;
+        font-size: 1em;
     }
     .phone-frame {
         width: 17rem;
@@ -749,7 +779,7 @@
     }
     .signIn-text {
         line-height: 40px;
-        font-size: 30px;
+        font-size: 1.875em;
         margin-bottom: 25px;
         text-align: center;
     }
@@ -758,7 +788,7 @@
     }
     .section_title-desc {
         width: 100%;
-        font-size: 16px;
+        font-size: 1em;
         line-height: 28px;
     }
     .feature_cards {
@@ -779,10 +809,10 @@
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
-        font-size: 16px;
+        font-size: 1em;
     }
     .feature_heading {
-        font-size: 22px;
+        font-size:  1.375em;
     }
     .socialTag{
         width: 35px;
@@ -796,5 +826,8 @@
     }
     .right_content {
         width: 100%;
+    }
+    .transition_feature{
+        display: none;
     }
 }
