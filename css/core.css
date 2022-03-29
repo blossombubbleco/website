@@ -23,11 +23,15 @@ a{
     --per-card-textHead-desc:#626877;
     --transition_lightMode:#F4DCDB;
     --clr-tertiory-footer:#1A1A40;
+    --clr-signtxt:#595978;
+    --menu-light:#ffffff;
+    --clr-clear-dark:#000000;
 }
 .dark_mode{
     /* background-color: #131627; */
     background-color: #0C0F37;
     --text-heading:#F3F3F3;
+    --clr-signtxt:#e7e7e7;
     --text-heading-desc:#C0C0C0;
     --text-section_heading-desc:#C0C0C0;
     --per-card:#252B77;
@@ -36,6 +40,8 @@ a{
     --clr-clear:#ACB5C4;
     --transition_lightMode:#060930;
     --clr-tertiory-footer:#ffffff;
+    --menu-light:#0C0F37;
+    --clr-clear-dark:#ffffff;
     
 }
 body.dark_mode.feature:hover{

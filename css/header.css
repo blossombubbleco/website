@@ -8,10 +8,19 @@
 .ff{
     font-family: 'Arizonia', cursive;
 }
+.blossom-brand{
+    margin-right: 5px;
+    width: 50px;
+}
+.header_logo a{
+    display: flex;
+    align-items: center;
+}
 .header_brand{
-    font-weight: 500;
+    font-weight: 300;
     font-size: 48px;
     line-height: 72px;
+    text-transform: uppercase;
     color: var(--clr-primary);
 }
 .header_faq-btn{
@@ -52,9 +61,12 @@
     width: 60px;
 }
 #checkbox:checked + .label .check_ball{
-    background-color: rgb(177, 177, 177);
+    background-color: rgb(17, 15, 15);
     transform: translateX(24px);
     transition: all 0.5s ease;
+}
+#checkbox:checked + .header_customize-dropdown-menu{
+    box-shadow: 0px 4px 17px #292B43;
 }
 #checkbox + .label .check_ball{
     transition: all 0.5s ease;
@@ -68,7 +80,7 @@
 .customize_title{
     font-size: 18px;
     font-weight: 600;
-    color: var(--clr-clear);
+    color: var(--clr-clear-dark);
 }
 .check_ball{
     position: absolute;
@@ -84,6 +96,8 @@
 }
 .customize_dark-light_theme{
     position: relative;
+    border: 1px solid black;
+    border-radius: 20px;
 }
 .customize_font-btns,.customize_changefont{
     display: flex;
@@ -94,17 +108,19 @@
     width: 51%;
 }
 .header_customize-dropdown-menu{
+    background: var(--menu-light);
+    box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
     display: none;
     position: absolute;
     top: 3.2rem;
     right: 0;
     height: 10rem;
     width: 20rem;
-    background-color: grey;
     padding: 0px 20px;
 }
 .fontChange-btn{
-    color: var(--per-white);
+    color: var(--clr-clear-dark);
     border-radius: 6px;
 }
 .f-small{
@@ -120,10 +136,10 @@
     padding: 3px;
 }
 .fontChange-btn:hover{
-    border: 1px solid var(--per-white);
+    border: 1px solid var(--clr-clear-dark);
 }
 .fontChange-btn.active{
-    border: 1px solid var(--per-white);
+    border: 1px solid var(--clr-clear-dark);
 }
 .header_customize-dropdown-menu.is-active{
     display: block;
@@ -209,11 +225,15 @@
     .header_section {
         padding: 10px 16px 20px;
     }
+    .blossom-brand {
+        width: 35px;
+    }
     .header_brand {
         font-size: 32px;
     }
     .header_faq-btn {
         font-size: 18px;
+        border: 2.5px solid var(--clr-primary);
     }
     .customize_btn{
         display: none;

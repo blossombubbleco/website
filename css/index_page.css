@@ -64,7 +64,6 @@
 }
 #joinUs_btn{
     cursor:pointer;
-    margin-left: 10px;
     height: 3rem;
     border: none;
     font-size: 1.125em;
@@ -76,11 +75,29 @@
     padding: 0px 20px;
 }
 
-
+.join_text-head{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    color: #595978;
+    margin-bottom: 25px;
+    /* color: var(--text-section_heading-desc); */
+}
+.join_text{
+    font-weight: 400;
+    font-size:  1.125em;
+    line-height: 32px;
+    color: #72728A;
+    margin-bottom: 35px;
+}
 .hero_socialIcons{
     display: flex;
     align-items: center;
-    margin-top: 11rem;
+    margin-top: 7rem;
+    justify-content: end;
+}
+.show-mob{
+    display: none;
 }
 .social_iconTag{
     font-weight: 500;
@@ -353,7 +370,7 @@
     .hero_tagline {
         font-size:  2.125em;
     }
-    .hero_rightIllustration img {
+    .hero_rightIllustration:first-child {
         margin-top: 20px;
     }
     .signIn-section {
@@ -388,6 +405,9 @@
     .feature-head {
         font-size: 3.125em;
     }
+    .show-mob{
+        display: none;
+    }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -402,15 +422,18 @@
         font-size: 2em;
         line-height: 62px;
     }
-    .hero_rightIllustration img {
-        margin-top: 60px;
-    }
-    #hero_email {
-        width: 65%;
+    .hero_rightIllustration:first-child {
+        margin: 60px 0px;
     }
     .social_icons {
-        width: 28%;
+        width: 38%;
     }  
+    .show-mob{
+        display: none
+    }  
+    .hero_socialIcons {
+        margin-top: 9rem;
+    }
     .signIn-section {
         padding: 90px 90px;
     }
@@ -450,17 +473,20 @@
         width: 50%;
     }
     .transition_container_01,.transition_container_02,.transition_container_03,.transition_container_04{
-        padding: 0px 50px;
+        padding: 0px 100px;
     }
     .feature-head {
-        font-size: 2.8125em;
+        font-size: 2.5125em;
+    }
+    .show-mob{
+        display: none;
     }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
 @media (min-width:993px) and (max-width:1200px){
     .hero_section {
-        padding: 25px 55px;
+        padding: 50px 55px;
     }
     .hero_leftContent {
         width: 52%;
@@ -472,17 +498,20 @@
         font-size: 2em;
         line-height: 62px;
     }
-    .hero_rightIllustration img {
-        margin-top: 60px;
+    .hero_rightIllustration:first-child {
+        margin: 60px 0px;
     }
     #hero_email {
         width: 80%;
     }
     .social_icons {
-        width: 30%;
-    }    
+        width: 38%;
+    }  
+    .show-mob{
+        display: none
+    }  
     .hero_socialIcons {
-        margin-top: 10rem;
+        margin-top: 9rem;
     }
     .signIn-section {
         padding: 80px 55px;
@@ -575,6 +604,14 @@
         width: 88%;
         margin: auto;
     }
+    .btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hid-mob{
+        display: none;
+    }
     .signIn-text {
         line-height: 48px;
         font-size: 2.5em;
@@ -654,6 +691,14 @@
     #joinUs_btn {
         padding: 0px 15px;
     }
+    .btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .hid-mob{
+        display: none;
+    }
     .hero_taglineDesc {
         margin-bottom: 25px;
     }
@@ -731,6 +776,9 @@
         flex-direction: column-reverse;
         align-items: center;
     }
+    .hid-mob{
+        display: none;
+    }
     .hero_leftContent {
         width: 100%;
         margin-top: 2rem;
@@ -756,7 +804,11 @@
     #joinUs_btn {
         padding: 0px 12px;
         font-size: 1em;
-        margin-left: 5px;
+    }
+    .btns{
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .hero_taglineDesc {
         margin-bottom: 25px;
