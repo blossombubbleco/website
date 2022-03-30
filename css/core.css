@@ -16,9 +16,12 @@ a{
     --text-heading:#1A1A40;
     --text-heading-desc:#9595a3;;
     --text-section_heading-desc:#424264;
+    --text-section_heading-descc:#424264;
     --input-text:#ACB5C4;
     --per-white:#ffffff;
     --per-card:#ffffff;
+    --per-input:#ffffff;
+    --signIn-lightMode:#FFC0D3;
     --per-card-textHead:#1A1A40
     --per-card-textHead-desc:#626877;
     --transition_lightMode:#F4DCDB;
@@ -26,6 +29,7 @@ a{
     --clr-signtxt:#595978;
     --menu-light:#ffffff;
     --clr-clear-dark:#000000;
+    --transition-clr:#F4DCDB;
 }
 .dark_mode{
     /* background-color: #131627; */
@@ -34,14 +38,19 @@ a{
     --clr-signtxt:#e7e7e7;
     --text-heading-desc:#C0C0C0;
     --text-section_heading-desc:#C0C0C0;
+    --text-section_heading-descc:#dfdfdf;
     --per-card:#252B77;
     --per-card-textHead:#FFFFFF;
     --per-card-textHead-desc:#D6D6D6;
     --clr-clear:#ACB5C4;
+    --per-input:#f4f4f8;
     --transition_lightMode:#060930;
     --clr-tertiory-footer:#ffffff;
     --menu-light:#0C0F37;
+    --input-text:#4C5057;
     --clr-clear-dark:#ffffff;
+    --transition-clr:#F4DCDB;
+    --signIn-lightMode:#495EB5;
     
 }
 body.dark_mode.feature:hover{
