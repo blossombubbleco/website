@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/index_page.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXC3MSHQ04"></script>
     <script>
@@ -132,18 +133,25 @@
                             Name ?</label>
                         <input type="text" name="name" id="name_input" placeholder="Enter your Name">
                         <div class="move_to_next" id="moveFirst">Next</div>
+
                     </div>
                     <div class="email_container">
                         <label for="email" class="email_label"><span class="light">2.</span>Btw
                             What's Your Email ?</label>
                         <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
-                        <div class="move_to_next" id="moveSecond">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveSecond">Next</div>
+                            <div class="move_to_next zero" id="moveFirstback">Prev</div>
+                        </div>
                     </div>
                     <div class="location_container">
                         <label for="location" class="location"><span class="light">3.</span>Where are you based
                             ?</label>
                         <input type="text" name="location" id="location_input" placeholder="City, Country">
-                        <div class="move_to_next" id="moveThird">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveThird">Next</div>
+                            <div class="move_to_next zero" id="moveSeondback">Prev</div>
+                        </div>
                     </div>
                     <div class="type_container">
                         <label for="type" class="type"><span class="light">4.</span>Great, You are an ?</label>
@@ -152,12 +160,18 @@
                             <option value="Autistic Parent">Autistic Parent</option>
                             <option value="Non-Autistic Person">Non-Autistic Person</option>
                         </select>
-                        <div class="move_to_next" id="moveForth">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveForth">Next</div>
+                            <div class="move_to_next zero" id="moveThirdback">Prev</div>
+                        </div>
                     </div>
                     <div class="sumbit_container">
                         <label for="submit" class="submit"><span class="light">5.</span>Great do you want to proceed
                             ?</label>
-                        <input type="submit" value="Yeah, Submit My Details" id="submitForm">
+                        <div class="flex_container wid">
+                            <input type="submit" value="Yeah, Submit My Details" id="submitForm">
+                            <div class="move_to_next" id="moveFourthback">Prev</div>
+                        </div>
                     </div>
                     <div class="signIn-done">
                         sign in done
@@ -318,13 +332,19 @@
                         <label for="email" class="email_label"><span class="light">2.</span>Btw
                             What's Your Email ?</label>
                         <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
-                        <div class="move_to_next" id="moveSecond2">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveSecond2">Next</div>
+                            <div class="move_to_next zero" id="moveFirstback2">Prev</div>
+                        </div>
                     </div>
                     <div class="location_container">
                         <label for="location" class="location"><span class="light">3.</span>Where are you based
                             ?</label>
                         <input type="text" name="location" id="location_input" placeholder="City, Country">
-                        <div class="move_to_next" id="moveThird2">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveThird2">Next</div>
+                            <div class="move_to_next zero" id="moveSecondback2">Prev</div>
+                        </div>
                     </div>
                     <div class="type_container">
                         <label for="type" class="type"><span class="light">4.</span>Great, You are an ?</label>
@@ -333,12 +353,18 @@
                             <option value="Autistic Parent">Autistic Parent</option>
                             <option value="Non-Autistic Person">Non-Autistic Person</option>
                         </select>
-                        <div class="move_to_next" id="moveForth2">Next</div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveForth2">Next</div>
+                            <div class="move_to_next zero" id="moveThirdback2">Prev</div>
+                        </div>
                     </div>
                     <div class="sumbit_container">
                         <label for="submit" class="submit"><span class="light">5.</span>Great do you want to proceed
                             ?</label>
-                        <input type="submit" value="Yeah, Submit My Details" id="submitForm2">
+                        <div class="flex_container wid">
+                            <input type="submit" value="Yeah, Submit My Details" id="submitForm2">
+                            <div class="move_to_next" id="moveForthback2">Prev</div>
+                        </div>
                     </div>
                     <div class="signIn-done">
                         sign in done
@@ -401,7 +427,33 @@
     <script>
         AOS.init();
     </script>
+    <script src="js/input_dataFirebase.js"></script>
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
+        // import { getStorage } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyAYemrEFaKFrqU1YbN5Cl8QnXLjKt5pYe8",
+            authDomain: "bb-website-83473.firebaseapp.com",
+            projectId: "bb-website-83473",
+            storageBucket: "bb-website-83473.appspot.com/",
+            messagingSenderId: "1049078427872",
+            appId: "1:1049078427872:web:ec7e326d3018cf33d76085",
+            measurementId: "G-18YJG46V4W"
+        };
+
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+    </script>
     <script src="js/input-section.js"></script>
+    <script src="js/input_dataFirebase.js"></script>
 </body>
 
 </html>
