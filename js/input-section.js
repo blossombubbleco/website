@@ -71,33 +71,33 @@ submit1.addEventListener('click', (event) => {
     event.preventDefault();
 });
 transFirst2.addEventListener('click', () => {
-    form.style.transform = "translateX(-40em)";
+    form2.style.transform = "translateX(-40em)";
 })
 transSecond2.addEventListener('click', () => {
-    form.style.transform = "translateX(-80em)";
+    form2.style.transform = "translateX(-80em)";
 })
 transThird2.addEventListener('click', () => {
-    form.style.transform = "translateX(-120em)";
+    form2.style.transform = "translateX(-120em)";
 })
 transForth2.addEventListener('click', () => {
-    form.style.transform = "translateX(-160em)";
+    form2.style.transform = "translateX(-160em)";
 })
 transFifth2.addEventListener('click', () => {
-    form.style.transform = "translateX(-200em)";
+    form2.style.transform = "translateX(-200em)";
 })
 
 transFirstBack2.addEventListener('click', () => {
-    form.style.transform = "translateX(0em)";
+    form2.style.transform = "translateX(0em)";
 })
 transSecondBack2.addEventListener('click', () => {
-    form.style.transform = "translateX(-40em)";
+    form2.style.transform = "translateX(-40em)";
 })
 transThirdBack2.addEventListener('click', () => {
-    form.style.transform = "translateX(-80em)";
+    form2.style.transform = "translateX(-80em)";
 })
 transFourthBack2.addEventListener('click', () => {
-    form.style.transform = "translateX(-120em)";
+    form2.style.transform = "translateX(-120em)";
 })
 transFifthBack2.addEventListener('click', () => {
-    form.style.transform = "translateX(-160em)";
+    form2.style.transform = "translateX(-160em)";
 })

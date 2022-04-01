@@ -1,29 +1,34 @@
 /*******************************************Header styling*******************************************/
-.header_section{
+.header_section {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 40px 120px;
 }
-.ff{
+
+.ff {
     font-family: 'Arizonia', cursive;
 }
-.blossom-brand{
-    margin-right: 5px;
+
+.blossom-brand {
+    margin-right: 10px;
     width: 50px;
 }
-.header_logo a{
+
+.header_logo a {
     display: flex;
     align-items: center;
 }
-.header_brand{
+
+.header_brand {
     font-weight: 300;
     font-size: 48px;
     line-height: 72px;
     text-transform: uppercase;
     color: var(--clr-primary);
 }
-.header_faq-btn{
+
+.header_faq-btn {
     font-weight: 500;
     font-size: 22px;
     line-height: 33px;
@@ -32,12 +37,14 @@
     padding: 4px 22px;
     border-radius: 12px;
 }
-.header_btn{
+
+.header_btn {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.header_customize{
+
+.header_customize {
     background: var(--clr-primary);
     border-radius: 12px;
     outline: none;
@@ -45,14 +52,16 @@
     cursor: pointer;
     margin-left: 20px;
 }
-.header_customize-btn{
+
+.header_customize-btn {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 6px 15px;
 }
-.label{
+
+.label {
     position: relative;
     display: flex;
     background-color: var(--per-white);
@@ -60,29 +69,35 @@
     height: 32px;
     width: 60px;
 }
-#checkbox:checked + .label .check_ball{
+
+#checkbox:checked+.label .check_ball {
     background-color: rgb(17, 15, 15);
     transform: translateX(24px);
     transition: all 0.5s ease;
 }
-#checkbox:checked + .header_customize-dropdown-menu{
+
+#checkbox:checked+.header_customize-dropdown-menu {
     box-shadow: 0px 4px 17px #292B43;
 }
-#checkbox + .label .check_ball{
+
+#checkbox+.label .check_ball {
     transition: all 0.5s ease;
 }
-.change_theme{
+
+.change_theme {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 15px 0px;
 }
-.customize_title{
+
+.customize_title {
     font-size: 18px;
     font-weight: 600;
     color: var(--clr-clear-dark);
 }
-.check_ball{
+
+.check_ball {
     position: absolute;
     background-color: black;
     border-radius: 50%;
@@ -91,23 +106,29 @@
     top: 4px;
     left: 5px;
 }
-#checkbox{
+
+#checkbox {
     display: none;
 }
-.customize_dark-light_theme{
+
+.customize_dark-light_theme {
     position: relative;
     border: 1px solid black;
     border-radius: 20px;
 }
-.customize_font-btns,.customize_changefont{
+
+.customize_font-btns,
+.customize_changefont {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.customize_font-btns{
+
+.customize_font-btns {
     width: 51%;
 }
-.header_customize-dropdown-menu{
+
+.header_customize-dropdown-menu {
     background: var(--menu-light);
     box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.25);
     border-radius: 14px;
@@ -119,35 +140,44 @@
     width: 20rem;
     padding: 0px 20px;
 }
-.fontChange-btn{
+
+.fontChange-btn {
     color: var(--clr-clear-dark);
     border-radius: 6px;
 }
-.f-small{
+
+.f-small {
     font-size: 18px;
     padding: 8px;
 }
-.f-medium{
+
+.f-medium {
     font-size: 24px;
     padding: 5px;
 }
-.f-large{
+
+.f-large {
     font-size: 28px;
     padding: 3px;
 }
-.fontChange-btn:hover{
+
+.fontChange-btn:hover {
     border: 1px solid var(--clr-clear-dark);
 }
-.fontChange-btn.active{
+
+.fontChange-btn.active {
     border: 1px solid var(--clr-clear-dark);
 }
-.header_customize-dropdown-menu.is-active{
+
+.header_customize-dropdown-menu.is-active {
     display: block;
 }
-.customize_btn-logo{
+
+.customize_btn-logo {
     margin-right: 4px;
 }
-.customize_btn{
+
+.customize_btn {
     font-weight: 500;
     font-size: 22px;
     line-height: 33px;
@@ -157,96 +187,118 @@
 
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-@media (min-width:1401px) and (max-width:1600px){
+@media (min-width:1401px) and (max-width:1600px) {
     .header_section {
         padding: 35px 110px;
     }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-@media (min-width:1201px) and (max-width:1400px){
+@media (min-width:1201px) and (max-width:1400px) {
     .header_section {
         padding: 30px 90px;
     }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[1201px-1400px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-@media (min-width:993px) and (max-width:1200px){
+@media (min-width:993px) and (max-width:1200px) {
     .header_section {
         padding: 30px 55px;
     }
-    .customize_btn,.header_faq-btn {
+
+    .customize_btn,
+    .header_faq-btn {
         font-size: 20px;
     }
 }
- /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[768px-992px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
- @media (min-width:768px) and (max-width:992px){
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[768px-992px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:768px) and (max-width:992px) {
     .header_section {
         padding: 25px 40px;
     }
-    .customize_btn,.header_faq-btn {
+
+    .customize_btn,
+    .header_faq-btn {
         font-size: 20px;
     }
+
     .header_faq-btn {
         padding: 5px 15px;
     }
+
     .header_customize {
         margin-left: 12px;
     }
- }
+}
 
-  /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[568px-767px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-@media (min-width:568px) and (max-width:767px){
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[568px-767px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:568px) and (max-width:767px) {
     .header_section {
         padding: 25px 30px;
     }
+
     .header_brand {
         font-size: 35px;
     }
-    .customize_btn,.header_faq-btn {
+
+    .customize_btn,
+    .header_faq-btn {
         font-size: 18px;
     }
+
     .header_faq-btn {
         padding: 5px 12px;
     }
+
     .customize_btn-logo {
         margin-right: 0px;
     }
+
     .header_customize-btn {
         padding: 6px 10px;
     }
+
     .header_customize {
         margin-left: 10px;
     }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[567px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
-@media screen and (max-width:567px){
+@media screen and (max-width:567px) {
     .header_section {
         padding: 10px 16px 20px;
     }
+
     .blossom-brand {
         width: 35px;
     }
+
     .header_brand {
         font-size: 32px;
     }
+
     .header_faq-btn {
         font-size: 18px;
         border: 2.5px solid var(--clr-primary);
     }
-    .customize_btn{
+
+    .customize_btn {
         display: none;
     }
+
     .header_faq-btn {
         padding: 1px 12px;
     }
+
     .customize_btn-logo {
         margin-right: 0px;
     }
+
     .header_customize-btn {
         padding: 8px 10px;
     }
+
     .header_customize {
         margin-left: 5px;
     }

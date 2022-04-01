@@ -43,8 +43,8 @@ showHidebtn.addEventListener('click', () => {
 //google_signIn btn
 const googleSignInBtn = document.querySelector('.google_signIn');
 const facebookSignInBtn = document.querySelector('.facebook_signIn');
-const googleSignInBtn2 = document.querySelector('.google_signIn2');
-const facebookSignInBtn2 = document.querySelector('.facebook_signIn2');
+const googleSignInBtn2 = document.querySelector('#signIn_google');
+const facebookSignInBtn2 = document.querySelector('#signIn_facebook');
 
 googleSignInBtn.addEventListener('click', () => {
     signInWithGoogle();

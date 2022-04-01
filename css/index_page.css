@@ -17,7 +17,7 @@
     line-height: 85px;
     letter-spacing: 0.02em;
     color: var(--text-heading);
-    margin-bottom: 3em;
+    margin-bottom: 5.65em;
 }
 
 .hero_tagline h1 span {
@@ -166,10 +166,10 @@
 .formOverflow {
     width: 40em;
     overflow: hidden;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 100%;
 }
 
 .formOverflow form {
@@ -188,6 +188,14 @@
 
 .wid {
     width: 94%;
+}
+
+.inputSection_illustration {
+    display: none;
+}
+
+.input_illustration {
+    width: 100%;
 }
 
 .zero {
@@ -285,11 +293,11 @@
 }
 
 .google_signIn img {
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .facebook_signIn img {
-    margin-right: 10px;
+    margin-right: 15px;
 }
 
 .google_signIn {
@@ -475,20 +483,9 @@
 
 
 /*******************transition end Section*******************/
-.transitionEnd-1 {
-    height: 5.0625em;
-    background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(244, 220, 219, 0) 185.19%);
-}
-
-.transitionEnd-2 {
-    margin-top: 20px;
-    height: 2.5em;
-    background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(244, 220, 219, 0) 518.75%);
-}
 
 .transitionEnd-3 {
-    margin-top: 10px;
-    height: 1.5em;
+    height: 6.5em;
     background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
@@ -496,17 +493,6 @@
     height: 19.75px;
     margin-top: 5px;
     background: linear-gradient(360deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-.height {
-    height: 29.26px;
-    margin-top: 5px;
-}
-
-.top {
-    background: linear-gradient(360deg, var(--transition-clr) 0%, rgba(244, 220, 219, 0) 185.19%);
-    height: 59.25px;
-    margin-top: 5px;
 }
 
 /*******************feature Section*******************/

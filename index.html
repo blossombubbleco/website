@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Arizonia&family=Dela+Gothic+One&family=Merienda:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/header.css">
@@ -147,7 +147,8 @@
                     <div class="location_container">
                         <label for="location" class="location"><span class="light">3.</span>Where are you based
                             ?</label>
-                        <input type="text" name="location" id="location_input" placeholder="City, Country">
+                        <input type="text" name="location" <!--id="location_input" --> id="pac-input"
+                        placeholder="City,Country">
                         <div class="flex_container">
                             <div class="move_to_next" id="moveThird">Next</div>
                             <div class="move_to_next zero" id="moveSeondback">Prev</div>
@@ -193,6 +194,18 @@
                     </div>
                 </form>
             </div>
+            <div class="inputSection_illustration">
+                <img src="assets/input_section/input_illustration01.svg" alt="Input Illustrations"
+                    class="input_illustration">
+                <img src="assets/input_section/input_illustration02.svg" alt="Input Illustrations"
+                    class="input_illustration">
+                <img src="assets/input_section/input_illustration03.svg" alt="Input Illustrations"
+                    class="input_illustration">
+                <img src="assets/input_section/input_illustration04.svg" alt="Input Illustrations"
+                    class="input_illustration">
+                <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
+                    class="input_illustration">
+            </div>
         </div>
     </section>
 
@@ -230,22 +243,22 @@
                     class="background_transition darkModeActive">
             </div>
             <div class="transition_container_01">
-                <div class="transition_feature" data-aos="fade-up-right" data-aos-duration="4000">
+                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
                     <p class="feature-head">Feature Shown</p>
                 </div>
             </div>
             <div class="transition_container_02">
-                <div class="transition_feature reverse" data-aos="fade-up-left" data-aos-duration="4000">
+                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
                     <p class="feature-head">Feature Shown</p>
                 </div>
             </div>
             <div class="transition_container_03">
-                <div class="transition_feature" data-aos="fade-up-right" data-aos-duration="4000">
+                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
                     <p class="feature-head">Feature Shown</p>
                 </div>
             </div>
-            <div class="transition_container_04 reverse">
-                <div class="transition_feature" data-aos="fade-up-left" data-aos-duration="4000">
+            <div class="transition_container_04">
+                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
                     <p class="feature-head">Feature Shown</p>
                 </div>
             </div>
@@ -253,8 +266,6 @@
     </section>
 
     <section class="transtionEnd-section">
-        <div class="transitionEnd-1"></div>
-        <div class="transitionEnd-2"></div>
         <div class="transitionEnd-3"></div>
     </section>
 
@@ -373,13 +384,13 @@
                             <div class="move_to_next zero" id="moveThirdback2">Prev</div>
                         </div>
                     </div>
-                    <div class="authorize_container1">
+                    <div class="authorize_container">
                         <label for="type" class="type"><span class="light">5.</span>Sign in with</label>
-                        <div class="google_signIn2">
+                        <div class="google_signIn" id="signIn_google">
                             <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
                             <span class="authentication_name">Google Sign-in</span>
                         </div>
-                        <div class="facebook_signIn2">
+                        <div class="facebook_signIn" id="signIn_facebook">
                             <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
                             <span class="authentication_name">Facebook Sign-in</span>
                         </div>
@@ -406,8 +417,6 @@
 
     <section class="transtionEnd-section">
         <div class="transitionEnd-3 start"></div>
-        <div class="transitionEnd-2 height"></div>
-        <div class="transitionEnd-1 top"></div>
     </section>
 
     <footer class="footer_section">
@@ -442,7 +451,12 @@
                     class="socialTag hid">
             </a>
         </div>
-        <div class="footer_brand"><a href="index.html"><span class="ff">B</span>lossom.</a></div>
+        <div class="footer_brand">
+            <a href="index.html">
+                <img src="assets/header/website-brand_logo.svg" alt="Blossom logo" class="blossom-brand footer-b">
+                <h1 class="header_brand zero_mar ">Blossom.</h1>
+            </a>
+        </div>
         <div class="footer_copyright">@ Copyright 2021-2022 All rights reserved. Powered by Blossom</div>
     </footer>
 
@@ -457,6 +471,8 @@
     <script>
         AOS.init();
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap&libraries=places&v=weekly"
+        async></script>
     <script src="js/input-section.js"></script>
     <script type="module" src="js/input_dataFirebase.js"></script>
 </body>
