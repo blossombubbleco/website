@@ -165,12 +165,27 @@
                             <div class="move_to_next zero" id="moveThirdback">Prev</div>
                         </div>
                     </div>
+                    <div class="authorize_container">
+                        <label for="type" class="type"><span class="light">5.</span>Sign in with</label>
+                        <div class="google_signIn">
+                            <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
+                            <span class="authentication_name">Google Sign-in</span>
+                        </div>
+                        <div class="facebook_signIn">
+                            <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
+                            <span class="authentication_name">Facebook Sign-in</span>
+                        </div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveFifth">Next</div>
+                            <div class="move_to_next zero" id="moveForthback">Prev</div>
+                        </div>
+                    </div>
                     <div class="sumbit_container">
-                        <label for="submit" class="submit"><span class="light">5.</span>Great do you want to proceed
+                        <label for="submit" class="submit"><span class="light">6.</span>Great do you want to proceed
                             ?</label>
                         <div class="flex_container wid">
                             <input type="submit" value="Yeah, Submit My Details" id="submitForm">
-                            <div class="move_to_next" id="moveFourthback">Prev</div>
+                            <div class="move_to_next" id="moveFifthback">Prev</div>
                         </div>
                     </div>
                     <div class="signIn-done">
@@ -358,12 +373,27 @@
                             <div class="move_to_next zero" id="moveThirdback2">Prev</div>
                         </div>
                     </div>
-                    <div class="sumbit_container">
+                    <div class="authorize_container1">
+                        <label for="type" class="type"><span class="light">5.</span>Sign in with</label>
+                        <div class="google_signIn2">
+                            <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
+                            <span class="authentication_name">Google Sign-in</span>
+                        </div>
+                        <div class="facebook_signIn2">
+                            <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
+                            <span class="authentication_name">Facebook Sign-in</span>
+                        </div>
+                        <div class="flex_container">
+                            <div class="move_to_next" id="moveForth">Next</div>
+                            <div class="move_to_next zero" id="moveForthback2">Prev</div>
+                        </div>
+                    </div>
+                    <div class="submit_container">
                         <label for="submit" class="submit"><span class="light">5.</span>Great do you want to proceed
                             ?</label>
                         <div class="flex_container wid">
                             <input type="submit" value="Yeah, Submit My Details" id="submitForm2">
-                            <div class="move_to_next" id="moveForthback2">Prev</div>
+                            <div class="move_to_next" id="moveFifthback2">Prev</div>
                         </div>
                     </div>
                     <div class="signIn-done">
@@ -427,37 +457,8 @@
     <script>
         AOS.init();
     </script>
-    <script src="js/input_dataFirebase.js"></script>
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
-        // import { getStorage } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js';
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-            apiKey: "AIzaSyAYemrEFaKFrqU1YbN5Cl8QnXLjKt5pYe8",
-            authDomain: "bb-website-83473.firebaseapp.com",
-            projectId: "bb-website-83473",
-            storageBucket: "bb-website-83473.appspot.com/",
-            messagingSenderId: "1049078427872",
-            appId: "1:1049078427872:web:ec7e326d3018cf33d76085",
-            measurementId: "G-18YJG46V4W"
-        };
-
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-    </script>
     <script src="js/input-section.js"></script>
-<<<<<<< HEAD
     <script type="module" src="js/input_dataFirebase.js"></script>
-=======
-    <script src="js/input_dataFirebase.js"></script>
->>>>>>> 16a1715b60bc47c99c1ae1b358a8ca1244487002
 </body>
 
 </html>

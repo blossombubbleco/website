@@ -164,8 +164,12 @@
 }
 
 .formOverflow {
-    width: 42em;
+    width: 40em;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }
 
 .formOverflow form {
@@ -228,7 +232,6 @@
 
 .light {
     font-size: 20px;
-    color: var(--text-section_heading-descc);
     margin-right: 20px;
 }
 
@@ -254,6 +257,56 @@
 #submitForm2 {
     width: 17rem;
 
+}
+
+
+.name_container,
+.email_container,
+.location_container,
+.type_container,
+.authorize_container,
+.submit_container {
+    height: 16.875em;
+    flex: 0 0 40em;
+
+}
+
+.google_signIn,
+.facebook_signIn {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background-color: var(--per-input);
+    border-radius: 8px;
+    margin-left: 28px;
+    width: 34em;
+    transition: 500ms;
+    padding: 8px 15px;
+}
+
+.google_signIn img {
+    margin-right: 10px;
+}
+
+.facebook_signIn img {
+    margin-right: 10px;
+}
+
+.google_signIn {
+    margin-bottom: 25px;
+}
+
+.google_signIn span {
+    font-size: 18px;
+}
+
+.facebook_signIn span {
+    font-size: 18px;
+}
+
+.facebook_signIn {
+    margin-bottom: 35px;
+    padding: 10px 15px;
 }
 
 .before_hidden {
