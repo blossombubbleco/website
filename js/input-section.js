@@ -4,6 +4,53 @@ const submit1 = document.querySelector('#submitForm2');
 const formContainer = document.querySelector('.early_access_section');
 
 
+<<<<<<< HEAD
+
+
+
+
+
+
+
+
+=======
+// // //send the data in the form of collection
+// // var messageRef = firebase.database().ref('User_data');
+
+
+showHidebtn.addEventListener('click', () => {
+    formContainer.style.display = 'block';
+    formContainer.scrollIntoView();
+})
+
+submit.addEventListener('click', (e) => {
+    e.preventDefault();
+    var name = GetInputVal('name_input');
+    var email = GetInputVal('email_input');
+    var location = GetInputVal('location_input');
+    var type = GetInputVal('type_input');
+
+    //call the function to save the values on submit
+    saveMessage(name, email, location, type);
+});
+>>>>>>> 16a1715b60bc47c99c1ae1b358a8ca1244487002
+
+function GetInputVal(id) {
+    return document.getElementById(id).value;
+}
+
+//function to save the message to the firebase
+function saveMessage(name, email, location, type) {
+    var newMessageRef = messageRef.push();
+    newMessageRef.set({
+        name: name,
+        email: email,
+        location: location,
+        type: type
+    });
+} //call this function when the form is submitted
+
+
 
 
 
@@ -34,6 +81,7 @@ transThird.addEventListener('click', () => {
 })
 transForth.addEventListener('click', () => {
     form.style.transform = "translateX(-168em)";
+<<<<<<< HEAD
 })
 
 transFirstBack.addEventListener('click', () => {
@@ -49,6 +97,23 @@ transFourthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-126em)";
 })
 
+=======
+})
+
+transFirstBack.addEventListener('click', () => {
+    form.style.transform = "translateX(0em)";
+})
+transSecondBack.addEventListener('click', () => {
+    form.style.transform = "translateX(-42em)";
+})
+transThirdBack.addEventListener('click', () => {
+    form.style.transform = "translateX(-84em)";
+})
+transFourthBack.addEventListener('click', () => {
+    form.style.transform = "translateX(-126em)";
+})
+
+>>>>>>> 16a1715b60bc47c99c1ae1b358a8ca1244487002
 
 
 

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Import the functions you need from the SDKs you need
 // import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase.js";
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
@@ -61,5 +62,7 @@ function saveMessage(name, email, location, type) {
         type: type
     });
 } //call this function when the form is submitted
+=======
+>>>>>>> 16a1715b60bc47c99c1ae1b358a8ca1244487002
 
 
