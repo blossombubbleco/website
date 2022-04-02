@@ -3,22 +3,22 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBnogqDTBrG9Q-wrZTL4SAwK0a-c9m7dME",
-    authDomain: "blossom-bubble-co.firebaseapp.com",
-    databaseURL: "https://blossom-bubble-co-default-rtdb.firebaseio.com",
-    projectId: "blossom-bubble-co",
-    storageBucket: "blossom-bubble-co.appspot.com",
-    messagingSenderId: "323769521871",
-    appId: "1:323769521871:web:49c438e3a9234fabad09ba",
-    measurementId: "G-V89SZFXDGF"
+    apiKey: "AIzaSyAYemrEFaKFrqU1YbN5Cl8QnXLjKt5pYe8",
+    authDomain: "bb-website-83473.firebaseapp.com",
+    projectId: "bb-website-83473",
+    storageBucket: "bb-website-83473.appspot.com",
+    messagingSenderId: "1049078427872",
+    appId: "1:1049078427872:web:ec7e326d3018cf33d76085",
+    measurementId: "G-18YJG46V4W"
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
@@ -47,6 +47,7 @@ const facebookSignInBtn = document.querySelector('.facebook_signIn');
 const googleSignInBtn2 = document.querySelector('#signIn_google');
 const facebookSignInBtn2 = document.querySelector('#signIn_facebook');
 
+
 googleSignInBtn.addEventListener('click', () => {
     signInWithGoogle();
 })
@@ -59,25 +60,46 @@ googleSignInBtn2.addEventListener('click', () => {
 facebookSignInBtn2.addEventListener('click', () => {
     signInWithFacebook();
 })
-
+var name = GetInputVal('name_input');
+var email = GetInputVal('email_input');
+var location = GetInputVal('location_input');
+var type = GetInputVal('type_input');
 submit.addEventListener('click', (e) => {
-    e.preventDefault();
-    form.style.transform = "translateX(-240em)"
-    //call the function to save the values on submit
-    addVal();
-    // signInWithEmail()
-});
+    var name = GetInputVal('name_input');
+    var email = GetInputVal('email_input');
+    var location = GetInputVal('location_input');
+    var type = GetInputVal('type_input');
 
+    e.preventDefault();
+    //call the function to save the values on submit
+    if (name == "" || email == "" || location == "" || type == "") {
+        alert('Please fill out all the details');
+    }
+    else {
+        form.style.transform = "translateX(-240em)"
+        addVal();
+        sendEmail();
+    }
+});
+submit1.addEventListener('click', (e) => {
+    e.preventDefault();
+    //call the function to save the values on submit
+    if (name == "" || email == "" || location == "" || type == "") {
+        alert('Please fill out all the details');
+    }
+    else {
+        form.style.transform = "translateX(-240em)"
+        addVal();
+        // sendEmail();
+    }
+});
+// var email = GetInputVal('email_input');
 
 function GetInputVal(id) {
     return document.getElementById(id).value;
 }
 async function addVal() {
     try {
-        var name = GetInputVal('name_input');
-        var email = GetInputVal('email_input');
-        var location = GetInputVal('location_input');
-        var type = GetInputVal('type_input');
 
         const docRef = await addDoc(collection(db, "users"), {
             name: name,
@@ -90,6 +112,41 @@ async function addVal() {
         console.error("Error adding document: ", e);
     }
 };
+
+//send email function
+function sendEmail() {
+    const actionCodeSettings = {
+        // URL you want to redirect back to. The domain (www.example.com) for this
+        // URL must be in the authorized domains list in the Firebase Console.
+        url: 'http://127.0.0.1:5501/index.html',
+        // This must be true.
+        handleCodeInApp: true,
+        iOS: {
+            bundleId: 'com.example.ios'
+        },
+        android: {
+            packageName: 'com.example.android',
+            installApp: true,
+            minimumVersion: '12'
+        },
+        dynamicLinkDomain: 'example.page.link'
+    };
+
+    sendSignInLinkToEmail(auth, email, actionCodeSettings)
+        .then(() => {
+            // The link was successfully sent. Inform the user.
+            // Save the email locally so you don't need to ask the user for it again
+            // if they open the link on the same device.
+            window.localStorage.setItem('emailForSignIn', email);
+            // ...
+        })
+        .catch((error) => {
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // ...
+        });
+}
+
 
 //function for the google authentication
 function signInWithGoogle() {

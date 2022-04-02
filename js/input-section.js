@@ -55,10 +55,10 @@ transFourthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-120em)";
     num.style.transform = 'translateY(-7.2em)';
 })
-// transFifthBack.addEventListener('click', () => {
-//     form.style.transform = "translateX(-160em)";
-//     num.style.transform = 'translateY(-9.6em)';
-// })
+transFifthBack.addEventListener('click', () => {
+    form.style.transform = "translateX(-160em)";
+    // num.style.transform = 'translateY(-9.6em)';
+})
 
 
 
@@ -120,6 +120,6 @@ transFourthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-120em)";
     num2.style.transform = 'translateY(-7.2em)';
 })
-// transFifthBack2.addEventListener('click', () => {
-//     form2.style.transform = "translateX(-160em)";
-// })
+transFifthBack2.addEventListener('click', () => {
+    form2.style.transform = "translateX(-160em)";
+})

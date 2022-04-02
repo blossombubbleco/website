@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blossom Bubble | Homepage</title>
+    <title>Blausm Bubble | Homepage</title>
     <link rel="shortcut icon" href="assets/bubbly_blossom_favicon.svg" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
         <div class="header_logo">
             <a href="index.html">
                 <img src="assets/header/website-brand_logo.svg" alt="Blossom logo" class="blossom-brand">
-                <h1 class="header_brand">Blossom.</h1>
+                <h1 class="header_brand">Blausm.</h1>
             </a>
         </div>
         <div class="header_btn">
@@ -151,32 +151,32 @@
                             <label for="email" class="email_label">What is your email
                                 address
                                 ?</label>
-                            <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
+                            <input type="email" name="email" id="email_input" placeholder="example@gmail.com" required>
                             <div class="flex_container">
-                                <div class="move_to_next" id="moveSecond">Next</div>
                                 <div class="move_to_next zero" id="moveFirstback">Prev</div>
+                                <div class="move_to_next" id="moveSecond">Next</div>
                             </div>
                         </div>
                         <div class="location_container">
                             <label for="location" class="location">Where are you located
                                 ?</label>
                             <input type="text" name="location" id="location_input"
-                                placeholder="Enter Your City and Country">
+                                placeholder="Enter Your City and Country" required>
                             <div class="flex_container">
-                                <div class="move_to_next" id="moveThird">Next</div>
                                 <div class="move_to_next zero" id="moveSeondback">Prev</div>
+                                <div class="move_to_next" id="moveThird">Next</div>
                             </div>
                         </div>
                         <div class="type_container">
                             <label for="type" class="type">Sign up as</label>
-                            <select name="type" id="type_input">
+                            <select name="type" id="type_input" required>
                                 <option value="Autistic Person">Neurodivergent Parent</option>
                                 <option value="Autistic Parent">Neurotypical Parent</option>
                                 <option value="Non-Autistic Person">Neurodivergent Adult</option>
                             </select>
                             <div class="flex_container">
-                                <div class="move_to_next" id="moveForth">Next</div>
                                 <div class="move_to_next zero" id="moveThirdback">Prev</div>
+                                <div class="move_to_next" id="moveForth">Next</div>
                             </div>
                         </div>
                         <div class="authorize_container">
@@ -189,16 +189,21 @@
                                 <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
                                 <span class="authentication_name">Facebook Sign-in</span>
                             </div>
+                            <div class="Email_signIn">
+                                <img src="assets/input_section/signIn_email.svg" alt="Email sign in">
+                                <span class="authentication_name">Email Sign-in</span>
+                            </div>
                             <div class="flex_container">
-                                <div class="move_to_next" id="moveFifth">Next</div>
                                 <div class="move_to_next zero" id="moveForthback">Prev</div>
+                                <div class="move_to_next" id="moveFifth">Next</div>
                             </div>
                         </div>
-                        <div class="sumbit_container">
+                        <div class="submit_container">
                             <label for="submit" class="submit">Thank you for Signin up , Please submit your
                                 details.</label>
                             <div class="flex_container wid full_wid">
-                                <input type="submit" value="Yeah, Submit My Details" id="submitForm">
+                                <div class="move_to_next zero" id="moveFifthback">Prev</div>
+                                <input type="submit" value="Submit My Details" id="submitForm">
                             </div>
                         </div>
                         <div class="signIn-done">
@@ -230,14 +235,9 @@
 
     <section class="mobile_previews">
         <div class="section_heading bg-white">
-            <p class="section_title">What does Blossom do?</p>
-            <p class="section_title-desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer
-            </p>
+            <p class="section_title bot">What does Blossom do?</p>
         </div>
         <div class="transition_area">
-            <!-- <img src="assets/preview_section/transition_00_background.svg" alt="Transition background image"
-                class="transition_background"> -->
             <div class="mobile_sticky-middle">
                 <div class="pos_sticky">
                     <div class="frame_withImage">
@@ -259,6 +259,20 @@
                     </div>
                 </div>
             </div>
+            <div class="card_feature">
+                <div class="card" data-aos="fade-up" data-aos-duration="8000">
+                    <img src="assets/preview_section/card_feature01.svg" alt="Feature card">
+                    <p class="feature_heading left bottom">Card-heading</p>
+                    <p class="feature_heading-desc left">We help you find and connect with other families and
+                        neurodiverse individuals who are on a similar journey in your city.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-duration="8500">
+                    <img src="assets/preview_section/card_feature01.svg" alt="Feature card">
+                    <p class="feature_heading left bottom">Card-heading</p>
+                    <p class="feature_heading-desc left">We help you find and connect with other families and
+                        neurodiverse individuals who are on a similar journey in your city.</p>
+                </div>
+            </div>
             <div class="mode_changing-image">
                 <img src="assets/preview_section/transition_lightMode_background.svg" alt="Light Mode color mountain"
                     class="background_transition display">
@@ -266,19 +280,13 @@
                     class="background_transition darkModeActive">
             </div>
             <div class="transition_container_01">
-                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
-                </div>
+
             </div>
             <div class="transition_container_02">
-                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
-                </div>
+
             </div>
             <div class="transition_container_03">
-                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
-                </div>
+
             </div>
             <div class="transition_container_04">
                 <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
