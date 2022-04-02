@@ -156,7 +156,7 @@
 }
 
 .input_form {
-    padding: 140px 140px 20px;
+    padding: 140px 160px 20px 140px;
     background-color: var(--signIn-lightMode);
     border-radius: 46px;
     height: 48em;
@@ -178,8 +178,25 @@
     transition: 500ms;
 }
 
+.input_wrapper {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.inputSection_illustration {
+    width: 35%;
+    transition: 500ms;
+    position: relative;
+}
+
+
+.width_flex {
+    height: 100%;
+}
+
 .section_wrapper {
-    height: 78%;
+    height: 83%;
 }
 
 .input_text_bottom {
@@ -206,12 +223,15 @@
     width: 94%;
 }
 
-.inputSection_illustration {
-    display: none;
-}
-
 .input_illustration {
     width: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: all 500ms ease-in;
+}
+
+.input_illustration.active {
+    opacity: 1;
 }
 
 .zero {
@@ -723,6 +743,47 @@
         font-size: 1.5em;
     }
 
+    .input_form {
+        padding: 120px 140px 20px 120px;
+    }
+
+    #name_input,
+    #email_input,
+    #location_input,
+    #type_input {
+        width: 26.2em;
+    }
+
+    .width_flex {
+        width: 54%;
+    }
+
+    .inputSection_illustration {
+        width: 43%;
+    }
+
+    .input_text_bottom {
+        margin-top: 0em;
+    }
+
+    .flex_container {
+        width: 74%;
+    }
+
+    .google_signIn,
+    .facebook_signIn,
+    .Email_signIn {
+        width: 30em;
+    }
+
+    .formOverflow {
+        height: 80%;
+    }
+
+    .input_illustration {
+        margin-top: 36px;
+    }
+
     .feature-head {
         font-size: 3.125em;
     }
@@ -826,6 +887,47 @@
     .card_feature {
         grid-column-gap: 24em;
         padding: 50px 60px;
+    }
+
+    .input_form {
+        padding: 120px 140px 20px 120px;
+    }
+
+    #name_input,
+    #email_input,
+    #location_input,
+    #type_input {
+        width: 33.2em;
+    }
+
+    .width_flex {
+        width: 54%;
+    }
+
+    .inputSection_illustration {
+        display: none;
+    }
+
+    .input_text_bottom {
+        margin-top: 0em;
+    }
+
+    .flex_container {
+        width: 74%;
+    }
+
+    .google_signIn,
+    .facebook_signIn,
+    .Email_signIn {
+        width: 30em;
+    }
+
+    .formOverflow {
+        height: 80%;
+    }
+
+    .input_illustration {
+        margin-top: 36px;
     }
 }
 
@@ -939,6 +1041,10 @@
     .card_feature {
         grid-column-gap: 21em;
         padding: 50px 20px;
+    }
+
+    .inputSection_illustration {
+        display: none;
     }
 }
 
@@ -1067,6 +1173,10 @@
     .card_feature {
         display: none;
     }
+
+    .inputSection_illustration {
+        display: none;
+    }
 }
 
 
@@ -1110,8 +1220,12 @@
     }
 
     .formOverflow {
+        height: 94%;
         width: 100%;
-        height: 120%;
+    }
+
+    .section_wrapper {
+        height: 100%;
     }
 
     .input_text_bottom {
@@ -1119,9 +1233,16 @@
     }
 
     .google_signIn,
-    .facebook_signIn {
-        width: 22em;
+    .facebook_signIn,
+    .Email_signIn {
+        width: 25em;
     }
+
+    .submit {
+        width: 66%;
+    }
+
+
 
     .btns {
         display: flex;
@@ -1209,7 +1330,7 @@
     #email_input,
     #location_input,
     #type_input {
-        width: 60%;
+        width: 66%;
     }
 
     .flex_container {
@@ -1229,11 +1350,19 @@
         font-size: 22px;
     }
 
+    .wid {
+        width: 59%;
+    }
+
     .early_access_section {
         padding: 90px 30px;
     }
 
     .card_feature {
+        display: none;
+    }
+
+    .inputSection_illustration {
         display: none;
     }
 }
@@ -1272,8 +1401,8 @@
     }
 
     .formOverflow {
-        width: 100%;
         height: 110%;
+        width: 100%;
     }
 
     .section_title {
@@ -1353,6 +1482,10 @@
         flex: 0 0 22rem;
     }
 
+    .submit {
+        width: 66%;
+    }
+
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
@@ -1402,7 +1535,7 @@
     #email_input,
     #location_input,
     #type_input {
-        width: 55%;
+        width: 66%;
         font-size: 16px;
     }
 
@@ -1424,12 +1557,21 @@
     }
 
     .google_signIn,
-    .facebook_signIn {
-        width: 50%;
+    .facebook_signIn,
+    .Email_signIn {
+        width: 25em;
+    }
+
+    .wid {
+        width: 49%;
     }
 
     .transition_feature {
         display: none;
+    }
+
+    .width_flex {
+        width: 100%;
     }
 
     .name,
@@ -1445,6 +1587,10 @@
     }
 
     .card_feature {
+        display: none;
+    }
+
+    .inputSection_illustration {
         display: none;
     }
 }

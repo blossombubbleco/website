@@ -118,7 +118,7 @@ function sendEmail() {
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
-        url: 'http://127.0.0.1:5501/index.html',
+        url: 'http://127.0.0.1:5501/',
         // This must be true.
         handleCodeInApp: true,
         iOS: {

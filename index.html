@@ -137,91 +137,97 @@
                     </div>
                     <p class="whole_number">/5</p>
                 </div>
-                <div class="formOverflow">
-                    <form action="" id="form">
-                        <div class="name_container">
-                            <label for="name" class="name">What is your name ?</label>
-                            <input type="text" name="name" id="name_input" placeholder="Enter Your First and Last Name">
-                            <div class="flex_container">
-                                <div class="move_to_next" id="moveFirst">Next</div>
-                            </div>
+                <div class="input_wrapper">
+                    <div class="width_flex">
+                        <div class="formOverflow">
+                            <form action="" id="form">
+                                <div class="name_container">
+                                    <label for="name" class="name">What is your name ?</label>
+                                    <input type="text" name="name" id="name_input"
+                                        placeholder="Enter Your First and Last Name">
+                                    <div class="flex_container">
+                                        <div class="move_to_next" id="moveFirst">Next</div>
+                                    </div>
 
+                                </div>
+                                <div class="email_container">
+                                    <label for="email" class="email_label">What is your email
+                                        address
+                                        ?</label>
+                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com"
+                                        required>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveFirstback">Prev</div>
+                                        <div class="move_to_next" id="moveSecond">Next</div>
+                                    </div>
+                                </div>
+                                <div class="location_container">
+                                    <label for="location" class="location">Where are you located
+                                        ?</label>
+                                    <input type="text" name="location" id="location_input"
+                                        placeholder="Enter Your City and Country" required>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveSeondback">Prev</div>
+                                        <div class="move_to_next" id="moveThird">Next</div>
+                                    </div>
+                                </div>
+                                <div class="type_container">
+                                    <label for="type" class="type">Sign up as</label>
+                                    <select name="type" id="type_input" required>
+                                        <option value="Autistic Person">Neurodivergent Parent</option>
+                                        <option value="Autistic Parent">Neurotypical Parent</option>
+                                        <option value="Non-Autistic Person">Neurodivergent Adult</option>
+                                    </select>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveThirdback">Prev</div>
+                                        <div class="move_to_next" id="moveForth">Next</div>
+                                    </div>
+                                </div>
+                                <div class="authorize_container">
+                                    <label for="type" class="type">Sign in with</label>
+                                    <div class="google_signIn">
+                                        <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
+                                        <span class="authentication_name">Google Sign-in</span>
+                                    </div>
+                                    <div class="facebook_signIn">
+                                        <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
+                                        <span class="authentication_name">Facebook Sign-in</span>
+                                    </div>
+                                    <div class="Email_signIn">
+                                        <img src="assets/input_section/signIn_email.svg" alt="Email sign in">
+                                        <span class="authentication_name">Email Sign-in</span>
+                                    </div>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveForthback">Prev</div>
+                                        <div class="move_to_next" id="moveFifth">Next</div>
+                                    </div>
+                                </div>
+                                <div class="submit_container">
+                                    <label for="submit" class="submit">Thank you for Signin up , Please submit your
+                                        details.</label>
+                                    <div class="flex_container wid full_wid">
+                                        <div class="move_to_next zero" id="moveFifthback">Prev</div>
+                                        <input type="submit" value="Submit My Details" id="submitForm">
+                                    </div>
+                                </div>
+                                <div class="signIn-done">
+                                    sign in done
+                                </div>
+                            </form>
                         </div>
-                        <div class="email_container">
-                            <label for="email" class="email_label">What is your email
-                                address
-                                ?</label>
-                            <input type="email" name="email" id="email_input" placeholder="example@gmail.com" required>
-                            <div class="flex_container">
-                                <div class="move_to_next zero" id="moveFirstback">Prev</div>
-                                <div class="move_to_next" id="moveSecond">Next</div>
-                            </div>
-                        </div>
-                        <div class="location_container">
-                            <label for="location" class="location">Where are you located
-                                ?</label>
-                            <input type="text" name="location" id="location_input"
-                                placeholder="Enter Your City and Country" required>
-                            <div class="flex_container">
-                                <div class="move_to_next zero" id="moveSeondback">Prev</div>
-                                <div class="move_to_next" id="moveThird">Next</div>
-                            </div>
-                        </div>
-                        <div class="type_container">
-                            <label for="type" class="type">Sign up as</label>
-                            <select name="type" id="type_input" required>
-                                <option value="Autistic Person">Neurodivergent Parent</option>
-                                <option value="Autistic Parent">Neurotypical Parent</option>
-                                <option value="Non-Autistic Person">Neurodivergent Adult</option>
-                            </select>
-                            <div class="flex_container">
-                                <div class="move_to_next zero" id="moveThirdback">Prev</div>
-                                <div class="move_to_next" id="moveForth">Next</div>
-                            </div>
-                        </div>
-                        <div class="authorize_container">
-                            <label for="type" class="type">Sign in with</label>
-                            <div class="google_signIn">
-                                <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
-                                <span class="authentication_name">Google Sign-in</span>
-                            </div>
-                            <div class="facebook_signIn">
-                                <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
-                                <span class="authentication_name">Facebook Sign-in</span>
-                            </div>
-                            <div class="Email_signIn">
-                                <img src="assets/input_section/signIn_email.svg" alt="Email sign in">
-                                <span class="authentication_name">Email Sign-in</span>
-                            </div>
-                            <div class="flex_container">
-                                <div class="move_to_next zero" id="moveForthback">Prev</div>
-                                <div class="move_to_next" id="moveFifth">Next</div>
-                            </div>
-                        </div>
-                        <div class="submit_container">
-                            <label for="submit" class="submit">Thank you for Signin up , Please submit your
-                                details.</label>
-                            <div class="flex_container wid full_wid">
-                                <div class="move_to_next zero" id="moveFifthback">Prev</div>
-                                <input type="submit" value="Submit My Details" id="submitForm">
-                            </div>
-                        </div>
-                        <div class="signIn-done">
-                            sign in done
-                        </div>
-                    </form>
-                </div>
-                <div class="inputSection_illustration">
-                    <img src="assets/input_section/input_illustration01.svg" alt="Input Illustrations"
-                        class="input_illustration">
-                    <img src="assets/input_section/input_illustration02.svg" alt="Input Illustrations"
-                        class="input_illustration">
-                    <img src="assets/input_section/input_illustration03.svg" alt="Input Illustrations"
-                        class="input_illustration">
-                    <img src="assets/input_section/input_illustration04.svg" alt="Input Illustrations"
-                        class="input_illustration">
-                    <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
-                        class="input_illustration">
+                    </div>
+                    <div class="inputSection_illustration">
+                        <img src="assets/input_section/input_illustration01.svg" alt="Input Illustrations"
+                            class="input_illustration active">
+                        <img src="assets/input_section/input_illustration02.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration03.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration04.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                    </div>
                 </div>
             </div>
             <div class="input_text_bottom">
@@ -407,70 +413,91 @@
                     </div>
                     <p class="whole_number">/5</p>
                 </div>
-                <div class="formOverflow">
-                    <form action="" id="form2">
-                        <div class="name_container">
-                            <label for="name" class="name">What's Your Full
-                                Name ?</label>
-                            <input type="text" name="name" id="name_input" placeholder="Enter your Name">
-                            <div class="move_to_next" id="moveFirst2">Next</div>
+                <div class="input_wrapper">
+                    <div class="width_flex">
+                        <div class="formOverflow">
+                            <form action="" id="form2">
+                                <div class="name_container">
+                                    <label for="name" class="name">What's Your Full
+                                        Name ?</label>
+                                    <input type="text" name="name" id="name_input" placeholder="Enter your Name">
+                                    <div class="move_to_next" id="moveFirst2">Next</div>
+                                </div>
+                                <div class="email_container">
+                                    <label for="email" class="email_label">Btw
+                                        What's Your Email ?</label>
+                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveFirstback2">Prev</div>
+                                        <div class="move_to_next" id="moveSecond2">Next</div>
+                                    </div>
+                                </div>
+                                <div class="location_container">
+                                    <label for="location" class="location">Where are you based
+                                        ?</label>
+                                    <input type="text" name="location" id="location_input" placeholder="City, Country">
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveSecondback2">Prev</div>
+                                        <div class="move_to_next" id="moveThird2">Next</div>
+                                    </div>
+                                </div>
+                                <div class="type_container">
+                                    <label for="type" class="type">Great, You are an ?</label>
+                                    <select name="type" id="type_input">
+                                        <option value="Autistic Person">Autistic Person</option>
+                                        <option value="Autistic Parent">Autistic Parent</option>
+                                        <option value="Non-Autistic Person">Non-Autistic Person</option>
+                                    </select>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveThirdback2">Prev</div>
+                                        <div class="move_to_next" id="moveForth2">Next</div>
+                                    </div>
+                                </div>
+                                <div class="authorize_container">
+                                    <label for="type" class="type">Sign in with</label>
+                                    <div class="google_signIn" id="signIn_google">
+                                        <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
+                                        <span class="authentication_name">Google Sign-in</span>
+                                    </div>
+                                    <div class="facebook_signIn" id="signIn_facebook">
+                                        <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
+                                        <span class="authentication_name">Facebook Sign-in</span>
+                                    </div>
+                                    <div class="Email_signIn" id="signIn_email">
+                                        <img src="assets/input_section/signIn_email.svg" alt="Email sign in">
+                                        <span class="authentication_name">Email Sign-in</span>
+                                    </div>
+                                    <div class="flex_container">
+                                        <div class="move_to_next zero" id="moveForthback2">Prev</div>
+                                        <div class="move_to_next" id="moveFifth2">Next</div>
+                                    </div>
+                                </div>
+                                <div class="submit_container">
+                                    <label for="submit" class="submit">Great do you want to proceed
+                                        ?</label>
+                                    <div class="flex_container wid">
+                                        <div class="move_to_next zero" id="moveFifthback2">Prev</div>
+                                        <input type="submit" value="Submit My Details" id="submitForm2">
+                                    </div>
+                                </div>
+                                <div class="signIn-done">
+                                    sign in done
+                                </div>
+                            </form>
                         </div>
-                        <div class="email_container">
-                            <label for="email" class="email_label">Btw
-                                What's Your Email ?</label>
-                            <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
-                            <div class="flex_container">
-                                <div class="move_to_next" id="moveSecond2">Next</div>
-                                <div class="move_to_next zero" id="moveFirstback2">Prev</div>
-                            </div>
-                        </div>
-                        <div class="location_container">
-                            <label for="location" class="location">Where are you based
-                                ?</label>
-                            <input type="text" name="location" id="location_input" placeholder="City, Country">
-                            <div class="flex_container">
-                                <div class="move_to_next" id="moveThird2">Next</div>
-                                <div class="move_to_next zero" id="moveSecondback2">Prev</div>
-                            </div>
-                        </div>
-                        <div class="type_container">
-                            <label for="type" class="type">Great, You are an ?</label>
-                            <select name="type" id="type_input">
-                                <option value="Autistic Person">Autistic Person</option>
-                                <option value="Autistic Parent">Autistic Parent</option>
-                                <option value="Non-Autistic Person">Non-Autistic Person</option>
-                            </select>
-                            <div class="flex_container">
-                                <div class="move_to_next" id="moveForth2">Next</div>
-                                <div class="move_to_next zero" id="moveThirdback2">Prev</div>
-                            </div>
-                        </div>
-                        <div class="authorize_container">
-                            <label for="type" class="type">Sign in with</label>
-                            <div class="google_signIn" id="signIn_google">
-                                <img src="assets/input_section/signIn_google.svg" alt="Google sign in">
-                                <span class="authentication_name">Google Sign-in</span>
-                            </div>
-                            <div class="facebook_signIn" id="signIn_facebook">
-                                <img src="assets/input_section/signIn_facebook.svg" alt="Facebook sign in">
-                                <span class="authentication_name">Facebook Sign-in</span>
-                            </div>
-                            <div class="flex_container">
-                                <div class="move_to_next" id="moveFifth2">Next</div>
-                                <div class="move_to_next zero" id="moveForthback2">Prev</div>
-                            </div>
-                        </div>
-                        <div class="submit_container">
-                            <label for="submit" class="submit">Great do you want to proceed
-                                ?</label>
-                            <div class="flex_container wid">
-                                <input type="submit" value="Yeah, Submit My Details" id="submitForm2">
-                            </div>
-                        </div>
-                        <div class="signIn-done">
-                            sign in done
-                        </div>
-                    </form>
+                    </div>
+                    <div class="inputSection_illustration">
+                        <img src="assets/input_section/input_illustration01.svg" alt="Input Illustrations"
+                            class="input_illustration active">
+                        <img src="assets/input_section/input_illustration02.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration03.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration04.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                        <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
+                            class="input_illustration">
+                    </div>
                 </div>
             </div>
             <div class="input_text_bottom">
