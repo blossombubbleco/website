@@ -25,7 +25,8 @@ a {
     --per-card: #ffffff;
     --per-input: #ffffff;
     --signIn-lightMode: #F0DDDB;
-    --per-card-textHead: #1A1A40 --per-card-textHead-desc:#626877;
+    --per-card-textHead: #1A1A40;
+    --per-card-textHead-desc: #626877;
     --transition_lightMode: #F4DCDB;
     --clr-tertiory-footer: #1A1A40;
     --clr-signtxt: #595978;

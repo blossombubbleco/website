@@ -157,7 +157,7 @@
 }
 
 .input_form {
-    padding: 140px 140px;
+    padding: 140px 140px 20px;
     background-color: var(--signIn-lightMode);
     border-radius: 46px;
     height: 48em;
@@ -166,7 +166,7 @@
 .formOverflow {
     width: 40em;
     overflow: hidden;
-    height: 100%;
+    height: 95%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -179,11 +179,28 @@
     transition: 500ms;
 }
 
+.section_wrapper {
+    height: 78%;
+}
+
+.input_text_bottom {
+    margin-top: 3em;
+}
+
+.input_text_bottom p {
+    font-size: 14px;
+    text-align: center;
+}
+
+.input_text_bottom p a {
+    text-decoration: underline;
+}
+
 .flex_container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 36%;
+    width: 89%;
 }
 
 .wid {
@@ -212,7 +229,7 @@
     line-height: 38px;
     color: var(--text-heading);
     display: block;
-    margin-bottom: 20px;
+    margin-bottom: 26px;
 }
 
 #name_input,
@@ -226,16 +243,32 @@
     border: 0px;
     font-size: 18px;
     padding-left: 15px;
-    margin-bottom: 35px;
-    width: 34em;
+    margin-bottom: 4em;
+    width: 30.2em;
 }
 
-#name_input,
-#email_input,
-#location_input,
-.move_to_next,
-#type_input {
-    margin-left: 28px;
+.numbers {
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 38px;
+    color: var(--text-heading);
+}
+
+.flowing_number {
+    transition: all 500ms ease-in-out;
+}
+
+.whole_number {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 38px;
+    color: var(--text-heading-desc);
+}
+
+.number_update {
+    display: flex;
+    height: 2.3em;
+    overflow: hidden;
 }
 
 .light {
@@ -286,7 +319,6 @@
     cursor: pointer;
     background-color: var(--per-input);
     border-radius: 8px;
-    margin-left: 28px;
     width: 34em;
     transition: 500ms;
     padding: 8px 15px;
@@ -313,7 +345,7 @@
 }
 
 .facebook_signIn {
-    margin-bottom: 35px;
+    margin-bottom: 50px;
     padding: 10px 15px;
 }
 
