@@ -17,7 +17,8 @@ a {
     --clr-clear: #ffffff;
     --text-heading: #1A1A40;
     --text-heading-desc: #9595a3;
-    ;
+    --input_join-dark: #595978;
+    --input_join-light: #72728A;
     --text-section_heading-desc: #424264;
     --text-section_heading-descc: #424264;
     --input-text: #ACB5C4;
@@ -42,6 +43,8 @@ a {
     --clr-signtxt: #e7e7e7;
     --text-heading-desc: #C0C0C0;
     --text-section_heading-desc: #C0C0C0;
+    --input_join-dark: #F3F3F3;
+    --input_join-light: #e0e0e0;
     --text-section_heading-descc: #dfdfdf;
     --per-card: #252B77;
     --per-card-textHead: #FFFFFF;

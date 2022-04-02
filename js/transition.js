@@ -3,6 +3,10 @@ const container_01 = document.querySelector('.transition_container_01');
 const container_02 = document.querySelector('.transition_container_02');
 const container_03 = document.querySelector('.transition_container_03');
 const container_04 = document.querySelector('.transition_container_04');
+const container_05 = document.querySelector('.transition_container_05');
+const container_06 = document.querySelector('.transition_container_06');
+const container_07 = document.querySelector('.transition_container_07');
+const container_08 = document.querySelector('.transition_container_08');
 
 const image = document.querySelectorAll('.mobile_preview');
 
@@ -109,3 +113,71 @@ observer04 = new IntersectionObserver((entries) => {
     })
 }, options04);
 observer04.observe(container_04);
+
+options05 = {
+    root: null,
+    threshold: 0.1
+}
+observer05 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            image[4].classList.remove('active');
+            image[5].classList.add('active');
+        }
+        else {
+            image[5].classList.remove('active');
+        }
+    })
+}, options05);
+observer05.observe(container_05);
+
+options06 = {
+    root: null,
+    threshold: 0.1
+}
+observer06 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            image[5].classList.remove('active');
+            image[6].classList.add('active');
+        }
+        else {
+            image[6].classList.remove('active');
+        }
+    })
+}, options06);
+observer06.observe(container_06);
+
+options07 = {
+    root: null,
+    threshold: 0.1
+}
+observer07 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            image[6].classList.remove('active');
+            image[7].classList.add('active');
+        }
+        else {
+            image[7].classList.remove('active');
+        }
+    })
+}, options07);
+observer07.observe(container_07);
+
+options08 = {
+    root: null,
+    threshold: 0.1
+}
+observer08 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            image[7].classList.remove('active');
+            image[8].classList.add('active');
+        }
+        else {
+            image[8].classList.remove('active');
+        }
+    })
+}, options08);
+observer08.observe(container_08);
