@@ -592,11 +592,10 @@
 
 .transitionEnd-3 {
     height: 6.5em;
+    background: -webkit-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -o-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
-}
-
-#checkbox:checked+.transtionEnd-section .transitionEnd-3 {
-    background: #0C0F37;
 }
 
 .start {
