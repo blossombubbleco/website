@@ -206,6 +206,7 @@
 .input_text_bottom p {
     font-size: 14px;
     text-align: center;
+    color: var(--per-card-textHead-desc);
 }
 
 .input_text_bottom p a {
@@ -592,6 +593,10 @@
 .transitionEnd-3 {
     height: 6.5em;
     background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+#checkbox:checked+.transtionEnd-section .transitionEnd-3 {
+    background: #0C0F37;
 }
 
 .start {
