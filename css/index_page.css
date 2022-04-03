@@ -441,6 +441,8 @@
 
 .bot {
     margin-bottom: 40px;
+    width: 70%;
+    margin: auto;
 }
 
 .card {
@@ -490,9 +492,8 @@
 }
 
 .bg-white {
-    /* background-color: #ffffff; */
     margin-bottom: 0px;
-    margin-top: 5rem;
+    margin-top: 7rem;
 }
 
 .abs_container {
@@ -592,9 +593,6 @@
 
 .transitionEnd-3 {
     height: 6.5em;
-    background: -webkit-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
-    background: -moz-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
-    background: -o-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
     background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
 }
 

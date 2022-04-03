@@ -10,13 +10,14 @@ import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, isS
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyAYemrEFaKFrqU1YbN5Cl8QnXLjKt5pYe8",
-    authDomain: "bb-website-83473.firebaseapp.com",
-    projectId: "bb-website-83473",
-    storageBucket: "bb-website-83473.appspot.com",
-    messagingSenderId: "1049078427872",
-    appId: "1:1049078427872:web:ec7e326d3018cf33d76085",
-    measurementId: "G-18YJG46V4W"
+    apiKey: "AIzaSyBnogqDTBrG9Q-wrZTL4SAwK0a-c9m7dME",
+    authDomain: "blossom-bubble-co.firebaseapp.com",
+    databaseURL: "https://blossom-bubble-co-default-rtdb.firebaseio.com",
+    projectId: "blossom-bubble-co",
+    storageBucket: "blossom-bubble-co.appspot.com",
+    messagingSenderId: "323769521871",
+    appId: "1:323769521871:web:49c438e3a9234fabad09ba",
+    measurementId: "G-V89SZFXDGF"
 };
 
 
@@ -44,8 +45,10 @@ showHidebtn.addEventListener('click', () => {
 //google_signIn btn
 const googleSignInBtn = document.querySelector('.google_signIn');
 const facebookSignInBtn = document.querySelector('.facebook_signIn');
+const emailSignInBtn = document.querySelector('.Email_signIn');
 const googleSignInBtn2 = document.querySelector('#signIn_google');
 const facebookSignInBtn2 = document.querySelector('#signIn_facebook');
+const emailSignInBtn2 = document.querySelector('#signIn_email');
 
 
 googleSignInBtn.addEventListener('click', () => {
@@ -54,21 +57,26 @@ googleSignInBtn.addEventListener('click', () => {
 facebookSignInBtn.addEventListener('click', () => {
     signInWithFacebook();
 })
+emailSignInBtn.addEventListener('click', () => {
+    sendEmail();
+})
 googleSignInBtn2.addEventListener('click', () => {
     signInWithGoogle();
 })
 facebookSignInBtn2.addEventListener('click', () => {
     signInWithFacebook();
 })
-var name = GetInputVal('name_input');
-var email = GetInputVal('email_input');
-var location = GetInputVal('location_input');
-var type = GetInputVal('type_input');
+emailSignInBtn2.addEventListener('click', () => {
+    sendEmail();
+})
+// 
 submit.addEventListener('click', (e) => {
     var name = GetInputVal('name_input');
     var email = GetInputVal('email_input');
     var location = GetInputVal('location_input');
     var type = GetInputVal('type_input');
+
+    console.log(name, email, location, type)
 
     e.preventDefault();
     //call the function to save the values on submit
@@ -76,9 +84,11 @@ submit.addEventListener('click', (e) => {
         alert('Please fill out all the details');
     }
     else {
-        form.style.transform = "translateX(-240em)"
         addVal();
-        sendEmail();
+        setInterval(function closeWindow() {
+            formContainer.style.display = 'none';
+        }, 6000);
+        clearInterval();
     }
 });
 submit1.addEventListener('click', (e) => {
@@ -88,20 +98,23 @@ submit1.addEventListener('click', (e) => {
         alert('Please fill out all the details');
     }
     else {
-        form.style.transform = "translateX(-240em)"
         addVal();
-        // sendEmail();
     }
 });
-// var email = GetInputVal('email_input');
+
+//city/country api
 
 function GetInputVal(id) {
     return document.getElementById(id).value;
 }
 async function addVal() {
+    var name = GetInputVal('name_input');
+    var email = GetInputVal('email_input');
+    var location = GetInputVal('location_input');
+    var type = GetInputVal('type_input');
     try {
 
-        const docRef = await addDoc(collection(db, "users"), {
+        const docRef = await addDoc(collection(db, "website_user"), {
             name: name,
             email: email,
             location: location,
@@ -118,7 +131,7 @@ function sendEmail() {
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
-        url: 'http://127.0.0.1:5501/',
+        url: 'https://blossombubbleco.github.io/website/',
         // This must be true.
         handleCodeInApp: true,
         iOS: {
@@ -129,9 +142,9 @@ function sendEmail() {
             installApp: true,
             minimumVersion: '12'
         },
-        dynamicLinkDomain: 'example.page.link'
+        // dynamicLinkDomain: 'example.page.link'
     };
-
+    var email = GetInputVal('email_input');
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
             // The link was successfully sent. Inform the user.

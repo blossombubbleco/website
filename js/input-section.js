@@ -20,13 +20,12 @@ var transFifthBack = document.querySelector('#moveFifthback');
 //number changing
 const num = document.querySelector('.flowing_number');
 
-['click', 'keydown'].forEach(evt => {
-    transFirst.addEventListener(evt, () => {
-        form.style.transform = "translateX(-40em)";
-        num.style.transform = 'translateY(-2.4em)';
-        inputIllustrations[0].classList.remove('active');
-        inputIllustrations[1].classList.add('active');
-    })
+
+transFirst.addEventListener('click', () => {
+    form.style.transform = "translateX(-40em)";
+    num.style.transform = 'translateY(-2.4em)';
+    inputIllustrations[0].classList.remove('active');
+    inputIllustrations[1].classList.add('active');
 })
 transSecond.addEventListener('click', () => {
     form.style.transform = "translateX(-80em)";
