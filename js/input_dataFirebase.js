@@ -3,7 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, isSignInWithEmailLink, signInWithEmailLink, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -59,6 +59,7 @@ facebookSignInBtn.addEventListener('click', () => {
 })
 emailSignInBtn.addEventListener('click', () => {
     sendEmail();
+    email_text[0].style.display = 'block';
 })
 googleSignInBtn2.addEventListener('click', () => {
     signInWithGoogle();
@@ -68,6 +69,7 @@ facebookSignInBtn2.addEventListener('click', () => {
 })
 emailSignInBtn2.addEventListener('click', () => {
     sendEmail();
+    email_text[1].style.display = 'block';
 })
 // 
 submit.addEventListener('click', (e) => {
@@ -127,39 +129,45 @@ async function addVal() {
 };
 
 //send email function
-const actionCodeSettings = {
-    // URL you want to redirect back to. The domain (www.example.com) for this
-    // URL must be in the authorized domains list in the Firebase Console.
-    url: 'http://127.0.0.1:5501/index.html',
-    // This must be true.
-    handleCodeInApp: true,
-    iOS: {
-        bundleId: 'com.example.ios'
-    },
-    android: {
-        packageName: 'com.example.android',
-        installApp: true,
-        minimumVersion: '12'
-    },
-    dynamicLinkDomain: 'http://127.0.0.1:5501/index.html'
-};
+const email_text = document.querySelectorAll('.email_auth');
 function sendEmail() {
     var email = GetInputVal('email_input');
+    const actionCodeSettings = {
+        // URL you want to redirect back to. The domain (www.example.com) for this
+        // URL must be in the authorized domains list in the Firebase Console.
+        url: 'http://127.0.0.1:5501/',
+        // This must be true.
+        handleCodeInApp: true,
+        // iOS: {
+        //     bundleId: 'com.example.ios'
+        // },
+        // android: {
+        //     packageName: 'com.example.android',
+        //     installApp: true,
+        //     minimumVersion: '12'
+        // },
+        // dynamicLinkDomain: 'example.page.link'
+    };
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
             // The link was successfully sent. Inform the user.
+            // emailSent();
             // Save the email locally so you don't need to ask the user for it again
             // if they open the link on the same device.
             window.localStorage.setItem('emailForSignIn', email);
+
             // ...
         })
         .catch((error) => {
             const errorCode = error.code;
             const errorMessage = error.message;
             // ...
+            console.log('error is here');
         });
 }
-
+function emailSent() {
+    email_text.style.display = 'block';
+}
 
 //function for the google authentication
 function signInWithGoogle() {

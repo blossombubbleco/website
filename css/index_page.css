@@ -345,7 +345,20 @@
     transition: 500ms;
     padding: 8px 15px;
     margin-bottom: 28px;
+    position: relative;
+}
 
+.Email_signIn {
+    margin-bottom: 41px;
+}
+
+.email_auth {
+    display: none;
+    position: absolute;
+    top: 49px;
+    right: 0px;
+    color: red;
+    font-size: 14px;
 }
 
 .google_signIn img {
