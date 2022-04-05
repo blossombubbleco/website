@@ -127,23 +127,23 @@ async function addVal() {
 };
 
 //send email function
+const actionCodeSettings = {
+    // URL you want to redirect back to. The domain (www.example.com) for this
+    // URL must be in the authorized domains list in the Firebase Console.
+    url: 'http://127.0.0.1:5501/index.html',
+    // This must be true.
+    handleCodeInApp: true,
+    iOS: {
+        bundleId: 'com.example.ios'
+    },
+    android: {
+        packageName: 'com.example.android',
+        installApp: true,
+        minimumVersion: '12'
+    },
+    dynamicLinkDomain: 'http://127.0.0.1:5501/index.html'
+};
 function sendEmail() {
-    const actionCodeSettings = {
-        // URL you want to redirect back to. The domain (www.example.com) for this
-        // URL must be in the authorized domains list in the Firebase Console.
-        url: 'https://blossombubbleco.github.io/website/',
-        // This must be true.
-        handleCodeInApp: true,
-        iOS: {
-            bundleId: 'com.example.ios'
-        },
-        android: {
-            packageName: 'com.example.android',
-            installApp: true,
-            minimumVersion: '12'
-        },
-        // dynamicLinkDomain: 'example.page.link'
-    };
     var email = GetInputVal('email_input');
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {

@@ -16,6 +16,7 @@ var transSecondBack = document.querySelector('#moveSeondback');
 var transThirdBack = document.querySelector('#moveThirdback');
 var transFourthBack = document.querySelector('#moveForthback');
 var transFifthBack = document.querySelector('#moveFifthback');
+const quesDesc = document.querySelectorAll('.input_text_bottom');
 
 //number changing
 const num = document.querySelector('.flowing_number');
@@ -38,12 +39,14 @@ transThird.addEventListener('click', () => {
     num.style.transform = 'translateY(-7.2em)';
     inputIllustrations[2].classList.remove('active');
     inputIllustrations[3].classList.add('active');
+    quesDesc[0].style.display = 'block';
 })
 transForth.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
     num.style.transform = 'translateY(-9.6em)';
     inputIllustrations[3].classList.remove('active');
     inputIllustrations[4].classList.add('active');
+    quesDesc[0].style.display = 'none';
 })
 transFifth.addEventListener('click', () => {
     form.style.transform = "translateX(-200em)";
@@ -68,12 +71,14 @@ transThirdBack.addEventListener('click', () => {
     num.style.transform = 'translateY(-4.8em)';
     inputIllustrations[2].classList.add('active');
     inputIllustrations[3].classList.remove('active');
+    quesDesc[0].style.display = 'none';
 })
 transFourthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-120em)";
     num.style.transform = 'translateY(-7.2em)';
     inputIllustrations[3].classList.add('active');
     inputIllustrations[4].classList.remove('active');
+    quesDesc[0].style.display = 'block';
 })
 transFifthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
@@ -109,39 +114,61 @@ submit1.addEventListener('click', (event) => {
 transFirst2.addEventListener('click', () => {
     form2.style.transform = "translateX(-40em)";
     num2.style.transform = 'translateY(-2.4em)';
+    inputIllustrations[5].classList.remove('active');
+    inputIllustrations[6].classList.add('active');
 })
 transSecond2.addEventListener('click', () => {
     form2.style.transform = "translateX(-80em)";
     num2.style.transform = 'translateY(-4.8em)';
+    inputIllustrations[6].classList.remove('active');
+    inputIllustrations[7].classList.add('active');
 })
 transThird2.addEventListener('click', () => {
     form2.style.transform = "translateX(-120em)";
     num2.style.transform = 'translateY(-7.2em)';
+    inputIllustrations[7].classList.remove('active');
+    inputIllustrations[8].classList.add('active');
+    quesDesc[1].style.display = 'block';
 })
 transForth2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";
     num2.style.transform = 'translateY(-9.6em)';
+    inputIllustrations[8].classList.remove('active');
+    inputIllustrations[9].classList.add('active');
+    quesDesc[1].style.display = 'none';
 })
 transFifth2.addEventListener('click', () => {
     form2.style.transform = "translateX(-200em)";
+    inputIllustrations[9].classList.remove('active');
 })
 
 transFirstBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(0em)";
     num2.style.transform = 'translateY(0em)';
+    inputIllustrations[5].classList.add('active');
+    inputIllustrations[6].classList.remove('active');
 })
 transSecondBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-40em)";
     num2.style.transform = 'translateY(-2.4em)';
+    inputIllustrations[6].classList.add('active');
+    inputIllustrations[7].classList.remove('active');
 })
 transThirdBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-80em)";
     num2.style.transform = 'translateY(-4.8em)';
+    inputIllustrations[7].classList.add('active');
+    inputIllustrations[8].classList.remove('active');
+    quesDesc[1].style.display = 'none';
 })
 transFourthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-120em)";
     num2.style.transform = 'translateY(-7.2em)';
+    inputIllustrations[8].classList.add('active');
+    inputIllustrations[9].classList.remove('active');
+    quesDesc[1].style.display = 'block';
 })
 transFifthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";
+    inputIllustrations[9].classList.add('active');
 })

@@ -26,26 +26,9 @@ check.addEventListener('change', () => {
 
 
 
-// options00 = {
-//     root: null,
-//     threshold: 0.1
-// }
-// observer00 = new IntersectionObserver((entries) => {
-//     entries.forEach(entry => {
-//         if (entry.isIntersecting) {
-//             image[0].classList.add('active');
-//         }
-//         else {
-//             // image[0].classList.remove('active');
-//         }
-//     })
-// }, options00);
-// observer00.observe(container_00);
-
-
 options01 = {
     root: null,
-    threshold: 1
+    threshold: 0.2
 }
 observer01 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {

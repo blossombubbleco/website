@@ -200,6 +200,7 @@
 }
 
 .input_text_bottom {
+    display: none;
     margin-top: 3em;
 }
 
@@ -217,11 +218,11 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 89%;
+    width: 31%;
 }
 
 .wid {
-    width: 94%;
+    width: 59%;
 }
 
 .input_illustration {
@@ -1223,14 +1224,14 @@
 
     .formOverflow {
         height: 94%;
-        width: 100%;
+        width: 17%;
     }
 
     .section_wrapper {
         height: 100%;
     }
 
-    .input_text_bottom {
+    .input_text_bottom p {
         display: none;
     }
 
@@ -1408,9 +1409,17 @@
     }
 
     .section_title {
-        font-size: 2.1em;
+        font-size: 1.4em;
         line-height: 41px;
         margin-bottom: 20px;
+    }
+
+    .bg-white {
+        margin-top: 3rem;
+    }
+
+    .bot {
+        width: 95%;
     }
 
     .join_text {
@@ -1554,7 +1563,7 @@
         width: 49%;
     }
 
-    .input_text_bottom {
+    .input_text_bottom p {
         display: none;
     }
 
