@@ -1,6 +1,7 @@
 /*******************************************Header styling*******************************************/
 .footer_section {
-    background: url(../assets/footer_section/Footer-background-LightMode.svg);
+    /* background: url(../assets/footer_section/Footer-background-LightMode.svg); */
+    background-color: var(--transition_lightMode);
     background-size: cover;
     padding: 79px 240px 15px;
     text-align: center;

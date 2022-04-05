@@ -3,6 +3,7 @@ const submit = document.querySelector('#submitForm');
 const submit1 = document.querySelector('#submitForm2');
 const formContainer = document.querySelector('.early_access_section');
 const inputIllustrations = document.querySelectorAll('.input_illustration');
+const formBottom = document.querySelector('#form_bottom');
 
 
 var form = document.querySelector('#form');
@@ -18,28 +19,49 @@ var transFourthBack = document.querySelector('#moveForthback');
 var transFifthBack = document.querySelector('#moveFifthback');
 const quesDesc = document.querySelectorAll('.input_text_bottom');
 
+
+
 //number changing
 const num = document.querySelector('.flowing_number');
 
+function GetInputVal(id) {
+    return document.getElementById(id).value;
+}
 
 transFirst.addEventListener('click', () => {
-    form.style.transform = "translateX(-40em)";
-    num.style.transform = 'translateY(-2.4em)';
-    inputIllustrations[0].classList.remove('active');
-    inputIllustrations[1].classList.add('active');
+    var name = GetInputVal('name_input');
+    if (name == '') {
+        alert('Please enter your Name');
+    } else {
+        form.style.transform = "translateX(-40em)";
+        num.style.transform = 'translateY(-2.4em)';
+        inputIllustrations[0].classList.remove('active');
+        inputIllustrations[1].classList.add('active');
+    }
 })
 transSecond.addEventListener('click', () => {
-    form.style.transform = "translateX(-80em)";
-    num.style.transform = 'translateY(-4.8em)';
-    inputIllustrations[1].classList.remove('active');
-    inputIllustrations[2].classList.add('active');
+    var email = GetInputVal('email_input');
+    if (email == '') {
+        alert('Please enter your email')
+    }
+    else {
+        form.style.transform = "translateX(-80em)";
+        num.style.transform = 'translateY(-4.8em)';
+        inputIllustrations[1].classList.remove('active');
+        inputIllustrations[2].classList.add('active');
+    }
 })
 transThird.addEventListener('click', () => {
-    form.style.transform = "translateX(-120em)";
-    num.style.transform = 'translateY(-7.2em)';
-    inputIllustrations[2].classList.remove('active');
-    inputIllustrations[3].classList.add('active');
-    quesDesc[0].style.display = 'block';
+    var location = GetInputVal('location_input');
+    if (location == '') {
+        alert('Please enter your Location')
+    } else {
+        form.style.transform = "translateX(-120em)";
+        num.style.transform = 'translateY(-7.2em)';
+        inputIllustrations[2].classList.remove('active');
+        inputIllustrations[3].classList.add('active');
+        quesDesc[0].style.display = 'block';
+    }
 })
 transForth.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
@@ -93,7 +115,9 @@ transFifthBack.addEventListener('click', () => {
 
 
 
-
+function GetInputValClass(Class) {
+    return document.getElementsByClassName(Class).value;
+}
 var form2 = document.querySelector('#form2');
 var transFirst2 = document.querySelector('#moveFirst2');
 var transSecond2 = document.querySelector('#moveSecond2');
@@ -112,23 +136,39 @@ submit1.addEventListener('click', (event) => {
     event.preventDefault();
 });
 transFirst2.addEventListener('click', () => {
-    form2.style.transform = "translateX(-40em)";
-    num2.style.transform = 'translateY(-2.4em)';
-    inputIllustrations[5].classList.remove('active');
-    inputIllustrations[6].classList.add('active');
+    var name = document.querySelector('.name_input').value;
+    if (name == '') {
+        alert('Please enter your Name');
+    } else {
+        form2.style.transform = "translateX(-40em)";
+        num2.style.transform = 'translateY(-2.4em)';
+        inputIllustrations[5].classList.remove('active');
+        inputIllustrations[6].classList.add('active');
+    }
 })
 transSecond2.addEventListener('click', () => {
-    form2.style.transform = "translateX(-80em)";
-    num2.style.transform = 'translateY(-4.8em)';
-    inputIllustrations[6].classList.remove('active');
-    inputIllustrations[7].classList.add('active');
+    var email = document.querySelector('.email_input').value
+    if (email == '') {
+        alert('Please enter your email')
+    }
+    else {
+        form2.style.transform = "translateX(-80em)";
+        num2.style.transform = 'translateY(-4.8em)';
+        inputIllustrations[6].classList.remove('active');
+        inputIllustrations[7].classList.add('active');
+    }
 })
 transThird2.addEventListener('click', () => {
-    form2.style.transform = "translateX(-120em)";
-    num2.style.transform = 'translateY(-7.2em)';
-    inputIllustrations[7].classList.remove('active');
-    inputIllustrations[8].classList.add('active');
-    quesDesc[1].style.display = 'block';
+    var location = document.querySelector('.location_input').value
+    if (location == '') {
+        alert('Please enter your Location')
+    } else {
+        form2.style.transform = "translateX(-120em)";
+        num2.style.transform = 'translateY(-7.2em)';
+        inputIllustrations[7].classList.remove('active');
+        inputIllustrations[8].classList.add('active');
+        quesDesc[1].style.display = 'block';
+    }
 })
 transForth2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";

@@ -21,11 +21,12 @@
 }
 
 .header_brand {
-    font-weight: 300;
-    font-size: 48px;
+    font-weight: 600;
+    font-size: 46px;
     line-height: 72px;
-    text-transform: uppercase;
-    color: var(--clr-primary);
+    background: -webkit-linear-gradient(297deg, rgb(242, 95, 186) 2.1%, #f26bcb 25.21%, #cb5bfb 49.16%, #8043fc 68.91%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .header_faq-btn {

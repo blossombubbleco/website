@@ -34,7 +34,7 @@
         <div class="header_logo">
             <a href="index.html">
                 <img src="assets/header/website-brand_logo.svg" alt="Blossom logo" class="blossom-brand">
-                <h1 class="header_brand">Blausm.</h1>
+                <h1 class="header_brand">blausm.</h1>
             </a>
         </div>
         <div class="header_btn">
@@ -390,7 +390,7 @@
         </div>
     </section>
 
-    <section class="early_access_section">
+    <section class="early_access_section" id="form_bottom">
         <div class="input_form">
             <div class="section_wrapper">
                 <div class="number_update">
@@ -410,13 +410,15 @@
                                 <div class="name_container">
                                     <label for="name" class="name">What's Your Full
                                         Name ?</label>
-                                    <input type="text" name="name" id="name_input" placeholder="Enter your Name">
+                                    <input type="text" name="name" id="name_input" placeholder="Enter your Name"
+                                        class="name_input">
                                     <div class="move_to_next" id="moveFirst2">Next</div>
                                 </div>
                                 <div class="email_container">
                                     <label for="email" class="email_label">Btw
                                         What's Your Email ?</label>
-                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com">
+                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com"
+                                        class="email_input">
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveFirstback2">Prev</div>
                                         <div class="move_to_next" id="moveSecond2">Next</div>
@@ -425,7 +427,8 @@
                                 <div class="location_container">
                                     <label for="location" class="location">Where are you based
                                         ?</label>
-                                    <input type="text" name="location" id="location_input" placeholder="City, Country">
+                                    <input type="text" name="location" id="location_input" placeholder="City, Country"
+                                        class="location_input">
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveSecondback2">Prev</div>
                                         <div class="move_to_next" id="moveThird2">Next</div>
@@ -507,21 +510,18 @@
     <footer class="footer_section">
         <div class="footer_social-icon">
             <a href="#">
-                <img src="assets/footer_section/social_instagram-whiteIcon.svg" alt="Social Instagram Icon"
-                    class="socialTag none">
-                <img src="assets/footer_section/social_instagram-DarkIcon.svg" alt="Social Instagram Icon"
-                    class="socialTag hid">
+                <img src="assets/footer_section/social_metaLink.svg" alt="Social Instagram Icon" class="socialTag">
+                <!-- <img src="assets/footer_section/social_instagram-DarkIcon.svg" alt="Social Instagram Icon"
+                class="socialTag hid"> -->
             </a>
             <a href="#">
-                <img src="assets/footer_section/social_meta-whiteIcon.svg" alt="Social Meta Icon"
-                    class="socialTag none">
-                <img src="assets/footer_section/social_meta-DarkIcon.svg" alt="Social Meta Icon" class="socialTag hid">
+                <img src="assets/footer_section/social_twitterLink.svg" alt="Social Meta Icon" class="socialTag">
+                <!-- <img src="assets/footer_section/social_meta-DarkIcon.svg" alt="Social Meta Icon" class="socialTag hid"> -->
             </a>
             <a href="#">
-                <img src="assets/footer_section/social_twitter-whiteIcon.svg" alt="Social Twitter Icon"
-                    class="socialTag none">
-                <img src="assets/footer_section/social_twitter-DarkIcon.svg" alt="Social Twitter Icon"
-                    class="socialTag hid">
+                <img src="assets/footer_section/social_igLink.svg" alt="Social Twitter Icon" class="socialTag">
+                <!-- <img src="assets/footer_section/social_twitter-DarkIcon.svg" alt="Social Twitter Icon" -->
+                <!-- class="socialTag hid"> -->
             </a>
             <!-- <a href="#">
                 <img src="assets/footer_section/social_pintrest-whiteIcon.svg" alt="Social Pintrest Icon"
@@ -558,6 +558,7 @@
     </script>
     <script src="js/input-section.js"></script>
     <script type="module" src="js/input_dataFirebase.js"></script>
+
 </body>
 
 </html>

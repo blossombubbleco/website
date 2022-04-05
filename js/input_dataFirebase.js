@@ -31,7 +31,7 @@ const auth = getAuth(app);
 //initialize the google authentication
 const provider1 = new GoogleAuthProvider();
 //initialize the facebook authentication
-const provider2 = new FacebookAuthProvider();
+const provider = new FacebookAuthProvider();
 
 
 // send the data in the form of collections
@@ -82,29 +82,33 @@ submit.addEventListener('click', (e) => {
 
     e.preventDefault();
     //call the function to save the values on submit
-    if (name == "" || email == "" || location == "" || type == "") {
-        alert('Please fill out all the details');
-    }
-    else {
-        addVal();
-        setInterval(function closeWindow() {
+
+    addVal();
+    runAfterSubmit()
+    function runAfterSubmit() {
+        setTimeout(function closeWindow() {
             formContainer.style.display = 'none';
         }, 6000);
-        clearInterval();
+        const btn = document.querySelector('#joinUs_btn');
+        btn.innerHTML = "Thank you for joining"
+        formBottom.style.display = 'none'
     }
+
 });
 submit1.addEventListener('click', (e) => {
     e.preventDefault();
-    //call the function to save the values on submit
-    if (name == "" || email == "" || location == "" || type == "") {
-        alert('Please fill out all the details');
-    }
-    else {
-        addVal();
-    }
+    addVal();
 });
 
 //city/country api
+function getData() {
+    url = '';
+    fetch(url).then((response) => {
+        return response.text();
+    }).then((data) => {
+        console.log(data);
+    })
+}
 
 function GetInputVal(id) {
     return document.getElementById(id).value;
@@ -151,7 +155,6 @@ function sendEmail() {
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
             // The link was successfully sent. Inform the user.
-            // emailSent();
             // Save the email locally so you don't need to ask the user for it again
             // if they open the link on the same device.
             window.localStorage.setItem('emailForSignIn', email);
@@ -164,9 +167,6 @@ function sendEmail() {
             // ...
             console.log('error is here');
         });
-}
-function emailSent() {
-    email_text.style.display = 'block';
 }
 
 //function for the google authentication
@@ -199,19 +199,20 @@ function signInWithGoogle() {
 
 function signInWithFacebook() {
 
-    signInWithPopup(auth, provider2)
+    signInWithPopup(auth, provider)
         .then((result) => {
             // The signed-in user info.
             const user = result.user;
-
+            console.log('this is working');
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
-            form.style.transform = "translateX(-200em)";
+
             // ...
         })
         .catch((error) => {
             // Handle Errors here.
+            console.log('this is not working');
             const errorCode = error.code;
             const errorMessage = error.message;
             // The email of the user's account used.
