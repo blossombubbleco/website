@@ -164,8 +164,15 @@
                                 <div class="location_container">
                                     <label for="location" class="location">Where are you located
                                         ?</label>
-                                    <input type="text" name="location" id="location_input"
-                                        placeholder="Enter Your City and Country" required>
+                                    <div class="country">
+                                        <span class="text_location">Country:</span>
+                                        <select type="text" name="location" id="location_input"
+                                            placeholder="Enter Your City and Country"></select>
+                                    </div>
+                                    <div class="city">
+                                        <span class="text_location right">City</span>
+                                        <select name="location_city" id="location_inputCity"></select>
+                                    </div>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveSeondback">Prev</div>
                                         <div class="move_to_next" id="moveThird">Next</div>

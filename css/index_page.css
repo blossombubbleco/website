@@ -256,7 +256,8 @@
 #name_input,
 #email_input,
 #location_input,
-#type_input {
+#type_input,
+#location_inputCity {
     height: 3rem;
     outline: none;
     background-color: var(--per-input);
@@ -266,6 +267,31 @@
     padding-left: 15px;
     margin-bottom: 4em;
     width: 30.2em;
+}
+
+#location_input,
+#location_inputCity {
+    width: 25.2em;
+    margin-bottom: 0px;
+}
+
+
+.country {
+    margin-bottom: 2em;
+}
+
+.city {
+    margin-bottom: 3em;
+}
+
+.text_location {
+    font-size: 18px;
+    margin-right: 12px;
+    color: var(--text-heading);
+}
+
+.right {
+    margin-right: 2.8em;
 }
 
 .numbers {

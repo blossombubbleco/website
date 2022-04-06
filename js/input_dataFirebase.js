@@ -101,13 +101,51 @@ submit1.addEventListener('click', (e) => {
 });
 
 //city/country api
+const location_output = document.querySelector('#location_input');
+getData();
 function getData() {
-    url = '';
+    var url = 'https://restcountries.com/v3.1/all';
     fetch(url).then((response) => {
-        return response.text();
+        return response.json();
     }).then((data) => {
-        console.log(data);
+        let output = '';
+        data.forEach(country => {
+            output += `<option>${country.name.common}</option>`
+            // console.log(country.name);
+        })
+        location_output.innerHTML = output;
+    }).catch(error => {
+        console.log(error);
     })
+}
+const location_outputCity = document.querySelector('#location_inputCity');
+getDataCity();
+function getDataCity() {
+    // var headers = new Headers();
+    // headers.append("X-CSCAPI-KEY", "API_KEY");
+
+    // var requestOptions = {
+    //     method: 'GET',
+    //     headers: headers,
+    //     redirect: 'follow'
+    // };
+
+    // fetch("https://api.countrystatecity.in/v1/states", requestOptions)
+    //     .then(response => response.text())
+    //     .then(result => console.log(result))
+    //     .catch(error => console.log('error', error));
+    const options = {
+        method: 'GET',
+        headers: {
+            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
+            'X-RapidAPI-Key': 'dbb60ea83emshc462c8aaeec9337p1baba4jsn6cbd6526cc0f'
+        }
+    };
+
+    fetch('https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions', options)
+        .then(response => response.json())
+        .then(response => console.log(response))
+        .catch(err => console.error(err));
 }
 
 function GetInputVal(id) {
@@ -203,7 +241,6 @@ function signInWithFacebook() {
         .then((result) => {
             // The signed-in user info.
             const user = result.user;
-            console.log('this is working');
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
