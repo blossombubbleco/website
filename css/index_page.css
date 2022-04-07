@@ -291,7 +291,7 @@
 }
 
 .right {
-    margin-right: 2.8em;
+    margin-right: 2.9em;
 }
 
 .numbers {
@@ -376,6 +376,11 @@
 
 .Email_signIn {
     margin-bottom: 41px;
+}
+
+#moveFifth,
+#moveFifth2 {
+    opacity: 0;
 }
 
 .email_auth {
@@ -1263,7 +1268,11 @@
 
     .formOverflow {
         height: 94%;
-        width: 17%;
+        width: 100%;
+    }
+
+    .width_flex {
+        width: 100%;
     }
 
     .section_wrapper {
@@ -1457,6 +1466,10 @@
         margin-top: 3rem;
     }
 
+    .width_flex {
+        width: 100%;
+    }
+
     .bot {
         width: 95%;
     }
@@ -1483,6 +1496,7 @@
         padding: 0px 12px;
         font-size: 1em;
     }
+
 
     .btns {
         display: flex;
@@ -1533,8 +1547,9 @@
     }
 
     .submit {
-        width: 66%;
+        width: 62%;
     }
+
 
     .feature_heading-desc {
         margin-top: 5px;
@@ -1606,10 +1621,14 @@
         display: none;
     }
 
+    .email_auth {
+        font-size: 12px;
+    }
+
     .google_signIn,
     .facebook_signIn,
     .Email_signIn {
-        width: 25em;
+        width: 53%;
     }
 
     .wid {
@@ -1632,6 +1651,10 @@
         font-size: 20px;
     }
 
+    #type_input {
+        width: 54%;
+    }
+
     .early_access_section {
         padding: 90px 5px;
     }
@@ -1642,5 +1665,19 @@
 
     .inputSection_illustration {
         display: none;
+    }
+
+    .name_container,
+    .email_container,
+    .location_container,
+    .type_container,
+    .authorize_container,
+    .submit_container {
+        height: 20.875em;
+    }
+
+    #location_input,
+    #location_inputCity {
+        width: 37%;
     }
 }

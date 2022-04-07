@@ -58,7 +58,8 @@ facebookSignInBtn.addEventListener('click', () => {
     signInWithFacebook();
 })
 emailSignInBtn.addEventListener('click', () => {
-    sendEmail();
+    var email = GetInputVal('email_input');
+    sendEmail(email);
     email_text[0].style.display = 'block';
 })
 googleSignInBtn2.addEventListener('click', () => {
@@ -68,7 +69,8 @@ facebookSignInBtn2.addEventListener('click', () => {
     signInWithFacebook();
 })
 emailSignInBtn2.addEventListener('click', () => {
-    sendEmail();
+    var email = document.querySelector('.email_input').value;
+    sendEmail(email)
     email_text[1].style.display = 'block';
 })
 // 
@@ -100,8 +102,18 @@ submit1.addEventListener('click', (e) => {
     addVal();
 });
 
+
+//btn show if user authenticated succesfully
+var transFifth = document.querySelector('#moveFifth');
+var transFifth2 = document.querySelector('#moveFifth2');
+function showRun() {
+    transFifth.style.opacity = '1';
+    transFifth2.style.opacity = '1';
+}
+
+
 //city/country api
-const location_output = document.querySelector('#location_input');
+const location_output = document.querySelectorAll('#location_input');
 getData();
 function getData() {
     var url = 'https://restcountries.com/v3.1/all';
@@ -113,7 +125,23 @@ function getData() {
             output += `<option>${country.name.common}</option>`
             // console.log(country.name);
         })
-        location_output.innerHTML = output;
+        location_output[0].innerHTML = output;
+    }).catch(error => {
+        console.log(error);
+    })
+}
+getData2()
+function getData2() {
+    var url = 'https://restcountries.com/v3.1/all';
+    fetch(url).then((response) => {
+        return response.json();
+    }).then((data) => {
+        let output = '';
+        data.forEach(country => {
+            output += `<option>${country.name.common}</option>`
+            // console.log(country.name);
+        })
+        location_output[1].innerHTML = output;
     }).catch(error => {
         console.log(error);
     })
@@ -121,19 +149,6 @@ function getData() {
 const location_outputCity = document.querySelector('#location_inputCity');
 getDataCity();
 function getDataCity() {
-    // var headers = new Headers();
-    // headers.append("X-CSCAPI-KEY", "API_KEY");
-
-    // var requestOptions = {
-    //     method: 'GET',
-    //     headers: headers,
-    //     redirect: 'follow'
-    // };
-
-    // fetch("https://api.countrystatecity.in/v1/states", requestOptions)
-    //     .then(response => response.text())
-    //     .then(result => console.log(result))
-    //     .catch(error => console.log('error', error));
     const options = {
         method: 'GET',
         headers: {
@@ -169,11 +184,9 @@ async function addVal() {
         console.error("Error adding document: ", e);
     }
 };
-
 //send email function
 const email_text = document.querySelectorAll('.email_auth');
-function sendEmail() {
-    var email = GetInputVal('email_input');
+function sendEmail(email) {
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
@@ -196,8 +209,7 @@ function sendEmail() {
             // Save the email locally so you don't need to ask the user for it again
             // if they open the link on the same device.
             window.localStorage.setItem('emailForSignIn', email);
-
-            // ...
+            showRun();
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -206,6 +218,31 @@ function sendEmail() {
             console.log('error is here');
         });
 }
+// function sendEmail2() {
+//     var email = document.querySelector('.email_input').value;
+//     const actionCodeSettings = {
+//         // URL you want to redirect back to. The domain (www.example.com) for this
+//         // URL must be in the authorized domains list in the Firebase Console.
+//         url: 'https://www.blausm.app/',
+//         // This must be true.
+//         handleCodeInApp: true,
+//     };
+//     sendSignInLinkToEmail(auth, email, actionCodeSettings)
+//         .then(() => {
+//             // The link was successfully sent. Inform the user.
+//             // Save the email locally so you don't need to ask the user for it again
+//             // if they open the link on the same device.
+//             window.localStorage.setItem('emailForSignIn', email);
+//             showRun();
+//             console.log('running');
+//         })
+//         .catch((error) => {
+//             const errorCode = error.code;
+//             const errorMessage = error.message;
+//             // ...
+//             console.log('error is here');
+//         });
+// }
 
 //function for the google authentication
 function signInWithGoogle() {
@@ -219,6 +256,8 @@ function signInWithGoogle() {
             const user = result.user;
             form.style.transform = "translateX(-200em)";
             // ...
+
+            showRun();
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
@@ -244,7 +283,7 @@ function signInWithFacebook() {
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
-
+            showRun();
             // ...
         })
         .catch((error) => {
