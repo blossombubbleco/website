@@ -92,14 +92,14 @@ submit.addEventListener('click', (e) => {
             formContainer.style.display = 'none';
         }, 6000);
         const btn = document.querySelector('#joinUs_btn');
-        btn.innerHTML = "Thank you for joining"
+        btn.innerHTML = "Thank you for joining our waitlist"
         formBottom.style.display = 'none'
     }
 
 });
 submit1.addEventListener('click', (e) => {
     e.preventDefault();
-    addVal();
+    addVal2();
 });
 
 
@@ -113,55 +113,60 @@ function showRun() {
 
 
 //city/country api
-const location_output = document.querySelectorAll('#location_input');
-getData();
-function getData() {
-    var url = 'https://restcountries.com/v3.1/all';
-    fetch(url).then((response) => {
-        return response.json();
-    }).then((data) => {
-        let output = '';
-        data.forEach(country => {
-            output += `<option>${country.name.common}</option>`
-            // console.log(country.name);
-        })
-        location_output[0].innerHTML = output;
-    }).catch(error => {
-        console.log(error);
-    })
-}
-getData2()
-function getData2() {
-    var url = 'https://restcountries.com/v3.1/all';
-    fetch(url).then((response) => {
-        return response.json();
-    }).then((data) => {
-        let output = '';
-        data.forEach(country => {
-            output += `<option>${country.name.common}</option>`
-            // console.log(country.name);
-        })
-        location_output[1].innerHTML = output;
-    }).catch(error => {
-        console.log(error);
-    })
-}
-const location_outputCity = document.querySelector('#location_inputCity');
-getDataCity();
-function getDataCity() {
-    const options = {
-        method: 'GET',
-        headers: {
-            'X-RapidAPI-Host': 'wft-geo-db.p.rapidapi.com',
-            'X-RapidAPI-Key': 'dbb60ea83emshc462c8aaeec9337p1baba4jsn6cbd6526cc0f'
-        }
-    };
+var headers = new Headers();
+headers.append("X-CSCAPI-KEY", "N3NXSFh0dHRUUUNYMXhmVWRwSDlndW8yMlJicU5acFVraEd6anRWUA==");
 
-    fetch('https://wft-geo-db.p.rapidapi.com/v1/geo/adminDivisions', options)
-        .then(response => response.json())
-        .then(response => console.log(response))
-        .catch(err => console.error(err));
+var requestOptions = {
+    method: 'GET',
+    headers: headers,
+    redirect: 'follow'
+};
+
+getcountry();
+
+async function getcountry() {
+    const response = await
+        fetch("https://api.countrystatecity.in/v1/countries/", requestOptions);
+    var result = await response.text();
+    const country = JSON.parse(result);
+    $.typeahead({
+        input: '.js-typeahead-country_v1',
+        minLength: 1,
+        order: "asc",
+        display: ["name"],
+        source: {
+            data: country
+        },
+        callback: {
+            onClickAfter: function (node, a, item, event) {
+                //call the function to send the data to firebase
+                getcity(item.iso2);
+            },
+        }
+    });
 }
+
+
+async function getcity(iso2) {
+    var url = "https://api.countrystatecity.in/v1/countries/" + iso2 + "/cities"
+    const response = await fetch(url, requestOptions);
+    var result = await response.text();
+    const city = JSON.parse(result).map(function (el) { return el.name })
+    $.typeahead({
+        input: '.js-typeahead-city_v1',
+        minLength: 1,
+        order: "asc",
+        source: {
+            data: city
+        },
+        callback: {
+            onClickAfter: function (node, a, item, event) {
+                //call the function to send the data to firebase
+            },
+        }
+    });
+}
+
 
 function GetInputVal(id) {
     return document.getElementById(id).value;
@@ -169,14 +174,36 @@ function GetInputVal(id) {
 async function addVal() {
     var name = GetInputVal('name_input');
     var email = GetInputVal('email_input');
-    var location = GetInputVal('location_input');
+    var locationCountry = GetInputVal('country');
+    var locationCity = GetInputVal('location_input');
     var type = GetInputVal('type_input');
     try {
 
         const docRef = await addDoc(collection(db, "website_user"), {
             name: name,
             email: email,
-            location: location,
+            Country: locationCountry,
+            city: locationCity,
+            type: type
+        });
+        console.log("Document written with ID: ", docRef.id);
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
+};
+async function addVal2() {
+    var name = document.querySelector('.name_input').value;
+    var email = document.querySelector('.email_input').value;
+    var locationCountry = GetInputVal('countery');
+    var locationCity = GetInputVal('location_inputCity');
+    var type = document.querySelector('.type_input').value
+    try {
+
+        const docRef = await addDoc(collection(db, "website_user"), {
+            name: name,
+            email: email,
+            Country: locationCountry,
+            city: locationCity,
             type: type
         });
         console.log("Document written with ID: ", docRef.id);
@@ -210,6 +237,8 @@ function sendEmail(email) {
             // if they open the link on the same device.
             window.localStorage.setItem('emailForSignIn', email);
             showRun();
+            runAfterAuth();
+            runAfterAuth2();
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -258,6 +287,8 @@ function signInWithGoogle() {
             // ...
 
             showRun();
+            runAfterAuth();
+            runAfterAuth2();
         }).catch((error) => {
             // Handle Errors here.
             const errorCode = error.code;
@@ -284,6 +315,8 @@ function signInWithFacebook() {
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
             showRun();
+            runAfterAuth();
+            runAfterAuth2();
             // ...
         })
         .catch((error) => {

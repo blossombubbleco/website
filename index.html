@@ -12,12 +12,15 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index_page.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    </script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXC3MSHQ04"></script>
     <script>
@@ -134,8 +137,9 @@
                         <p class="numbers">3</p>
                         <p class="numbers">4</p>
                         <p class="numbers">5</p>
+                        <p class="numbers">6</p>
                     </div>
-                    <p class="whole_number">/5</p>
+                    <p class="whole_number">/6</p>
                 </div>
                 <div class="input_wrapper">
                     <div class="width_flex">
@@ -164,14 +168,21 @@
                                 <div class="location_container">
                                     <label for="location" class="location">Where are you located
                                         ?</label>
-                                    <div class="country">
-                                        <span class="text_location">Country:</span>
-                                        <select type="text" name="location" id="location_input"
-                                            placeholder="Enter Your City and Country"></select>
+                                    <div class="typeahead__container">
+                                        <div class="typeahead__field">
+                                            <div class="typeahead__query">
+                                                <input class="js-typeahead-country_v1" name="country_v1[query]"
+                                                    placeholder="Country" autocomplete="off" id="country">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="city">
-                                        <span class="text_location right">City</span>
-                                        <select name="location_city" id="location_inputCity"></select>
+                                    <div class="typeahead__container city">
+                                        <div class="typeahead__field">
+                                            <div class="typeahead__query">
+                                                <input class="js-typeahead-city_v1 location_input" name="city_v1[query]"
+                                                    placeholder="City" autocomplete="off" id="location_input">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveSeondback">Prev</div>
@@ -181,9 +192,9 @@
                                 <div class="type_container">
                                     <label for="type" class="type">Sign up as</label>
                                     <select name="type" id="type_input" required>
-                                        <option value="Autistic Person">Neurodivergent Parent</option>
-                                        <option value="Autistic Parent">Neurotypical Parent</option>
-                                        <option value="Non-Autistic Person">Neurodivergent Adult</option>
+                                        <option value="Neurodivergent Parent">Neurodivergent Parent</option>
+                                        <option value="Neurotypical Parent">Neurotypical Parent</option>
+                                        <option value="Neurodivergent Adult">Neurodivergent Adult</option>
                                     </select>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveThirdback">Prev</div>
@@ -282,7 +293,7 @@
                 </div>
                 <div class="card" data-aos="fade-up" data-aos-duration="8500">
                     <img src="assets/preview_section/card_feature02.svg" alt="Feature card">
-                    <p class="feature_heading left bottom">resources</p>
+                    <p class="feature_heading left bottom">Resources</p>
                     <p class="feature_heading-desc left">We surface local resources and services catering to
                         neurodiverse individuals in your city. </p>
                 </div>
@@ -303,28 +314,53 @@
 
             </div>
             <div class="transition_container_04">
-                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
+                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                    <div class="text_wid">
+                        <p class="feature-head">Feature Shown</p>
+                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                    </div>
                 </div>
             </div>
             <div class="transition_container_05">
-                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
+                <div class="transition_feature left" data-aos="fade-up" data-aos-duration="4000">
+                    <div class="text_wid">
+                        <p class="feature-head">Feature Shown</p>
+                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                    </div>
                 </div>
             </div>
             <div class="transition_container_06">
-                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
+                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                    <div class="text_wid">
+                        <p class="feature-head">Feature Shown</p>
+                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                    </div>
                 </div>
             </div>
             <div class="transition_container_07">
-                <div class="transition_feature" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
+                <div class="transition_feature left" data-aos="fade-up" data-aos-duration="4000">
+                    <div class="text_wid">
+                        <p class="feature-head">Feature Shown</p>
+                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                    </div>
                 </div>
             </div>
-            <div class="transition_container_08">
-                <div class="transition_feature reverse" data-aos="fade-up" data-aos-duration="4000">
-                    <p class="feature-head">Feature Shown</p>
+            <div class="transition_container_08 ">
+                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                    <div class="text_wid">
+                        <p class="feature-head">Feature Shown</p>
+                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
+                            dolor
+                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -386,16 +422,11 @@
                 class="vision_leftIllustration">
         </div>
         <div class="right_content">
-            <p class="vision_heading">Our Vision</p>
-            <hr class="below_heading">
+            <p class="vision_heading">Augment the well-being of the neurodiverse community through connections and
+                opportunities.</p>
             <p class="text_content top-mr">We know how hard it is to navigate a world not designed for you. So we
                 designed and built Blausm with the neurodiverse community, so you can connect and thrive with
                 like-minded individuals who can celebrate your life experiences, passions and uniqueness. </p>
-            <p class="text_content">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi cupiditate tempore
-                repudiandae ducimus vitae nulla est similique. Animi, mollitia, nam velit sunt nesciunt magni quas natus
-                ratione aperiam nemo assumenda?
-                Delectus magnam rerum obcaecati fugit nam quasi velit nesciunt deserunt cum iste tempora exercitationem
-                ipsum dolore enim quibusdam ipsa rem tempore accusamus</p>
         </div>
     </section>
 
@@ -409,8 +440,9 @@
                         <p class="numbers">3</p>
                         <p class="numbers">4</p>
                         <p class="numbers">5</p>
+                        <p class="numbers">6</p>
                     </div>
-                    <p class="whole_number">/5</p>
+                    <p class="whole_number">/6</p>
                 </div>
                 <div class="input_wrapper">
                     <div class="width_flex">
@@ -419,14 +451,13 @@
                                 <div class="name_container">
                                     <label for="name" class="name">What's Your Full
                                         Name ?</label>
-                                    <input type="text" name="name" id="name_input" placeholder="Enter your Name"
-                                        class="name_input">
+                                    <input type="text" name="name" placeholder="Enter your Name" class="name_input">
                                     <div class="move_to_next" id="moveFirst2">Next</div>
                                 </div>
                                 <div class="email_container">
                                     <label for="email" class="email_label">Btw
                                         What's Your Email ?</label>
-                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com"
+                                    <input type="email" name="email" placeholder="example@gmail.com"
                                         class="email_input">
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveFirstback2">Prev</div>
@@ -436,15 +467,22 @@
                                 <div class="location_container">
                                     <label for="location" class="location">Where are you based
                                         ?</label>
-                                    <div class="country">
-                                        <span class="text_location">Country:</span>
-                                        <select type="text" name="location" id="location_input" class="location_input"
-                                            placeholder="Enter Your City and Country"></select>
+                                    <div class="typeahead__container">
+                                        <div class="typeahead__field">
+                                            <div class="typeahead__query">
+                                                <input class="js-typeahead-country_v1 location_input"
+                                                    name="country_v1[query]" placeholder="Country" autocomplete="off"
+                                                    id="countery">
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div class="city">
-                                        <span class="text_location right">City</span>
-                                        <select name="location_city" id="location_inputCity"
-                                            class="location_inputCity"></select>
+                                    <div class="typeahead__container">
+                                        <div class="typeahead__field">
+                                            <div class="typeahead__query">
+                                                <input class="js-typeahead-city_v1 city" name="city_v1[query]"
+                                                    placeholder="City" autocomplete="off" id="location_inputCity">
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveSecondback2">Prev</div>
@@ -453,10 +491,10 @@
                                 </div>
                                 <div class="type_container">
                                     <label for="type" class="type">Great, You are an ?</label>
-                                    <select name="type" id="type_input">
-                                        <option value="Autistic Person">Autistic Person</option>
-                                        <option value="Autistic Parent">Autistic Parent</option>
-                                        <option value="Non-Autistic Person">Non-Autistic Person</option>
+                                    <select name="type" class="type_input">
+                                        <option value="Neurodivergent Parent">Neurodivergent Parent</option>
+                                        <option value="Neurotypical Parent">Neurotypical Parent</option>
+                                        <option value="Neurodivergent Adult">Neurodivergent Adult</option>
                                     </select>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveThirdback2">Prev</div>
@@ -558,7 +596,7 @@
         <div class="footer_brand">
             <a href="index.html">
                 <img src="assets/header/website-brand_logo.svg" alt="Blossom logo" class="blossom-brand footer-b">
-                <h1 class="header_brand zero_mar ">Blausm.</h1>
+                <h1 class="header_brand zero_mar ">blausm.</h1>
             </a>
         </div>
         <div class="footer_copyright">@ Copyright 2021-2022 All rights reserved. Powered by Blossom</div>

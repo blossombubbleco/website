@@ -257,7 +257,12 @@
 #email_input,
 #location_input,
 #type_input,
-#location_inputCity {
+#location_inputCity,
+#country,
+#countery,
+.name_input,
+.email_input,
+.type_input {
     height: 3rem;
     outline: none;
     background-color: var(--per-input);
@@ -270,17 +275,20 @@
 }
 
 #location_input,
-#location_inputCity {
-    width: 25.2em;
+#location_inputCity,
+#country,
+#countery {
+    width: 33.2em;
     margin-bottom: 0px;
 }
 
-
-.country {
-    margin-bottom: 2em;
+.typeahead__cancel-button {
+    display: none;
 }
 
-.city {
+.city,
+#location_inputCity {
+    margin-top: 2em;
     margin-bottom: 3em;
 }
 
@@ -380,7 +388,7 @@
 
 #moveFifth,
 #moveFifth2 {
-    opacity: 0;
+    background-color: var(--input-text);
 }
 
 .email_auth {
@@ -448,6 +456,24 @@
     color: var(--text-heading);
 }
 
+.right {
+    text-align: right;
+}
+
+.left {
+    text-align: left;
+}
+
+.text_wid {
+    width: 36%;
+}
+
+.disc {
+    color: var(--text-heading-desc);
+    font-size: 18px;
+    font-size: 500;
+}
+
 .section_heading {
     margin-bottom: 5rem;
 }
@@ -459,7 +485,7 @@
 
 .feature-head {
     font-size: 3.75em;
-    font-weight: 900;
+    font-weight: 600;
     color: var(--text-heading);
 }
 
@@ -649,6 +675,7 @@
 
 /*******************feature Section*******************/
 .feature_section {
+    display: none;
     padding: 90px 140px 130px;
 }
 
@@ -717,6 +744,7 @@
     font-size: 2.5em;
     line-height: 50px;
     color: var(--text-heading);
+    margin-bottom: 2em;
 }
 
 .below_heading {
@@ -772,6 +800,14 @@
         width: 62%;
     }
 
+    .text_wid {
+        width: 33%;
+    }
+
+    .reverse {
+        margin-right: 0px;
+    }
+
     .feature_cards {
         grid-column-gap: 30px;
         grid-row-gap: 50px;
@@ -797,7 +833,10 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
+    #type_input,
+    .name_input,
+    .email_input,
+    .type_input {
         width: 26.2em;
     }
 
@@ -895,6 +934,25 @@
         padding: 25px;
     }
 
+    .text_wid {
+        width: 33%;
+    }
+
+    .reverse {
+        margin-right: 0px;
+    }
+
+    .transition_container_01,
+    .transition_container_02,
+    .transition_container_03,
+    .transition_container_04,
+    .transition_container_05,
+    .transition_container_06,
+    .transition_container_07,
+    .transition_container_08 {
+        padding: 0px 60px;
+    }
+
     .feature_heading-desc {
         margin-top: 5px;
         line-height: 28px;
@@ -943,7 +1001,10 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
+    #type_input,
+    .name_input,
+    .email_input,
+    .type_input {
         width: 33.2em;
     }
 
@@ -1077,7 +1138,11 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
+    #type_input,
+    #country,
+    .name_input,
+    .email_input,
+    .type_input {
         width: 95%;
     }
 
@@ -1209,7 +1274,11 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
+    #type_input,
+    #country,
+    .name_input,
+    .email_input,
+    .type_input {
         width: 90%;
     }
 
@@ -1380,7 +1449,11 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
+    #type_input,
+    #country,
+    .name_input,
+    .email_input,
+    .type_input {
         width: 66%;
     }
 
@@ -1599,8 +1672,12 @@
     #name_input,
     #email_input,
     #location_input,
-    #type_input {
-        width: 66%;
+    #type_input,
+    #country,
+    .name_input,
+    .email_input,
+    .type_input {
+        width: 50%;
         font-size: 16px;
     }
 
@@ -1628,7 +1705,7 @@
     .google_signIn,
     .facebook_signIn,
     .Email_signIn {
-        width: 53%;
+        width: 50%;
     }
 
     .wid {
@@ -1651,8 +1728,9 @@
         font-size: 20px;
     }
 
-    #type_input {
-        width: 54%;
+    #type_input,
+    .type_input {
+        width: 50%;
     }
 
     .early_access_section {
@@ -1677,7 +1755,8 @@
     }
 
     #location_input,
-    #location_inputCity {
-        width: 37%;
+    #location_inputCity,
+    #country {
+        width: 50%;
     }
 }

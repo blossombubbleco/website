@@ -52,8 +52,9 @@ transSecond.addEventListener('click', () => {
     }
 })
 transThird.addEventListener('click', () => {
-    var location = GetInputVal('location_input');
-    if (location == '') {
+    var location = GetInputVal('country');
+    var locationCity = GetInputVal('location_input');
+    if (location == '' && locationCity == "") {
         alert('Please enter your Location')
     } else {
         form.style.transform = "translateX(-120em)";
@@ -70,11 +71,15 @@ transForth.addEventListener('click', () => {
     inputIllustrations[4].classList.add('active');
     quesDesc[0].style.display = 'none';
 })
-transFifth.addEventListener('click', () => {
-    form.style.transform = "translateX(-200em)";
-    inputIllustrations[4].classList.remove('active');
-    inputIllustrations[5].classList.add('active');
-})
+function runAfterAuth() {
+    transFifth.style.background = 'var(--clr-secondry)';
+    transFifth.addEventListener('click', () => {
+        form.style.transform = "translateX(-200em)";
+        num.style.transform = 'translateY(-12em)';
+        inputIllustrations[4].classList.remove('active');
+        inputIllustrations[5].classList.add('active');
+    })
+}
 
 transFirstBack.addEventListener('click', () => {
     form.style.transform = "translateX(0em)";
@@ -104,7 +109,7 @@ transFourthBack.addEventListener('click', () => {
 })
 transFifthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
-    // num.style.transform = 'translateY(-9.6em)';
+    num.style.transform = 'translateY(-9.6em)';
     inputIllustrations[4].classList.add('active');
     inputIllustrations[5].classList.remove('active');
 })
@@ -159,8 +164,9 @@ transSecond2.addEventListener('click', () => {
     }
 })
 transThird2.addEventListener('click', () => {
-    var location = document.querySelector('.location_input').value
-    if (location == '') {
+    var location = GetInputVal('countery');
+    var locationCity = GetInputVal('location_inputCity');
+    if (location == '' && locationCity == "") {
         alert('Please enter your Location')
     } else {
         form2.style.transform = "translateX(-120em)";
@@ -177,10 +183,14 @@ transForth2.addEventListener('click', () => {
     inputIllustrations[9].classList.add('active');
     quesDesc[1].style.display = 'none';
 })
-transFifth2.addEventListener('click', () => {
-    form2.style.transform = "translateX(-200em)";
-    inputIllustrations[9].classList.remove('active');
-})
+function runAfterAuth2() {
+    transFifth2.style.background = 'var(--clr-secondry)';
+    transFifth2.addEventListener('click', () => {
+        num2.style.transform = 'translateY(-12em)';
+        form2.style.transform = "translateX(-200em)";
+        inputIllustrations[9].classList.remove('active');
+    })
+}
 
 transFirstBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(0em)";
@@ -210,5 +220,6 @@ transFourthBack2.addEventListener('click', () => {
 })
 transFifthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";
+    num2.style.transform = 'translateY(-9.6em)';
     inputIllustrations[9].classList.add('active');
 })
