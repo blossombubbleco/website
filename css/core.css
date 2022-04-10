@@ -38,7 +38,6 @@ a {
 }
 
 .dark_mode {
-    /* background-color: #131627; */
     background-color: #0C0F37;
     --text-heading: #F3F3F3;
     --clr-signtxt: #e7e7e7;

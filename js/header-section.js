@@ -11,7 +11,6 @@ check.addEventListener('change', () => {
 })
 
 //change font size
-//1 get the buttons
 const size1 = document.querySelector('.f-small');
 const size2 = document.querySelector('.f-medium');
 const size3 = document.querySelector('.f-large');
