@@ -253,6 +253,13 @@
     margin-bottom: 26px;
 }
 
+.submit p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 38px;
+    color: var(--text-heading);
+}
+
 #name_input,
 #email_input,
 #location_input,
@@ -284,12 +291,6 @@
 
 .typeahead__cancel-button {
     display: none;
-}
-
-.city,
-#location_inputCity {
-    margin-top: 2em;
-    margin-bottom: 3em;
 }
 
 .text_location {
@@ -364,7 +365,7 @@
 .submit_container {
     height: 16.875em;
     flex: 0 0 40em;
-
+    position: relative;
 }
 
 .google_signIn,
@@ -389,6 +390,127 @@
 #moveFifth,
 #moveFifth2 {
     background-color: var(--input-text);
+}
+
+.alertShow,
+.alertemail,
+.alertlocate,
+.alertShow2,
+.alertemail2,
+.alertlocate2 {
+    display: none;
+}
+
+
+.alert_input {
+    position: absolute;
+    top: 8.5em;
+    right: 7em;
+    color: red;
+    font-size: 14px;
+}
+
+.alteration {
+    top: 3.5em;
+    right: 3em;
+}
+
+.top {
+    top: 6.3em;
+}
+
+.mar_top {
+    margin-top: 2em;
+    margin-bottom: 3em;
+}
+
+.signIn-done {
+    display: none;
+}
+
+/*////////////////////// tick animation////////////////// */
+.wrapper {
+    margin: auto;
+    padding-bottom: 5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: var(--clr-primary);
+    fill: var(--clr-primary);
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
+}
+
+.checkmark {
+    width: 8em;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 5px;
+    stroke: #fff;
+    stroke-miterlimit: 10;
+    box-shadow: inset 0px 0px 0px var(--clr-primary);
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
+}
+
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
+}
+
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
+@keyframes scale {
+
+    0%,
+    100% {
+        transform: none
+    }
+
+    50% {
+        transform: scale3d(1.1, 1.1, 1)
+    }
+}
+
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px var(--clr-primary)
+    }
+}
+
+.thank_you {
+    font-family: 'Pacifico', cursive;
+    font-size: 7em;
+    color: var(--text-heading);
+    text-align: center;
+    margin: 25px 0px;
+}
+
+.above_ {
+    height: 1em;
+    border-radius: 20px;
+    background-color: var(--clr-primary);
+    width: 50em;
+    margin: auto;
+}
+
+.thank_text {
+    font-size: 2em;
+    text-align: center;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: var(--per-card-textHead-desc);
 }
 
 .email_auth {
@@ -465,7 +587,7 @@
 }
 
 .text_wid {
-    width: 36%;
+    width: 29%;
 }
 
 .disc {
@@ -485,7 +607,6 @@
 
 .feature-head {
     font-size: 3.75em;
-    font-weight: 600;
     color: var(--text-heading);
 }
 
@@ -584,7 +705,7 @@
 .mobile_preview {
     width: 19rem;
     position: absolute;
-    transition: all 500ms ease-in-out;
+    transition: all 0.3s ease-in-out;
     opacity: 0;
 }
 
@@ -694,6 +815,10 @@
     border-radius: 18px;
     transition: 400ms;
     box-shadow: -3px -3px 24px rgb(30 40 60 / 3%), 12px 12px 24px rgb(30 40 60 / 8%);
+}
+
+.mid_text {
+    text-align: center;
 }
 
 .feature_heading {
@@ -930,6 +1055,22 @@
         grid-row-gap: 50px;
     }
 
+    .wrapper {
+        padding-bottom: 4em;
+    }
+
+    .above_ {
+        width: 35em;
+    }
+
+    .thank_you {
+        font-size: 6em;
+    }
+
+    .thank_text {
+        font-size: 1.5em;
+    }
+
     .feature {
         padding: 25px;
     }
@@ -1054,7 +1195,23 @@
     }
 
     .input_form {
-        padding: 90px 90px 20px;
+        padding: 90px 90px 20px !important;
+    }
+
+    .wrapper {
+        padding-bottom: 4em;
+    }
+
+    .above_ {
+        width: 35em;
+    }
+
+    .thank_you {
+        font-size: 6em;
+    }
+
+    .thank_text {
+        font-size: 1.5em;
     }
 
     .input_text_bottom {
@@ -1131,8 +1288,30 @@
         width: 100%;
     }
 
-    .transition_feature {
-        display: none;
+    .transition_container_01,
+    .transition_container_02,
+    .transition_container_03,
+    .transition_container_04,
+    .transition_container_05,
+    .transition_container_06,
+    .transition_container_07,
+    .transition_container_08 {
+        padding: 0px 50px;
+    }
+
+    .right {
+        margin-right: 0em;
+    }
+
+    .feature-head,
+    .disc {
+        text-align: center;
+    }
+
+    .feature-head {
+        font-size: 2.1em;
+        line-height: 49px;
+        text-align: center;
     }
 
     #name_input,
@@ -1192,6 +1371,22 @@
 
     #hero_email {
         width: 80%;
+    }
+
+    .wrapper {
+        padding-bottom: 4em;
+    }
+
+    .above_ {
+        width: 35em;
+    }
+
+    .thank_you {
+        font-size: 5.5em;
+    }
+
+    .thank_text {
+        font-size: 1.5em;
     }
 
     .social_icons {
@@ -1258,12 +1453,34 @@
         width: 100%;
     }
 
-    .transition_feature {
-        display: none;
+    .transition_container_01,
+    .transition_container_02,
+    .transition_container_03,
+    .transition_container_04,
+    .transition_container_05,
+    .transition_container_06,
+    .transition_container_07,
+    .transition_container_08 {
+        padding: 0px 50px;
+    }
+
+    .right {
+        margin-right: 0em;
+    }
+
+    .feature-head,
+    .disc {
+        text-align: center;
+    }
+
+    .feature-head {
+        font-size: 2.1em;
+        line-height: 49px;
+        text-align: center;
     }
 
     .input_form {
-        padding: 80px 40px;
+        padding: 80px 40px !important;
         height: 45em;
     }
 
@@ -1443,7 +1660,29 @@
 
     .input_form {
         height: 35em;
-        padding: 80px 40px;
+        padding: 80px 40px !important;
+    }
+
+    .checkmark {
+        width: 6em;
+    }
+
+    .wrapper {
+        padding-bottom: 2em;
+    }
+
+    .above_ {
+        width: 22em;
+        height: 12px;
+    }
+
+    .thank_you {
+        font-size: 4.5em;
+        margin: 15px 0px;
+    }
+
+    .thank_text {
+        font-size: 1.3em;
     }
 
     #name_input,
@@ -1570,6 +1809,31 @@
         font-size: 1em;
     }
 
+    .checkmark {
+        width: 6em;
+    }
+
+    .wrapper {
+        padding-bottom: 2em;
+    }
+
+    .above_ {
+        width: 90%;
+        height: 12px;
+    }
+
+    .signIn-done {
+        margin-top: 28px;
+    }
+
+    .thank_you {
+        font-size: 3.5em;
+        margin: 35px 0px;
+    }
+
+    .thank_text {
+        font-size: 1.1em;
+    }
 
     .btns {
         display: flex;
@@ -1656,7 +1920,7 @@
     }
 
     .input_form {
-        padding: 65px 15px;
+        padding: 65px 15px !important;
         height: 36em;
         border-radius: 20px;
     }

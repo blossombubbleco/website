@@ -10,11 +10,12 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Outfit:wght@100;300;400;500;600;700;800;900&family=Pacifico&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.css">
     <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-typeahead/2.11.0/jquery.typeahead.min.js"></script>
     <link rel="stylesheet" href="css/core.css">
     <link rel="stylesheet" href="css/header.css">
@@ -127,9 +128,9 @@
         </div>
     </section>
 
-    <section class="early_access_section before_hidden">
-        <div class="input_form">
-            <div class="section_wrapper">
+    <section class="early_access_section before_hidden" id="remove">
+        <div class="input_form" id="top_removePadd">
+            <div class="section_wrapper" id="top_Form">
                 <div class="number_update">
                     <div class="flowing_number">
                         <p class="numbers">1</p>
@@ -149,6 +150,7 @@
                                     <label for="name" class="name">What is your name ?</label>
                                     <input type="text" name="name" id="name_input"
                                         placeholder="Enter Your First and Last Name">
+                                    <p class="alert_input alertShow">*Please enter your full name</p>
                                     <div class="flex_container">
                                         <div class="move_to_next" id="moveFirst">Next</div>
                                     </div>
@@ -160,6 +162,7 @@
                                         ?</label>
                                     <input type="email" name="email" id="email_input" placeholder="example@gmail.com"
                                         required>
+                                    <p class="alert_input alertemail">*Please Enter Your Email Address</p>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveFirstback">Prev</div>
                                         <div class="move_to_next" id="moveSecond">Next</div>
@@ -176,11 +179,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="typeahead__container city">
+                                    <div class="typeahead__container mar_top">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
                                                 <input class="js-typeahead-city_v1 location_input" name="city_v1[query]"
                                                     placeholder="City" autocomplete="off" id="location_input">
+                                                <p class="alert_input alertlocate alteration">*Please Enter Your
+                                                    Location</p>
                                             </div>
                                         </div>
                                     </div>
@@ -192,9 +197,11 @@
                                 <div class="type_container">
                                     <label for="type" class="type">Sign up as</label>
                                     <select name="type" id="type_input" required>
-                                        <option value="Neurodivergent Parent">Neurodivergent Parent</option>
-                                        <option value="Neurotypical Parent">Neurotypical Parent</option>
-                                        <option value="Neurodivergent Adult">Neurodivergent Adult</option>
+                                        <option value="Neurodivergent Parent" class="option_">Neurodivergent Parent
+                                        </option>
+                                        <option value="Neurotypical Parent" class="option_">Neurotypical Parent</option>
+                                        <option value="Neurodivergent Adult" class="option_">Neurodivergent Adult
+                                        </option>
                                     </select>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveThirdback">Prev</div>
@@ -222,10 +229,11 @@
                                     </div>
                                 </div>
                                 <div class="submit_container">
-                                    <label for="submit" class="submit">Thank you for providing your information. Once
-                                        you submit your details, we'll
-                                        reach out to you with more information regarding Blausm's launch in your
-                                        city.</label>
+                                    <label for="submit" class="submit">Thank you for providing your
+                                        information.<p>Once
+                                            you submit your details, we'll
+                                            reach out to you with more information regarding Blausm's launch in your
+                                            city.</p></label>
                                     <div class="flex_container wid full_wid">
                                         <div class="move_to_next zero" id="moveFifthback">Prev</div>
                                         <input type="submit" value="Submit My Details" id="submitForm">
@@ -245,6 +253,8 @@
                             class="input_illustration">
                         <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
                             class="input_illustration">
+                        <img src="assets/input_section/input_illustration06.svg" alt="Input Illustrations"
+                            class="input_illustration">
                     </div>
                 </div>
             </div>
@@ -253,6 +263,16 @@
                     “normal”, and include neurodivergence such as autism, dyslexia, ADHD, etc.</p>
                 <p>**Neurotypical individuals have neurocognitive functioning that fall within the dominant societal
                     standards of “normal.” Interested to learn more, <a href="#" target="_blank">read here.</a></p>
+            </div>
+            <div class="signIn-done" id="top_done">
+                <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+                <hr class="above_">
+                <p class="thank_you">Thank You</p>
+                <p class="thank_text">Thank You For Joining Our Waiting List....Will Update you soon.</p>
             </div>
         </div>
     </section>
@@ -287,14 +307,14 @@
             <div class="card_feature">
                 <div class="card" data-aos="fade-up" data-aos-duration="8000">
                     <img src="assets/preview_section/card_feature01.svg" alt="Feature card">
-                    <p class="feature_heading left bottom">People</p>
-                    <p class="feature_heading-desc left">We help you find and connect with other families and
+                    <p class="feature_heading left bottom mid_text">People</p>
+                    <p class="feature_heading-desc lef mid_text">We help you find and connect with other families and
                         neurodiverse individuals who are on a similar journey in your city.</p>
                 </div>
                 <div class="card" data-aos="fade-up" data-aos-duration="8500">
                     <img src="assets/preview_section/card_feature02.svg" alt="Feature card">
-                    <p class="feature_heading left bottom">Resources</p>
-                    <p class="feature_heading-desc left">We surface local resources and services catering to
+                    <p class="feature_heading left bottom mid_text">Resources</p>
+                    <p class="feature_heading-desc left mid_text">We surface local resources and services catering to
                         neurodiverse individuals in your city. </p>
                 </div>
             </div>
@@ -314,7 +334,7 @@
 
             </div>
             <div class="transition_container_04">
-                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                <div class="transition_feature reverse right">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -324,7 +344,7 @@
                 </div>
             </div>
             <div class="transition_container_05">
-                <div class="transition_feature left" data-aos="fade-up" data-aos-duration="4000">
+                <div class="transition_feature left">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -334,7 +354,7 @@
                 </div>
             </div>
             <div class="transition_container_06">
-                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                <div class="transition_feature reverse right">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -344,7 +364,7 @@
                 </div>
             </div>
             <div class="transition_container_07">
-                <div class="transition_feature left" data-aos="fade-up" data-aos-duration="4000">
+                <div class="transition_feature left">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -354,7 +374,7 @@
                 </div>
             </div>
             <div class="transition_container_08 ">
-                <div class="transition_feature reverse right" data-aos="fade-up" data-aos-duration="4000">
+                <div class="transition_feature reverse right">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -431,8 +451,8 @@
     </section>
 
     <section class="early_access_section" id="form_bottom">
-        <div class="input_form">
-            <div class="section_wrapper">
+        <div class="input_form" id="bottom_removePadd">
+            <div class="section_wrapper" id="bottom_Form">
                 <div class="number_update">
                     <div class="flowing_number flowing_number2">
                         <p class="numbers">1</p>
@@ -452,6 +472,7 @@
                                     <label for="name" class="name">What's Your Full
                                         Name ?</label>
                                     <input type="text" name="name" placeholder="Enter your Name" class="name_input">
+                                    <p class="alert_input alertShow2">*Please enter your full name</p>
                                     <div class="move_to_next" id="moveFirst2">Next</div>
                                 </div>
                                 <div class="email_container">
@@ -459,6 +480,7 @@
                                         What's Your Email ?</label>
                                     <input type="email" name="email" placeholder="example@gmail.com"
                                         class="email_input">
+                                    <p class="alert_input alertemail2">*Please Enter Your Email Address</p>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveFirstback2">Prev</div>
                                         <div class="move_to_next" id="moveSecond2">Next</div>
@@ -476,11 +498,13 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="typeahead__container">
+                                    <div class="typeahead__container mar_top">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
                                                 <input class="js-typeahead-city_v1 city" name="city_v1[query]"
                                                     placeholder="City" autocomplete="off" id="location_inputCity">
+                                                <p class="alert_input alertlocate2 alteration">*Please Enter Your
+                                                    Location</p>
                                             </div>
                                         </div>
                                     </div>
@@ -492,9 +516,11 @@
                                 <div class="type_container">
                                     <label for="type" class="type">Great, You are an ?</label>
                                     <select name="type" class="type_input">
-                                        <option value="Neurodivergent Parent">Neurodivergent Parent</option>
-                                        <option value="Neurotypical Parent">Neurotypical Parent</option>
-                                        <option value="Neurodivergent Adult">Neurodivergent Adult</option>
+                                        <option value="Neurodivergent Parent" class="option_">Neurodivergent Parent
+                                        </option>
+                                        <option value="Neurotypical Parent" class="option_">Neurotypical Parent</option>
+                                        <option value="Neurodivergent Adult" class="option_">Neurodivergent Adult
+                                        </option>
                                     </select>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveThirdback2">Prev</div>
@@ -523,21 +549,19 @@
                                 </div>
                                 <div class="submit_container">
                                     <label for="submit" class="submit">
-                                        Thank you for providing your information. Once you submit your details, we'll
-                                        reach out to you with more information regarding Blausm's launch in your
-                                        city.</label>
+                                        Thank you for providing your information. <p>Once you submit your details,
+                                            we'll
+                                            reach out to you with more information regarding Blausm's launch in your
+                                            city.</p></label>
                                     <div class="flex_container wid">
                                         <div class="move_to_next zero" id="moveFifthback2">Prev</div>
                                         <input type="submit" value="Submit My Details" id="submitForm2">
                                     </div>
                                 </div>
-                                <div class="signIn-done">
-                                    sign in done
-                                </div>
                             </form>
                         </div>
                     </div>
-                    <div class="inputSection_illustration">
+                    <div class="inputSection_illustration" id="bottom_illus">
                         <img src="assets/input_section/input_illustration01.svg" alt="Input Illustrations"
                             class="input_illustration active ">
                         <img src="assets/input_section/input_illustration02.svg" alt="Input Illustrations"
@@ -548,6 +572,8 @@
                             class="input_illustration">
                         <img src="assets/input_section/input_illustration05.svg" alt="Input Illustrations"
                             class="input_illustration">
+                        <img src="assets/input_section/input_illustration06.svg" alt="Input Illustrations"
+                            class="input_illustration">
                     </div>
                 </div>
             </div>
@@ -556,6 +582,16 @@
                     “normal”, and include neurodivergence such as autism, dyslexia, ADHD, etc.</p>
                 <p>**Neurotypical individuals have neurocognitive functioning that fall within the dominant societal
                     standards of “normal.” Interested to learn more, <a href="#" target="_blank">read here.</a></p>
+            </div>
+            <div class="signIn-done" id="bottom_done">
+                <div class="wrapper"> <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
+                        <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+                        <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
+                    </svg>
+                </div>
+                <hr class="above_">
+                <p class="thank_you">Thank You</p>
+                <p class="thank_text">Thank You For Joining Our Waiting List....Will Update you soon.</p>
             </div>
         </div>
     </section>

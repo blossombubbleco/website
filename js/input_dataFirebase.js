@@ -3,7 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -88,18 +88,37 @@ submit.addEventListener('click', (e) => {
     addVal();
     runAfterSubmit()
     function runAfterSubmit() {
-        setTimeout(function closeWindow() {
-            formContainer.style.display = 'none';
-        }, 6000);
+        setTimeout(function runAfter() {
+            const hidden = document.querySelector('#remove');
+            hidden.style.display = 'none';
+            const hiddenBottom = document.querySelector('#form_bottom');
+            hiddenBottom.style.display = 'none';
+        }, 4000)
+        const botForm = document.querySelector('#top_Form');
+        botForm.style.display = 'none';
+        const done = document.querySelector('#top_done');
+        done.style.display = 'block';
+        const padding = document.querySelector('#top_removePadd');
+        padding.style.padding = '100px 140px'
         const btn = document.querySelector('#joinUs_btn');
         btn.innerHTML = "Thank you for joining our waitlist"
-        formBottom.style.display = 'none'
     }
 
 });
 submit1.addEventListener('click', (e) => {
     e.preventDefault();
     addVal2();
+    runAfterSubmit()
+    function runAfterSubmit() {
+        const botForm = document.querySelector('#bottom_Form');
+        botForm.style.display = 'none';
+        const done = document.querySelector('#bottom_done');
+        done.style.display = 'block';
+        const padding = document.querySelector('#bottom_removePadd');
+        padding.style.padding = '100px 140px'
+        const btn = document.querySelector('#joinUs_btn');
+        btn.innerHTML = "Thank you for joining our waitlist"
+    }
 });
 
 
@@ -214,6 +233,37 @@ async function addVal2() {
 //send email function
 const email_text = document.querySelectorAll('.email_auth');
 function sendEmail(email) {
+    // if (isSignInWithEmailLink(auth, window.location.href)) {
+    //     // Additional state parameters can also be passed via URL.
+    //     // This can be used to continue the user's intended action before triggering
+    //     // the sign-in operation.
+    //     // Get the email if available. This should be available if the user completes
+    //     // the flow on the same device where they started it.
+    //     let email = window.localStorage.getItem('emailForSignIn');
+    //     if (!email) {
+    //         // User opened the link on a different device. To prevent session fixation
+    //         // attacks, ask the user to provide the associated email again. For example:
+    //         email = window.prompt('Please provide your email for confirmation');
+    //     }
+    //     // The client SDK will parse the code from the link for you.
+    //     signInWithEmailLink(auth, email, window.location.href)
+    //         .then((result) => {
+    //             // Clear email from storage.
+    //             window.localStorage.removeItem('emailForSignIn');
+    //             console.log('working result');
+    //             // You can access the new user via result.user
+    //             // Additional user info profile not available via:
+    //             // result.additionalUserInfo.profile == null
+    //             // You can check if the user is new or existing:
+    //             // result.additionalUserInfo.isNewUser
+    //         })
+    //         .catch((error) => {
+    //             console.log('working error' + error);
+    //             // Some error occurred, you can inspect the code: error.code
+    //             // Common errors could be invalid email and invalid or expired OTPs.
+    //         });
+    // }
+
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
@@ -235,7 +285,10 @@ function sendEmail(email) {
             // The link was successfully sent. Inform the user.
             // Save the email locally so you don't need to ask the user for it again
             // if they open the link on the same device.
+            // const credential = sendSignInLinkToEmail.credentialFromResult(result);
+            // const accessToken = credential.accessToken;
             window.localStorage.setItem('emailForSignIn', email);
+
             showRun();
             runAfterAuth();
             runAfterAuth2();
