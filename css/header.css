@@ -20,6 +20,10 @@
     align-items: center;
 }
 
+/* .header_btn a {
+    display: none;
+} */
+
 .header_brand {
     font-weight: 600;
     font-size: 46px;
