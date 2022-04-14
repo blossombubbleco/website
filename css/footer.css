@@ -7,7 +7,16 @@
 }
 
 .footer_brand {
-    padding: 40px 0px;
+    padding: 40px 0px 20px;
+}
+
+.privacy_policyPage {
+    margin: 5px 0px;
+}
+
+.clr {
+    font-weight: 600;
+    color: var(--clr-signtxt);
 }
 
 .footer-b {

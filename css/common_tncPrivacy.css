@@ -1,0 +1,46 @@
+.policy_content {
+    padding: 30px 120px 120px;
+}
+
+.privacy_heading {
+    font-size: 2em;
+    font-weight: 600;
+    color: var(--text-heading);
+    margin-bottom: 20px;
+}
+
+.para {
+    margin-bottom: 60px;
+}
+
+.para p {
+    font-size: 1.2em;
+    color: var(--clr-tertiory-footer);
+}
+
+.heading_page {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 2em;
+    font-weight: 700;
+}
+
+.margn {
+    margin-bottom: 10px;
+}
+
+.para ul {
+    padding: 0.5em 0em 0em 5em;
+    list-style-type: disc;
+    margin-bottom: 1em;
+}
+
+.para ul li {
+    padding: 5px 0px;
+    color: var(--clr-tertiory-footer);
+}
+
+.privacy_heading p {
+    color: var(--text-heading-desc);
+    font-size: 1.5em;
+}

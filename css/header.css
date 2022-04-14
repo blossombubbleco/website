@@ -20,9 +20,9 @@
     align-items: center;
 }
 
-/* .header_btn a {
+.header_btn a {
     display: none;
-} */
+}
 
 .header_brand {
     font-weight: 600;

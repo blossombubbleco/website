@@ -1,4 +1,5 @@
 const container_00 = document.querySelector('.mobile_sticky-middle');
+const container_card = document.querySelector('.mode_changing-image');
 const container_01 = document.querySelector('.transition_container_01');
 const container_02 = document.querySelector('.transition_container_02');
 const container_03 = document.querySelector('.transition_container_03');
@@ -7,6 +8,8 @@ const container_05 = document.querySelector('.transition_container_05');
 const container_06 = document.querySelector('.transition_container_06');
 const container_07 = document.querySelector('.transition_container_07');
 const container_08 = document.querySelector('.transition_container_08');
+
+const transitionFeature = document.querySelectorAll('.transition_feature');
 
 const image = document.querySelectorAll('.mobile_preview');
 
@@ -26,9 +29,25 @@ check.addEventListener('change', () => {
 
 
 
+options00 = {
+    root: null,
+    threshold: 0.1
+}
+observer00 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            image[0].classList.add('active');
+        }
+        else {
+            image[1].classList.remove('active');
+        }
+    })
+}, options00);
+observer00.observe(container_card);
+
 options01 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer01 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -89,9 +108,11 @@ observer04 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[3].classList.remove('active');
             image[4].classList.add('active');
+            transitionFeature[0].classList.remove('show_feature');
         }
         else {
             image[4].classList.remove('active');
+            transitionFeature[0].classList.add('show_feature');
         }
     })
 }, options04);
@@ -106,9 +127,11 @@ observer05 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[4].classList.remove('active');
             image[5].classList.add('active');
+            transitionFeature[1].classList.remove('show_feature');
         }
         else {
             image[5].classList.remove('active');
+            transitionFeature[1].classList.add('show_feature');
         }
     })
 }, options05);
@@ -123,9 +146,11 @@ observer06 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[5].classList.remove('active');
             image[6].classList.add('active');
+            transitionFeature[2].classList.remove('show_feature');
         }
         else {
             image[6].classList.remove('active');
+            transitionFeature[2].classList.add('show_feature');
         }
     })
 }, options06);
@@ -140,9 +165,11 @@ observer07 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[6].classList.remove('active');
             image[7].classList.add('active');
+            transitionFeature[3].classList.remove('show_feature');
         }
         else {
             image[7].classList.remove('active');
+            transitionFeature[3].classList.add('show_feature');
         }
     })
 }, options07);
@@ -157,9 +184,11 @@ observer08 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[7].classList.remove('active');
             image[8].classList.add('active');
+            transitionFeature[4].classList.remove('show_feature');
         }
         else {
             image[8].classList.remove('active');
+            transitionFeature[4].classList.add('show_feature');
         }
     })
 }, options08);

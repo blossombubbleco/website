@@ -346,7 +346,10 @@
     line-height: 33px;
     color: var(--per-white);
     background: var(--clr-secondry);
+    --webkit-border-radius: 5px;
+    --moz-border-radius: 5px;
     border-radius: 5px;
+    --khtml-border-radius: 5px;
     width: 5.3em;
 }
 
@@ -785,6 +788,18 @@
 .transitionEnd-3 {
     height: 6.5em;
     background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    background: -moz-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* FF3.6+ */
+    background: --webkit-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%), color-stop(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* IE10+ */
+    background: linear-gradient(180deg, var(--transition-clr) 0%, rgba(255, 255, 255, 0) 100%);
+    /* W3C */
 }
 
 .start {
@@ -909,7 +924,7 @@
 
 .keyHead {
     font-weight: 500;
-    font-size: 2em;
+    font-size: 1.6em;
     line-height: 36px;
     letter-spacing: 0.02em;
     color: var(--text-heading);
@@ -931,6 +946,17 @@
     color: var(--text-section_heading-desc);
 }
 
+.last_heading {
+    text-align: center;
+    padding: 80px 0px;
+}
+
+.last_heading p {
+    font-size: 2.5em;
+    /* color: var(--text-heading); */
+    color: #000000;
+    font-weight: 700;
+}
 
 
 
@@ -1546,6 +1572,13 @@
 
     .right {
         margin-right: 0em;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .text_wid {
+        width: 100%;
     }
 
     .feature-head,
@@ -1607,6 +1640,14 @@
 
     .keyIllustation {
         height: 34em;
+    }
+
+    .mobile_sticky-middle {
+        top: 2%;
+    }
+
+    .show_feature {
+        display: none;
     }
 
     .key {
@@ -2080,6 +2121,16 @@
 
     .full_wid {
         width: 49%;
+    }
+
+    .alert_input {
+        right: 0;
+        left: 8.7em;
+    }
+
+    .alertemail,
+    .alertemail2 {
+        left: 6.7em;
     }
 
     .input_text_bottom p {

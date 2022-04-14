@@ -80,6 +80,13 @@ submit.addEventListener('click', (e) => {
 
     e.preventDefault();
     //call the function to save the values on submit
+    var bool = true;
+    if (e.which === 13) {
+        bool = false;
+    }
+    else {
+        console.log('not');
+    }
 
     addVal();
     runAfterSubmit()
@@ -116,6 +123,24 @@ submit1.addEventListener('click', (e) => {
         btn.innerHTML = "Thank you for joining our waitlist"
     }
 });
+
+//btn for enter to move focus on next
+var allFields = document.querySelectorAll(".register_form");
+
+for (var i = 0; i < allFields.length; i++) {
+
+    allFields[i].addEventListener("keyup", function (event) {
+
+        if (event.keyCode === 13) {
+            console.log('Enter clicked')
+            event.preventDefault();
+            if (this.parentElement.nextElementSibling.querySelector('input')) {
+                this.parentElement.nextElementSibling.querySelector('input').focus();
+            }
+        }
+    });
+
+}
 
 
 //btn show if user authenticated succesfully
@@ -229,37 +254,6 @@ async function addVal2() {
 //send email function
 const email_text = document.querySelectorAll('.email_auth');
 function sendEmail(email) {
-    // if (isSignInWithEmailLink(auth, window.location.href)) {
-    //     // Additional state parameters can also be passed via URL.
-    //     // This can be used to continue the user's intended action before triggering
-    //     // the sign-in operation.
-    //     // Get the email if available. This should be available if the user completes
-    //     // the flow on the same device where they started it.
-    //     let email = window.localStorage.getItem('emailForSignIn');
-    //     if (!email) {
-    //         // User opened the link on a different device. To prevent session fixation
-    //         // attacks, ask the user to provide the associated email again. For example:
-    //         email = window.prompt('Please provide your email for confirmation');
-    //     }
-    //     // The client SDK will parse the code from the link for you.
-    //     signInWithEmailLink(auth, email, window.location.href)
-    //         .then((result) => {
-    //             // Clear email from storage.
-    //             window.localStorage.removeItem('emailForSignIn');
-    //             console.log('working result');
-    //             // You can access the new user via result.user
-    //             // Additional user info profile not available via:
-    //             // result.additionalUserInfo.profile == null
-    //             // You can check if the user is new or existing:
-    //             // result.additionalUserInfo.isNewUser
-    //         })
-    //         .catch((error) => {
-    //             console.log('working error' + error);
-    //             // Some error occurred, you can inspect the code: error.code
-    //             // Common errors could be invalid email and invalid or expired OTPs.
-    //         });
-    // }
-
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
@@ -267,14 +261,14 @@ function sendEmail(email) {
         // This must be true.
         handleCodeInApp: true,
         // iOS: {
-        //     bundleId: 'com.example.ios'
+        //     // bundleId: 'com.blausm.ios'
         // },
         // android: {
-        //     packageName: 'com.example.android',
+        //     // packageName: 'com.blausm.android',
         //     installApp: true,
         //     minimumVersion: '12'
         // },
-        // dynamicLinkDomain: 'example.page.link'
+        // dynamicLinkDomain: 'https://www.blausm.app/'
     };
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
@@ -283,7 +277,7 @@ function sendEmail(email) {
             // if they open the link on the same device.
             // const credential = sendSignInLinkToEmail.credentialFromResult(result);
             // const accessToken = credential.accessToken;
-            window.localStorage.setItem('emailForSignIn', email);
+            // window.localStorage.setItem('emailForSignIn', email);
 
             showRun();
             runAfterAuth();
@@ -295,32 +289,38 @@ function sendEmail(email) {
             // ...
             console.log('error is here');
         });
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+        // Additional state parameters can also be passed via URL.
+        // This can be used to continue the user's intended action before triggering
+        // the sign-in operation.
+        // Get the email if available. This should be available if the user completes
+        // the flow on the same device where they started it.
+        // let email = window.localStorage.getItem('emailForSignIn');
+        if (!email) {
+            // User opened the link on a different device. To prevent session fixation
+            // attacks, ask the user to provide the associated email again. For example:
+            email = window.prompt('Please provide your email for confirmation');
+        }
+        // The client SDK will parse the code from the link for you.
+        signInWithEmailLink(auth, email, window.location.href)
+            .then((result) => {
+                // Clear email from storage.
+                // window.localStorage.removeItem('emailForSignIn');
+                console.log('working result');
+                // You can access the new user via result.user
+                // Additional user info profile not available via:
+                // result.additionalUserInfo.profile == null
+                // You can check if the user is new or existing:
+                // result.additionalUserInfo.isNewUser
+            })
+            .catch((error) => {
+                console.log('working error' + error);
+                // Some error occurred, you can inspect the code: error.code
+                // Common errors could be invalid email and invalid or expired OTPs.
+            });
+    }
 }
-// function sendEmail2() {
-//     var email = document.querySelector('.email_input').value;
-//     const actionCodeSettings = {
-//         // URL you want to redirect back to. The domain (www.example.com) for this
-//         // URL must be in the authorized domains list in the Firebase Console.
-//         url: 'https://www.blausm.app/',
-//         // This must be true.
-//         handleCodeInApp: true,
-//     };
-//     sendSignInLinkToEmail(auth, email, actionCodeSettings)
-//         .then(() => {
-//             // The link was successfully sent. Inform the user.
-//             // Save the email locally so you don't need to ask the user for it again
-//             // if they open the link on the same device.
-//             window.localStorage.setItem('emailForSignIn', email);
-//             showRun();
-//             console.log('running');
-//         })
-//         .catch((error) => {
-//             const errorCode = error.code;
-//             const errorMessage = error.message;
-//             // ...
-//             console.log('error is here');
-//         });
-// }
+
 
 //function for the google authentication
 function signInWithGoogle() {
@@ -332,7 +332,12 @@ function signInWithGoogle() {
             const token = credential.accessToken;
             // The signed-in user info.
             const user = result.user;
+            //for the form first 
             form.style.transform = "translateX(-200em)";
+            num.style.transform = 'translateY(-12em)';
+            //for the form Second
+            form2.style.transform = "translateX(-200em)";
+            num2.style.transform = 'translateY(-12em)';
             // ...
 
             showRun();
@@ -363,6 +368,8 @@ function signInWithFacebook() {
             // This gives you a Facebook Access Token. You can use it to access the Facebook API.
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
+            form.style.transform = "translateX(-200em)";
+            num.style.transform = 'translateY(-12em)';
             showRun();
             runAfterAuth();
             runAfterAuth2();

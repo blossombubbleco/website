@@ -21,7 +21,7 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/index_page.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="js/moveFocus.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MXC3MSHQ04"></script>
     <script>
@@ -148,7 +148,7 @@
                             <form action="" id="form">
                                 <div class="name_container">
                                     <label for="name" class="name">What is your name ?</label>
-                                    <input type="text" name="name" id="name_input"
+                                    <input type="text" name="name" id="name_input" class="moveFocus"
                                         placeholder="Enter Your First and Last Name">
                                     <p class="alert_input alertShow">*Please enter your full name</p>
                                     <div class="flex_container">
@@ -160,8 +160,8 @@
                                     <label for="email" class="email_label">What is your email
                                         address
                                         ?</label>
-                                    <input type="email" name="email" id="email_input" placeholder="example@gmail.com"
-                                        required>
+                                    <input type="email" name="email" class="moveFocus" id="email_input"
+                                        placeholder="example@gmail.com" required>
                                     <p class="alert_input alertemail">*Please Enter Your Email Address</p>
                                     <div class="flex_container">
                                         <div class="move_to_next zero" id="moveFirstback">Prev</div>
@@ -174,16 +174,18 @@
                                     <div class="typeahead__container">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
-                                                <input class="js-typeahead-country_v1" name="country_v1[query]"
-                                                    placeholder="Country" autocomplete="off" id="country">
+                                                <input class="js-typeahead-country_v1 moveFocus"
+                                                    name="country_v1[query]" placeholder="Country" autocomplete="off"
+                                                    id="country">
                                             </div>
                                         </div>
                                     </div>
                                     <div class="typeahead__container mar_top">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
-                                                <input class="js-typeahead-city_v1 location_input" name="city_v1[query]"
-                                                    placeholder="City" autocomplete="off" id="location_input">
+                                                <input class="js-typeahead-city_v1 location_input moveFocus"
+                                                    name="city_v1[query]" placeholder="City" autocomplete="off"
+                                                    id="location_input">
                                                 <p class="alert_input alertlocate alteration">*Please Enter Your
                                                     Location</p>
                                             </div>
@@ -289,7 +291,7 @@
                         <img src="assets/preview_section/mobile_frame.svg" alt="" class="phone-frame">
                         <div class="abs_container">
                             <div class="preview_images">
-                                <img src="assets/preview_section/mobile_preview01.svg" alt="" style="opacity: 1;"
+                                <img src="assets/preview_section/mobile_preview01.svg" alt=""
                                     class="mobile_preview active">
                                 <img src="assets/preview_section/mobile_preview02.svg" alt="" class="mobile_preview">
                                 <img src="assets/preview_section/mobile_preview03.svg" alt="" class="mobile_preview">
@@ -334,7 +336,7 @@
 
             </div>
             <div class="transition_container_04">
-                <div class="transition_feature reverse right">
+                <div class="transition_feature reverse right show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -344,7 +346,7 @@
                 </div>
             </div>
             <div class="transition_container_05">
-                <div class="transition_feature left">
+                <div class="transition_feature left show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -354,7 +356,7 @@
                 </div>
             </div>
             <div class="transition_container_06">
-                <div class="transition_feature reverse right">
+                <div class="transition_feature reverse right show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -364,7 +366,7 @@
                 </div>
             </div>
             <div class="transition_container_07">
-                <div class="transition_feature left">
+                <div class="transition_feature left show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -374,7 +376,7 @@
                 </div>
             </div>
             <div class="transition_container_08 ">
-                <div class="transition_feature reverse right">
+                <div class="transition_feature reverse right show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -601,23 +603,32 @@
             <p class="keyHead">For Parents</p>
             <img src="assets/keyCard Section/On Being a Stepmom _ Cup of Jo.jpg" alt="Parent Illustration"
                 class="keyIllustation">
-            <p class="keyHead_disc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur
-                repudiandae voluptatem optio animi veniam facilis, sint illum alias adipisci.</p>
+            <p class="keyHead_disc">Blausm gives you what you’ve always wanted and needed but did not know how. Create
+                your own social circle with parents of neurodivergent individuals - learn and grow with each other,
+                build lasting relationships, seek support and mentorship from neurodiverse individuals and boost the
+                companionship for your child. </p>
         </div>
         <div class="key">
-            <p class="keyHead">For individuals</p>
+            <p class="keyHead">For Neurodivergent Individuals</p>
             <img src="assets/keyCard Section/On Being a Stepmom _ Cup of Jo.jpg" alt="Parent Illustration"
                 class="keyIllustation">
-            <p class="keyHead_disc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur
-                repudiandae voluptatem optio animi veniam facilis, sint illum alias adipisci.</p>
+            <p class="keyHead_disc">Looking for people who get you? Come join the neurodiverse community in your
+                locality, find other individuals who share your ideas, sensitivities, experiences and interests, and
+                create your own neurodiverse friend circle! And what is more, meet your friends virtually or plan an
+                in-person meet-up. It’s easy and intuitive!</p>
         </div>
         <div class="key">
-            <p class="keyHead">For Resources</p>
+            <p class="keyHead">For Service Providers </p>
             <img src="assets/keyCard Section/On Being a Stepmom _ Cup of Jo.jpg" alt="Parent Illustration"
                 class="keyIllustation">
-            <p class="keyHead_disc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit consequuntur
-                repudiandae voluptatem optio animi veniam facilis, sint illum alias adipisci.</p>
+            <p class="keyHead_disc">Have a product or service that can benefit the neurodiverse community? Looking to
+                reach out to the neurodiverse bretheren and not sure how? Your search ends here. Reach out to us on
+                admin@blausm.app to discuss partnership opportunities. </p>
         </div>
+    </section>
+
+    <section class="last_heading">
+        <p>Blossom With Blausm</p>
     </section>
 
     <section class="transtionEnd-section">
@@ -659,13 +670,20 @@
                 <h1 class="header_brand zero_mar ">blausm.</h1>
             </a>
         </div>
-        <div class="footer_copyright">@ Copyright 2021-2022 All rights reserved. Powered by Blossom</div>
+        <div class="privacy_policyPage">
+            <a href="privacy.html" target="_blank" class="clr">privay policy</a>
+        </div>
+        <div class="footer_copyright">@ Copyright 2021-2022 All rights reserved <a href="termsAndCondition.html"
+                target="_blank" class="clr">t&c Apply</a>.
+            Powered by
+            Blossom</div>
     </footer>
 
 
 
 
     <script src="js/highlight_text.js"></script>
+    <script src="js/moveFocus.js"></script>
     <script src="js/header-section.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/footer.js"></script>
