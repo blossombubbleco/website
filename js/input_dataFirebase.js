@@ -70,6 +70,53 @@ emailSignInBtn2.addEventListener('click', () => {
     email_text[1].style.display = 'block';
 })
 // 
+
+//moving focus
+form.addEventListener('keypress', (e) => {
+    let keyPressed = e.keycode || e.which;
+
+    const question = document.querySelectorAll('.formQuestions');
+    question[0].addEventListener('keydown', (e) => {
+        if (question[0].value != '') {
+            if (keyPressed == 13) {
+                console.log('key is pressed 1');
+                nameAlert.style.display = 'none';
+                form.style.transform = "translateX(-40em)";
+                num.style.transform = 'translateY(-2.4em)';
+            }
+        } else {
+            nameAlert.style.display = 'block';
+        }
+    });
+    // question[0].addEventListener('keydown', (e) => {
+    //     if (question[0].value != '') {
+    //         if (keyPressed == 13) {
+    //             console.log('key is pressed 1');
+    //             nameAlert.style.display = 'none';
+    //             form.style.transform = "translateX(-40em)";
+    //             num.style.transform = 'translateY(-2.4em)';
+    //         }
+    //     } else {
+    //         nameAlert.style.display = 'block';
+    //     }
+    // });
+    question[1].addEventListener('keypress', (e) => {
+        if (question[1].value != '') {
+            if (keyPressed == 13) {
+                console.log('key pressed')
+            }
+        } else {
+            emailAlert.style.display = 'block';
+        }
+    });
+
+    if (keyPressed == 13) {
+        e.preventDefault();
+    }
+
+})
+
+
 submit.addEventListener('click', (e) => {
     var name = GetInputVal('name_input');
     var email = GetInputVal('email_input');
@@ -108,6 +155,14 @@ submit.addEventListener('click', (e) => {
     }
 
 });
+form2.addEventListener("keypress", (e) => {
+    let bool = true;
+    let keyPressed = e.keycode || e.which;
+    if (keyPressed == 13) {
+        e.preventDefault();
+        bool = false;
+    }
+})
 submit1.addEventListener('click', (e) => {
     e.preventDefault();
     addVal2();
@@ -124,23 +179,6 @@ submit1.addEventListener('click', (e) => {
     }
 });
 
-//btn for enter to move focus on next
-var allFields = document.querySelectorAll(".register_form");
-
-for (var i = 0; i < allFields.length; i++) {
-
-    allFields[i].addEventListener("keyup", function (event) {
-
-        if (event.keyCode === 13) {
-            console.log('Enter clicked')
-            event.preventDefault();
-            if (this.parentElement.nextElementSibling.querySelector('input')) {
-                this.parentElement.nextElementSibling.querySelector('input').focus();
-            }
-        }
-    });
-
-}
 
 
 //btn show if user authenticated succesfully

@@ -9,6 +9,8 @@ const container_06 = document.querySelector('.transition_container_06');
 const container_07 = document.querySelector('.transition_container_07');
 const container_08 = document.querySelector('.transition_container_08');
 
+const background = document.querySelector('.mobile_sticky-middle');
+
 const transitionFeature = document.querySelectorAll('.transition_feature');
 
 const image = document.querySelectorAll('.mobile_preview');
@@ -108,6 +110,7 @@ observer04 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[3].classList.remove('active');
             image[4].classList.add('active');
+            // background.style.background = 'var(--transition-clr)';
             transitionFeature[0].classList.remove('show_feature');
         }
         else {

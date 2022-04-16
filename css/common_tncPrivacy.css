@@ -9,6 +9,14 @@
     margin-bottom: 20px;
 }
 
+p a,
+p a:hover,
+p a:active,
+p a:focus,
+p a:visited {
+    color: blue;
+}
+
 .para {
     margin-bottom: 60px;
 }
@@ -37,10 +45,88 @@
 
 .para ul li {
     padding: 5px 0px;
+    font-size: 1.2em;
     color: var(--clr-tertiory-footer);
 }
 
 .privacy_heading p {
     color: var(--text-heading-desc);
     font-size: 1.5em;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<MEDIA QUERIES<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+@media (min-width:1401px) and (max-width:1600px) {
+    .policy_content {
+        padding: 35px 110px 100px;
+    }
+}
+
+@media (min-width: 1201px) and (max-width: 1400px) {
+    .policy_content {
+        padding: 35px 90px 100px;
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    .policy_content {
+        padding: 30px 55px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .policy_content {
+        padding: 25px 40px;
+    }
+
+    .heading_page {
+        font-size: 2em;
+    }
+
+    .para ul {
+        padding: 0.5em 0em 0em 4em;
+    }
+}
+
+@media (min-width: 568px) and (max-width: 767px) {
+    .policy_content {
+        padding: 25px 30px;
+    }
+
+    .privacy_heading {
+        font-size: 1.5em;
+    }
+
+    .para p {
+        font-size: 1em;
+    }
+
+    .para ul {
+        padding: 0.5em 0em 0em 3em;
+    }
+
+    .para ul li {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 567px) {
+    .policy_content {
+        padding: 10px 16px 20px;
+    }
+
+    .privacy_heading {
+        font-size: 1.5em;
+    }
+
+    .para p {
+        font-size: 1em;
+    }
+
+    .para ul {
+        padding: 0.5em 0em 0em 3em;
+    }
+
+    .para ul li {
+        font-size: 1em;
+    }
 }

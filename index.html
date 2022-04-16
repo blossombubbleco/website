@@ -145,10 +145,10 @@
                 <div class="input_wrapper">
                     <div class="width_flex">
                         <div class="formOverflow">
-                            <form action="" id="form">
+                            <form action="" id="form" class="form_01">
                                 <div class="name_container">
                                     <label for="name" class="name">What is your name ?</label>
-                                    <input type="text" name="name" id="name_input" class="moveFocus"
+                                    <input type="text" name="name" id="name_input" class="formQuestions"
                                         placeholder="Enter Your First and Last Name">
                                     <p class="alert_input alertShow">*Please enter your full name</p>
                                     <div class="flex_container">
@@ -160,7 +160,7 @@
                                     <label for="email" class="email_label">What is your email
                                         address
                                         ?</label>
-                                    <input type="email" name="email" class="moveFocus" id="email_input"
+                                    <input type="email" name="email" class="formQuestions" id="email_input"
                                         placeholder="example@gmail.com" required>
                                     <p class="alert_input alertemail">*Please Enter Your Email Address</p>
                                     <div class="flex_container">
@@ -174,7 +174,7 @@
                                     <div class="typeahead__container">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
-                                                <input class="js-typeahead-country_v1 moveFocus"
+                                                <input class="js-typeahead-country_v1 formQuestions"
                                                     name="country_v1[query]" placeholder="Country" autocomplete="off"
                                                     id="country">
                                             </div>
@@ -183,7 +183,7 @@
                                     <div class="typeahead__container mar_top">
                                         <div class="typeahead__field">
                                             <div class="typeahead__query">
-                                                <input class="js-typeahead-city_v1 location_input moveFocus"
+                                                <input class="js-typeahead-city_v1 location_input formQuestions"
                                                     name="city_v1[query]" placeholder="City" autocomplete="off"
                                                     id="location_input">
                                                 <p class="alert_input alertlocate alteration">*Please Enter Your
@@ -336,7 +336,7 @@
 
             </div>
             <div class="transition_container_04">
-                <div class="transition_feature reverse right show_feature">
+                <div class="transition_feature reverse show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -346,27 +346,25 @@
                 </div>
             </div>
             <div class="transition_container_05">
-                <div class="transition_feature left show_feature">
+                <div class="transition_feature right show_feature">
                     <div class="text_wid">
-                        <p class="feature-head">Feature Shown</p>
-                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
-                            dolor
-                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                        <p class="feature-head">CONNECT WITH THE NEURODIVERSE COMMUNITY IN YOUR NEIGHBOURHOOD</p>
+                        <p class="disc">Find neurodiverse families around you, filter by location, interests,
+                            sensitivites, age etc.</p>
                     </div>
                 </div>
             </div>
             <div class="transition_container_06">
-                <div class="transition_feature reverse right show_feature">
+                <div class="transition_feature reverse show_feature">
                     <div class="text_wid">
-                        <p class="feature-head">Feature Shown</p>
-                        <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
-                            dolor
-                            sit amet consectetur adipisicing elit. Tempore, dignissimos.</p>
+                        <p class="feature-head">SEEK SERVICES FROM PROVIDERS CATERING TO NEURODIVERGENT INDIVIDUALS </p>
+                        <p class="disc">Find, rate and recommend resources and services providers in your neighborhoods
+                        </p>
                     </div>
                 </div>
             </div>
             <div class="transition_container_07">
-                <div class="transition_feature left show_feature">
+                <div class="transition_feature right show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -376,7 +374,7 @@
                 </div>
             </div>
             <div class="transition_container_08 ">
-                <div class="transition_feature reverse right show_feature">
+                <div class="transition_feature reverse show_feature">
                     <div class="text_wid">
                         <p class="feature-head">Feature Shown</p>
                         <p class="disc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, Lorem ipsum
@@ -440,6 +438,10 @@
 
     <section class="vision_section">
         <div class="vision_left-illustration">
+            <div class="section_head">
+                <p class="vision_heading down">Our Vision</p>
+                <hr class="below_heading">
+            </div>
             <img src="assets/vision_section/vision_left-illustration.svg" alt="Vision section Illustration"
                 class="vision_leftIllustration">
         </div>
@@ -683,16 +685,16 @@
 
 
     <script src="js/highlight_text.js"></script>
-    <script src="js/moveFocus.js"></script>
     <script src="js/header-section.js"></script>
     <script src="js/transition.js"></script>
     <script src="js/footer.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/input-section.js"></script>
     <script>
         AOS.init();
     </script>
-    <script src="js/input-section.js"></script>
     <script type="module" src="js/input_dataFirebase.js"></script>
+    <!-- <script src="js/moveFocus.js"></script> -->
 
 </body>
 

@@ -12,6 +12,7 @@ const emailAlert2 = document.querySelector('.alertemail2');
 const locationAlert2 = document.querySelector('.alertlocate2');
 
 
+
 var form = document.querySelector('#form');
 var transFirst = document.querySelector('#moveFirst');
 var transSecond = document.querySelector('#moveSecond');

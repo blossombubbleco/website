@@ -1,34 +1,72 @@
-// for moving focus to next element on enter
 
-// 1 press enter on move to next field
-// const formQuestion01 = document.querySelectorAll('.moveFocus');
+// form1.addEventListener('keypress', (e) => {
+//     let bool = true;
+//     let keyPressed = e.keycode || e.which;
 
-// var allFields = document.querySelectorAll(".moveFocus");
-
-// for (var i = 0; i < allFields.length; i++) {
-
-//     allFields[i].addEventListener("keyup", function (event) {
-
-//         if (event.which === 13) {
-//             console.log('Enter clicked')
-//             event.preventDefault();
-//             if (this.parentElement.nextElementSibling.querySelector('input')) {
-//                 this.parentElement.nextElementSibling.querySelector('input').focus();
+//     const question = document.querySelectorAll('.formQuestions');
+//     question[0].addEventListener('keypress', (e) => {
+//         if (question[0].value != '') {
+//             if (keyPressed == 13) {
+//                 console.log('key is pressed 1');
+//                 nameAlert.style.display = 'none';
+//                 form.style.transform = "translateX(-40em)";
+//                 num.style.transform = 'translateY(-2.4em)';
 //             }
-//         }
-//     });
-
-// }
-
-// formQuestion01.forEach(element => {
-//     element.addEventListener('keyup', (e) => {
-//         // e.preventDefault();
-//         if (e.keyCode === 13) {
-//             console.log('Enter clicked')
-//             e.preventDefault();
-//             // if (this.parentElement.nextElementSibling.querySelector('input')) {
-//             //     this.parentElement.nextElementSibling.querySelector('input').focus();
-//             // }
+//         } else {
+//             nameAlert.style.display = 'block';
 //         }
 //     })
-// });
+//     question[1].addEventListener('keypress', (e) => {
+//         if (question[1].value != '') {
+//             if (keyPressed == 13) {
+//                 console.log('key is pressed 2');
+//                 emailAlert.style.display = 'none';
+//                 form.style.transform = "translateX(-80em)";
+//                 num.style.transform = 'translateY(-4.8em)';
+//                 // question[1].nextElementSibling.focus();
+//             }
+//         } else {
+//             emailAlert.style.display = 'block';
+//         }
+//     })
+//     question[2].addEventListener('keypress', (e) => {
+//         if (question[2].value != '' && question[3].value != '') {
+//             if (keyPressed == 13) {
+//                 console.log('key is pressed 3');
+//                 locationAlert.style.display = 'none';
+//                 form.style.transform = "translateX(-120em)";
+//                 num.style.transform = 'translateY(-7.2em)';
+//                 // question[2].nextElementSibling.focus();
+//             }
+//         } else {
+//             locationAlert.style.display = 'block';
+//         }
+//     })
+//     question[3].addEventListener('keypress', (e) => {
+//         if (question[3].value != '' && question[2].value != '') {
+//             if (keyPressed == 13) {
+//                 console.log('key is pressed 4');
+//                 locationAlert.style.display = 'none';
+//                 form.style.transform = "translateX(-120em)";
+//                 num.style.transform = 'translateY(-7.2em)';
+//                 // question[3].focus();
+//             }
+//         } else {
+//             locationAlert.style.display = 'block';
+//         }
+//     })
+
+//     if (keyPressed == 13) {
+//         e.preventDefault();
+//     }
+
+// })
+
+
+// var form2 = document.querySelector('#form2');
+// form2.addEventListener("keypress", (e) => {
+//     let keyPressed = e.keycode || e.which;
+//     if (keyPressed == 13) {
+//         e.preventDefault();
+//     }
+// })
