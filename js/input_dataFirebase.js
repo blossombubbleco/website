@@ -71,50 +71,106 @@ emailSignInBtn2.addEventListener('click', () => {
 })
 // 
 
+
 //moving focus
-form.addEventListener('keypress', (e) => {
+const topForm = document.querySelector('#remove');
+const bottomForm = document.querySelector('#form_bottom');
+topForm.addEventListener('keypress', (e) => {
     let keyPressed = e.keycode || e.which;
 
     const question = document.querySelectorAll('.formQuestions');
-    question[0].addEventListener('keydown', (e) => {
-        if (question[0].value != '') {
-            if (keyPressed == 13) {
-                console.log('key is pressed 1');
+    if (keyPressed == 13) {
+        e.preventDefault();
+        question.forEach(element => {
+            if (question[0].value != '') {
                 nameAlert.style.display = 'none';
                 form.style.transform = "translateX(-40em)";
                 num.style.transform = 'translateY(-2.4em)';
-            }
-        } else {
-            nameAlert.style.display = 'block';
-        }
-    });
-    // question[0].addEventListener('keydown', (e) => {
-    //     if (question[0].value != '') {
-    //         if (keyPressed == 13) {
-    //             console.log('key is pressed 1');
-    //             nameAlert.style.display = 'none';
-    //             form.style.transform = "translateX(-40em)";
-    //             num.style.transform = 'translateY(-2.4em)';
-    //         }
-    //     } else {
-    //         nameAlert.style.display = 'block';
-    //     }
-    // });
-    question[1].addEventListener('keypress', (e) => {
-        if (question[1].value != '') {
-            if (keyPressed == 13) {
-                console.log('key pressed')
-            }
-        } else {
-            emailAlert.style.display = 'block';
-        }
-    });
+                inputIllustrations[0].classList.remove('active');
+                inputIllustrations[1].classList.add('active');
+                if (question[1].value != '') {
+                    emailAlert.style.display = 'none';
+                    form.style.transform = "translateX(-80em)";
+                    num.style.transform = 'translateY(-4.8em)';
+                    inputIllustrations[1].classList.remove('active');
+                    inputIllustrations[2].classList.add('active');
+                    if (question[2].value != '' && question[3].value != '') {
+                        locationAlert.style.display = 'none';
+                        form.style.transform = "translateX(-120em)";
+                        num.style.transform = 'translateY(-7.2em)';
+                        inputIllustrations[2].classList.remove('active');
+                        inputIllustrations[3].classList.add('active');
+                        quesDesc[0].style.display = 'block';
+                        e.preventDefault();
 
-    if (keyPressed == 13) {
-        e.preventDefault();
+                    } else {
+                        locationAlert.style.display = 'block';
+                    }
+                }
+                else {
+                    emailAlert.style.display = 'block';
+                }
+            } else {
+                nameAlert.style.display = 'block';
+            }
+        })
     }
+    var name = GetInputVal('name_input');
+    var email = GetInputVal('email_input');
+    var locationCountry = GetInputVal('country');
+    var locationCity = GetInputVal('location_input');
+    var type = GetInputVal('type_input');
 
 })
+
+bottomForm.addEventListener('keypress', (e) => {
+    let keyPressed = e.keycode || e.which;
+
+    const question = document.querySelectorAll('.formQuestions2');
+    if (keyPressed == 13) {
+        e.preventDefault();
+        question.forEach(element => {
+            if (question[0].value != '') {
+                nameAlert2.style.display = 'none';
+                form2.style.transform = "translateX(-40em)";
+                num2.style.transform = 'translateY(-2.4em)';
+                inputIllustrations[6].classList.remove('active');
+                inputIllustrations[7].classList.add('active');
+                if (question[1].value != '') {
+                    emailAlert2.style.display = 'none';
+                    form2.style.transform = "translateX(-80em)";
+                    num2.style.transform = 'translateY(-4.8em)';
+                    inputIllustrations[7].classList.remove('active');
+                    inputIllustrations[8].classList.add('active');
+                    if (question[2].value != '' && question[3].value != '') {
+                        locationAlert2.style.display = 'none';
+                        form2.style.transform = "translateX(-120em)";
+                        num2.style.transform = 'translateY(-7.2em)';
+                        inputIllustrations[8].classList.remove('active');
+                        inputIllustrations[9].classList.add('active');
+                        quesDesc[1].style.display = 'block';
+                        e.preventDefault();
+
+                    } else {
+                        locationAlert2.style.display = 'block';
+                    }
+                }
+                else {
+                    emailAlert2.style.display = 'block';
+                }
+            } else {
+                nameAlert2.style.display = 'block';
+            }
+        })
+    }
+    var name = GetInputVal('name_input');
+    var email = GetInputVal('email_input');
+    var locationCountry = GetInputVal('country');
+    var locationCity = GetInputVal('location_input');
+    var type = GetInputVal('type_input');
+
+})
+
 
 
 submit.addEventListener('click', (e) => {

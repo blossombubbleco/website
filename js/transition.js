@@ -41,7 +41,7 @@ observer00 = new IntersectionObserver((entries) => {
             image[0].classList.add('active');
         }
         else {
-            image[1].classList.remove('active');
+            // image[1].classList.remove('active');
         }
     })
 }, options00);

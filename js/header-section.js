@@ -6,8 +6,10 @@ customize_btn.addEventListener('click', function () {
 });
 
 const check = document.querySelector('#checkbox');
+const transitonEnd = document.querySelector('.transtionEnd-section');
 check.addEventListener('change', () => {
-    document.body.classList.toggle('dark_mode')
+    document.body.classList.toggle('dark_mode');
+    transitonEnd.classList.toggle('show_end');
 })
 
 //change font size

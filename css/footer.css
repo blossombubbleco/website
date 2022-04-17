@@ -11,7 +11,11 @@
 }
 
 .privacy_policyPage {
-    margin: 5px 0px;
+    width: 100%;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .clr {
@@ -41,6 +45,14 @@
     align-items: center;
     width: 24%;
     margin: auto;
+}
+
+.left_mar {
+    margin-left: 10px;
+}
+
+.right_mar {
+    margin-right: 10px;
 }
 
 .none {
@@ -95,6 +107,10 @@
     .footer_social-icon {
         width: 58%;
     }
+
+    .privacy_policyPage {
+        width: 68%;
+    }
 }
 
 /* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<[567px]<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
@@ -109,6 +125,15 @@
 
     .footer_brand a {
         font-size: 32px;
+    }
+
+    .privacy_policyPage {
+        width: 82%;
+        margin: 10px auto 15px;
+    }
+
+    .clr {
+        font-size: 14px;
     }
 
     .footer_copyright {
