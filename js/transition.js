@@ -40,9 +40,6 @@ observer00 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[0].classList.add('active');
         }
-        else {
-            // image[1].classList.remove('active');
-        }
     })
 }, options00);
 observer00.observe(container_card);
@@ -187,11 +184,11 @@ observer08 = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             image[7].classList.remove('active');
             image[8].classList.add('active');
-            transitionFeature[4].classList.remove('show_feature');
+            // transitionFeature[4].classList.remove('show_feature');
         }
         else {
             image[8].classList.remove('active');
-            transitionFeature[4].classList.add('show_feature');
+            // transitionFeature[4].classList.add('show_feature');
         }
     })
 }, options08);

@@ -94,7 +94,7 @@ topForm.addEventListener('keypress', (e) => {
                     num.style.transform = 'translateY(-4.8em)';
                     inputIllustrations[1].classList.remove('active');
                     inputIllustrations[2].classList.add('active');
-                    if (question[2].value != '' && question[3].value != '') {
+                    if (question[2].value != '' && question[3].value != '' && question[4].value != '') {
                         locationAlert.style.display = 'none';
                         form.style.transform = "translateX(-120em)";
                         num.style.transform = 'translateY(-7.2em)';
@@ -115,11 +115,6 @@ topForm.addEventListener('keypress', (e) => {
             }
         })
     }
-    var name = GetInputVal('name_input');
-    var email = GetInputVal('email_input');
-    var locationCountry = GetInputVal('country');
-    var locationCity = GetInputVal('location_input');
-    var type = GetInputVal('type_input');
 
 })
 
@@ -142,7 +137,7 @@ bottomForm.addEventListener('keypress', (e) => {
                     num2.style.transform = 'translateY(-4.8em)';
                     inputIllustrations[7].classList.remove('active');
                     inputIllustrations[8].classList.add('active');
-                    if (question[2].value != '' && question[3].value != '') {
+                    if (question[2].value != '' && question[3].value != '' && question[4].value != '') {
                         locationAlert2.style.display = 'none';
                         form2.style.transform = "translateX(-120em)";
                         num2.style.transform = 'translateY(-7.2em)';
@@ -163,11 +158,6 @@ bottomForm.addEventListener('keypress', (e) => {
             }
         })
     }
-    var name = GetInputVal('name_input');
-    var email = GetInputVal('email_input');
-    var locationCountry = GetInputVal('country');
-    var locationCity = GetInputVal('location_input');
-    var type = GetInputVal('type_input');
 
 })
 
@@ -203,7 +193,7 @@ submit.addEventListener('click', (e) => {
         const botForm = document.querySelector('#top_Form');
         botForm.style.display = 'none';
         const done = document.querySelector('#top_done');
-        done.style.display = 'block';
+        done.style.display = 'flex';
         const padding = document.querySelector('#top_removePadd');
         padding.style.padding = '100px 140px'
         const btn = document.querySelector('#joinUs_btn');
@@ -227,7 +217,7 @@ submit1.addEventListener('click', (e) => {
         const botForm = document.querySelector('#bottom_Form');
         botForm.style.display = 'none';
         const done = document.querySelector('#bottom_done');
-        done.style.display = 'block';
+        done.style.display = 'flex';
         const padding = document.querySelector('#bottom_removePadd');
         padding.style.padding = '100px 140px'
         const btn = document.querySelector('#joinUs_btn');
@@ -267,6 +257,7 @@ async function getcountry() {
         input: '.js-typeahead-country_v1',
         minLength: 1,
         order: "asc",
+        searchOnFocus: true,
         display: ["name"],
         source: {
             data: country
@@ -274,18 +265,40 @@ async function getcountry() {
         callback: {
             onClickAfter: function (node, a, item, event) {
                 //call the function to send the data to firebase
-                getcity(item.iso2);
+                getstate(item.iso2);
             },
         }
     });
 }
 
+async function getstate(iso2) {
+    var url = "https://api.countrystatecity.in/v1/countries/" + iso2 + "/states"
+    const response = await fetch(url, requestOptions);
+    var result = await response.text();
+    const state = JSON.parse(result);
+    $.typeahead({
+        input: '.js-typeahead-state_v1',
+        minLength: 1,
+        order: "asc",
+        display: ["name"],
+        source: {
+            data: state
+        },
+        callback: {
+            onClickAfter: function (node, a, item, event) {
+                //call the function to send the data to firebase
+                getcity(iso2, item.iso2);
+            },
+        }
+    });
+}
 
-async function getcity(iso2) {
-    var url = "https://api.countrystatecity.in/v1/countries/" + iso2 + "/cities"
+async function getcity(countryiso2, stateiso2) {
+    var url = "https://api.countrystatecity.in/v1/countries/" + countryiso2 + "/states/" + stateiso2 + "/cities"
     const response = await fetch(url, requestOptions);
     var result = await response.text();
     const city = JSON.parse(result).map(function (el) { return el.name })
+    console.log(city);
     $.typeahead({
         input: '.js-typeahead-city_v1',
         minLength: 1,
@@ -309,7 +322,8 @@ async function addVal() {
     var name = GetInputVal('name_input');
     var email = GetInputVal('email_input');
     var locationCountry = GetInputVal('country');
-    var locationCity = GetInputVal('location_input');
+    var locationState = GetInputVal('location_input');
+    var locationCity = GetInputVal('location_inputCity');
     var type = GetInputVal('type_input');
     try {
 
@@ -317,6 +331,7 @@ async function addVal() {
             name: name,
             email: email,
             Country: locationCountry,
+            State: locationState,
             city: locationCity,
             type: type
         });
@@ -329,7 +344,8 @@ async function addVal2() {
     var name = document.querySelector('.name_input').value;
     var email = document.querySelector('.email_input').value;
     var locationCountry = GetInputVal('countery');
-    var locationCity = GetInputVal('location_inputCity');
+    var locationState = GetInputVal('location_inputState');
+    var locationCity = document.querySelector('.location_inputCity').value;
     var type = document.querySelector('.type_input').value
     try {
 
@@ -337,6 +353,7 @@ async function addVal2() {
             name: name,
             email: email,
             Country: locationCountry,
+            State: locationState,
             city: locationCity,
             type: type
         });

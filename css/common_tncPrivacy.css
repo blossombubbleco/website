@@ -3,10 +3,10 @@
 }
 
 .privacy_heading {
-    font-size: 2em;
-    font-weight: 600;
+    font-size: 2.5em;
+    font-weight: 700;
     color: var(--text-heading);
-    margin-bottom: 20px;
+    margin-bottom: 2em;
 }
 
 p a,
@@ -17,13 +17,18 @@ p a:visited {
     color: blue;
 }
 
+.weight {
+    font-weight: 700;
+}
+
 .para {
     margin-bottom: 60px;
 }
 
 .para p {
     font-size: 1.2em;
-    color: var(--clr-tertiory-footer);
+    color: var(--text-section_heading-descc);
+    margin-bottom: 3em;
 }
 
 .heading_page {
@@ -37,16 +42,26 @@ p a:visited {
     margin-bottom: 10px;
 }
 
-.para ul {
+.para ul,
+.para ol {
     padding: 0.5em 0em 0em 5em;
     list-style-type: disc;
     margin-bottom: 1em;
 }
 
-.para ul li {
+ul li {
+    margin-bottom: 10px;
+}
+
+.para ul li,
+.para ol li {
     padding: 5px 0px;
     font-size: 1.2em;
-    color: var(--clr-tertiory-footer);
+    color: var(--text-section_heading-descc);
+}
+
+.para ul li i {
+    font-weight: 500;
 }
 
 .privacy_heading p {
@@ -82,7 +97,8 @@ p a:visited {
         font-size: 2em;
     }
 
-    .para ul {
+    .para ul,
+    .para ol {
         padding: 0.5em 0em 0em 4em;
     }
 }
@@ -100,11 +116,13 @@ p a:visited {
         font-size: 1em;
     }
 
-    .para ul {
+    .para ul,
+    .para ol {
         padding: 0.5em 0em 0em 3em;
     }
 
-    .para ul li {
+    .para ul li,
+    .para ol li {
         font-size: 1em;
     }
 }
@@ -122,11 +140,13 @@ p a:visited {
         font-size: 1em;
     }
 
-    .para ul {
+    .para ul,
+    .para ol {
         padding: 0.5em 0em 0em 3em;
     }
 
-    .para ul li {
+    .para ul li,
+    .para ol li {
         font-size: 1em;
     }
 }

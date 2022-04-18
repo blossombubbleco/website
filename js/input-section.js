@@ -62,8 +62,9 @@ transSecond.addEventListener('click', () => {
 })
 transThird.addEventListener('click', () => {
     var location = GetInputVal('country');
-    var locationCity = GetInputVal('location_input');
-    if (location == '' || locationCity == '') {
+    var locationState = GetInputVal('location_input');
+    var locationCity = GetInputVal('location_inputCity');
+    if (location == '' || locationState == '' || locationCity == '') {
         locationAlert.style.display = 'block';
     } else {
         locationAlert.style.display = 'none';
@@ -177,8 +178,9 @@ transSecond2.addEventListener('click', () => {
 })
 transThird2.addEventListener('click', () => {
     var location = GetInputVal('countery');
-    var locationCity = GetInputVal('location_inputCity');
-    if (location == '' || locationCity == '') {
+    var locationState = GetInputVal('location_inputState');
+    var locationcity = document.querySelector('.location_inputCity').value;
+    if (location == '' || locationState == '' || locationcity == '') {
         locationAlert2.style.display = 'block';
     } else {
         locationAlert2.style.display = 'none';

@@ -265,6 +265,9 @@
 #location_input,
 #type_input,
 #location_inputCity,
+.location_inputCity,
+#location_inputState,
+#InputCity,
 #country,
 #countery,
 .name_input,
@@ -273,7 +276,7 @@
     height: 3rem;
     outline: none;
     background-color: var(--per-input);
-    border-radius: 8px;
+    border-radius: 8px !important;
     border: 0px;
     font-size: 18px;
     padding-left: 15px;
@@ -283,6 +286,9 @@
 
 #location_input,
 #location_inputCity,
+#location_inputState,
+#InputCity,
+.location_inputCity,
 #country,
 #countery {
     width: 33.2em;
@@ -433,96 +439,41 @@ select {
 
 .mar_top {
     margin-top: 2em;
-    margin-bottom: 3em;
+    margin-bottom: 2em;
+}
+
+.thankYou_illus {
+    width: 42%;
+}
+
+.thankYou_illus img {
+    width: 100%;
+}
+
+.thankyou_text {
+    width: 50%;
+}
+
+.thankYou_head {
+    font-weight: 600;
+    font-size: 64px;
+    line-height: 96px;
+    text-align: center;
+    margin-bottom: 1.5em;
+    color: var(--text-heading);
+}
+
+.thank_youDesc {
+    font-size: 2.1em;
+    line-height: 45px;
+    text-align: center;
+    color: var(--text-section_heading-desc);
 }
 
 .signIn-done {
     display: none;
-}
-
-/*////////////////////// tick animation////////////////// */
-.wrapper {
-    margin: auto;
-    padding-bottom: 5em;
-    display: flex;
-    justify-content: center;
     align-items: center;
-}
-
-.checkmark__circle {
-    stroke-dasharray: 166;
-    stroke-dashoffset: 166;
-    stroke-width: 2;
-    stroke-miterlimit: 10;
-    stroke: var(--clr-primary);
-    fill: var(--clr-primary);
-    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards
-}
-
-.checkmark {
-    width: 8em;
-    border-radius: 50%;
-    display: block;
-    stroke-width: 5px;
-    stroke: #fff;
-    stroke-miterlimit: 10;
-    box-shadow: inset 0px 0px 0px var(--clr-primary);
-    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both
-}
-
-.checkmark__check {
-    transform-origin: 50% 50%;
-    stroke-dasharray: 48;
-    stroke-dashoffset: 48;
-    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards
-}
-
-@keyframes stroke {
-    100% {
-        stroke-dashoffset: 0
-    }
-}
-
-@keyframes scale {
-
-    0%,
-    100% {
-        transform: none
-    }
-
-    50% {
-        transform: scale3d(1.1, 1.1, 1)
-    }
-}
-
-@keyframes fill {
-    100% {
-        box-shadow: inset 0px 0px 0px 30px var(--clr-primary)
-    }
-}
-
-.thank_you {
-    font-family: 'Pacifico', cursive;
-    font-size: 7em;
-    color: var(--text-heading);
-    text-align: center;
-    margin: 25px 0px;
-}
-
-.above_ {
-    height: 1em;
-    border-radius: 20px;
-    background-color: var(--clr-primary);
-    width: 50em;
-    margin: auto;
-}
-
-.thank_text {
-    font-size: 2em;
-    text-align: center;
-    font-weight: 400;
-    text-transform: uppercase;
-    color: var(--per-card-textHead-desc);
+    justify-content: space-between;
 }
 
 .email_auth {
@@ -1039,6 +990,10 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    #type_input,
+    .location_inputCity,
+    #location_inputState,
     #type_input,
     .name_input,
     .email_input,
@@ -1048,6 +1003,28 @@ select {
 
     .width_flex {
         width: 54%;
+    }
+
+    .thankYou_head {
+        font-size: 3.5em;
+        line-height: 80px;
+        margin-bottom: 1em;
+    }
+
+    .signIn-done {
+        height: 100%;
+    }
+
+    .thank_youDesc {
+        font-size: 1.8em;
+    }
+
+    .thankYou_illus {
+        width: 50%;
+    }
+
+    .thankyou_text {
+        width: 46%;
     }
 
     .inputSection_illustration {
@@ -1227,6 +1204,28 @@ select {
         display: none;
     }
 
+    .thankYou_head {
+        font-size: 3.1em;
+        line-height: 80px;
+        margin-bottom: 1em;
+    }
+
+    .signIn-done {
+        height: 100%;
+    }
+
+    .thank_youDesc {
+        font-size: 1.8em;
+    }
+
+    .thankYou_illus {
+        width: 50%;
+    }
+
+    .thankyou_text {
+        width: 50%;
+    }
+
     .early_access_section {
         padding: 90px 90px;
     }
@@ -1243,6 +1242,10 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    .location_inputCity,
+    #type_input,
+    #location_inputState,
     #type_input,
     .name_input,
     .email_input,
@@ -1432,8 +1435,13 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    .location_inputCity,
+    #type_input,
+    #location_inputState,
     #type_input,
     #country,
+    #countery,
     .name_input,
     .email_input,
     .type_input {
@@ -1447,6 +1455,28 @@ select {
     .card_feature {
         grid-column-gap: 21em;
         padding: 50px 20px;
+    }
+
+    .thankYou_head {
+        font-size: 3.1em;
+        line-height: 80px;
+        margin-bottom: 1em;
+    }
+
+    .signIn-done {
+        height: 100%;
+    }
+
+    .thank_youDesc {
+        font-size: 1.8em;
+    }
+
+    .thankYou_illus {
+        width: 50%;
+    }
+
+    .thankyou_text {
+        width: 50%;
     }
 
     .inputSection_illustration {
@@ -1639,8 +1669,14 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    .location_inputCity,
+    #type_input,
+    #location_inputState,
+    #InputCity,
     #type_input,
     #country,
+    #countery,
     .name_input,
     .email_input,
     .type_input {
@@ -1655,8 +1691,35 @@ select {
         display: none;
     }
 
+    .alteration {
+        right: 5em;
+    }
+
     .inputSection_illustration {
         display: none;
+    }
+
+    .thankYou_head {
+        font-size: 3.1em;
+        line-height: 80px;
+        margin-bottom: 1em;
+    }
+
+    .signIn-done {
+        height: 100%;
+    }
+
+    .thank_youDesc {
+        font-size: 1.3em;
+        line-height: 35px;
+    }
+
+    .thankYou_illus {
+        width: 50%;
+    }
+
+    .thankyou_text {
+        width: 50%;
     }
 
     .keyCard_section {
@@ -1886,8 +1949,13 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    .location_inputCity,
+    #type_input,
+    #location_inputState,
     #type_input,
     #country,
+    #countery,
     .name_input,
     .email_input,
     .type_input {
@@ -1935,6 +2003,30 @@ select {
         justify-content: space-between;
         flex-direction: column;
         height: 100%;
+    }
+
+    .thankYou_head {
+        font-size: 2.1em;
+        line-height: 52px;
+        margin-bottom: 0.4em;
+    }
+
+    .signIn-done {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .thank_youDesc {
+        font-size: 1em;
+        line-height: 22px;
+    }
+
+    .thankYou_illus {
+        width: 60%;
+    }
+
+    .thankyou_text {
+        width: 100%;
     }
 
     .keyHead {
@@ -2157,8 +2249,13 @@ select {
     #name_input,
     #email_input,
     #location_input,
+    #location_inputCity,
+    .location_inputCity,
+    #type_input,
+    #location_inputState,
     #type_input,
     #country,
+    #countery,
     .name_input,
     .email_input,
     .type_input {
@@ -2209,6 +2306,30 @@ select {
 
     .wid {
         width: 49%;
+    }
+
+    .thankYou_head {
+        font-size: 2.1em;
+        line-height: 52px;
+        margin-bottom: 0.4em;
+    }
+
+    .signIn-done {
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .thank_youDesc {
+        font-size: 1em;
+        line-height: 22px;
+    }
+
+    .thankYou_illus {
+        width: 60%;
+    }
+
+    .thankyou_text {
+        width: 100%;
     }
 
     .transition_feature {
@@ -2263,6 +2384,9 @@ select {
 
     #location_input,
     #location_inputCity,
+    #type_input,
+    .location_inputCity,
+    #location_inputState,
     #country,
     #countery {
         width: 50%;
