@@ -895,16 +895,16 @@ select {
     font-weight: 500;
     font-size: 1.6em;
     line-height: 36px;
+    padding-bottom: 40px;
     letter-spacing: 0.02em;
     color: var(--text-heading);
 }
 
 .keyIllustation {
-    height: 30em;
     object-fit: cover;
-    width: 100%;
+    width: 70%;
     border-radius: 9px;
-    margin: 40px 0px 35px;
+    margin: auto;
     display: block;
 }
 
