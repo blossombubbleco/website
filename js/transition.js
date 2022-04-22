@@ -15,6 +15,8 @@ const transitionFeature = document.querySelectorAll('.transition_feature');
 
 const image = document.querySelectorAll('.mobile_preview');
 
+const featureMobileCards = document.querySelectorAll('.featureShow_card');
+
 const lightImage = document.querySelector('.display')
 const darkImage = document.querySelector('.darkModeActive')
 check.addEventListener('change', () => {
@@ -46,7 +48,7 @@ observer00.observe(container_card);
 
 options01 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.475
 }
 observer01 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -64,11 +66,12 @@ observer01.observe(container_01);
 
 options02 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.475
 }
 observer02 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[1].classList.remove('active');
             image[2].classList.add('active');
         }
@@ -82,11 +85,12 @@ observer02.observe(container_02);
 
 options03 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.475
 }
 observer03 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[2].classList.remove('active');
             image[3].classList.add('active');
         }
@@ -100,19 +104,17 @@ observer03.observe(container_03);
 
 options04 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.425
 }
 observer04 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[3].classList.remove('active');
             image[4].classList.add('active');
-            // background.style.background = 'var(--transition-clr)';
-            transitionFeature[0].classList.remove('show_feature');
         }
         else {
             image[4].classList.remove('active');
-            transitionFeature[0].classList.add('show_feature');
         }
     })
 }, options04);
@@ -120,18 +122,19 @@ observer04.observe(container_04);
 
 options05 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.475
 }
 observer05 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[4].classList.remove('active');
             image[5].classList.add('active');
-            transitionFeature[1].classList.remove('show_feature');
+            featureMobileCards[0].style.opacity = '1';
         }
         else {
             image[5].classList.remove('active');
-            transitionFeature[1].classList.add('show_feature');
+            featureMobileCards[0].style.opacity = '0';
         }
     })
 }, options05);
@@ -139,18 +142,19 @@ observer05.observe(container_05);
 
 options06 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.25
 }
 observer06 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[5].classList.remove('active');
             image[6].classList.add('active');
-            transitionFeature[2].classList.remove('show_feature');
+            featureMobileCards[1].style.opacity = '1';
         }
         else {
             image[6].classList.remove('active');
-            transitionFeature[2].classList.add('show_feature');
+            featureMobileCards[1].style.opacity = '0';
         }
     })
 }, options06);
@@ -158,18 +162,19 @@ observer06.observe(container_06);
 
 options07 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.475
 }
 observer07 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[6].classList.remove('active');
             image[7].classList.add('active');
-            transitionFeature[3].classList.remove('show_feature');
+            featureMobileCards[2].style.opacity = '1';
         }
         else {
             image[7].classList.remove('active');
-            transitionFeature[3].classList.add('show_feature');
+            featureMobileCards[2].style.opacity = '0';
         }
     })
 }, options07);
@@ -177,18 +182,19 @@ observer07.observe(container_07);
 
 options08 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.25
 }
 observer08 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
+            image[0].classList.remove('active');
             image[7].classList.remove('active');
             image[8].classList.add('active');
-            // transitionFeature[4].classList.remove('show_feature');
+            featureMobileCards[3].style.opacity = '1';
         }
         else {
             image[8].classList.remove('active');
-            // transitionFeature[4].classList.add('show_feature');
+            featureMobileCards[3].style.opacity = '0';
         }
     })
 }, options08);

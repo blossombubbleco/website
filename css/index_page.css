@@ -550,8 +550,22 @@ select {
 
 .disc {
     color: var(--text-heading-desc);
-    font-size: 18px;
+    font-size: 1.15em;
     font-size: 500;
+}
+
+.show_mobCards {
+    display: none;
+}
+
+.posi_abs {
+    position: relative;
+}
+
+.featureShow_card {
+    position: absolute;
+    opacity: 0;
+    transition: 500ms;
 }
 
 .section_heading {
@@ -994,6 +1008,7 @@ select {
     #type_input,
     .location_inputCity,
     #location_inputState,
+    #country,
     #type_input,
     .name_input,
     .email_input,
@@ -1033,10 +1048,6 @@ select {
 
     .input_text_bottom {
         margin-top: 0em;
-    }
-
-    .flex_container {
-        width: 74%;
     }
 
     .google_signIn,
@@ -1265,10 +1276,6 @@ select {
         margin-top: 0em;
     }
 
-    .flex_container {
-        width: 74%;
-    }
-
     .google_signIn,
     .facebook_signIn,
     .Email_signIn {
@@ -1452,6 +1459,10 @@ select {
         padding: 90px 55px;
     }
 
+    .submit p {
+        font-size: 0.8em;
+    }
+
     .card_feature {
         grid-column-gap: 21em;
         padding: 50px 20px;
@@ -1611,6 +1622,10 @@ select {
         font-size: 1.375em;
     }
 
+    .submit p {
+        font-size: 0.8em;
+    }
+
     .vision_section {
         padding: 0px 40px 100px;
         flex-direction: column;
@@ -1642,6 +1657,18 @@ select {
         justify-content: center;
     }
 
+    .transition_feature {
+        display: none;
+    }
+
+    .show_mobCards {
+        position: sticky;
+        display: block;
+        top: 10%;
+        top: 78%;
+        padding: 0em 6em;
+    }
+
     .text_wid {
         width: 100%;
     }
@@ -1652,8 +1679,8 @@ select {
     }
 
     .feature-head {
-        font-size: 2.1em;
-        line-height: 49px;
+        font-size: 1.6em;
+        line-height: 45px;
         text-align: center;
     }
 
@@ -1814,7 +1841,7 @@ select {
     }
 
     .formOverflow {
-        height: 94%;
+        height: 100%;
         width: 100%;
     }
 
@@ -1840,7 +1867,9 @@ select {
         width: 66%;
     }
 
-
+    .transition_feature {
+        display: none;
+    }
 
     .btns {
         display: flex;
@@ -1903,7 +1932,7 @@ select {
     }
 
     .vision_section {
-        padding: 0px 30px 100px;
+        padding: 0px 30px 30px;
         flex-direction: column;
     }
 
@@ -1920,12 +1949,43 @@ select {
     }
 
     .input_form {
-        height: 35em;
+        height: 40em;
         padding: 80px 40px !important;
     }
 
     .checkmark {
         width: 6em;
+    }
+
+    .transition_feature {
+        display: none;
+    }
+
+    .show_mobCards {
+        position: sticky;
+        display: block;
+        top: 10%;
+        top: 78%;
+        padding: 0em 3em;
+    }
+
+    .mobile_sticky-middle {
+        position: sticky;
+        top: 4%;
+    }
+
+    .feature-head {
+        font-size: 1.2em;
+        margin-bottom: 5px;
+    }
+
+    .disc {
+        font-size: 1em;
+    }
+
+    .text_wid {
+        text-align: center;
+        width: 100%;
     }
 
     .wrapper {
@@ -1953,13 +2013,18 @@ select {
     .location_inputCity,
     #type_input,
     #location_inputState,
-    #type_input,
+    #InputCity,
     #country,
     #countery,
     .name_input,
     .email_input,
     .type_input {
-        width: 66%;
+        width: 22em;
+    }
+
+    .alert_input,
+    .alteration {
+        right: 18em;
     }
 
     .flex_container {
@@ -1970,6 +2035,23 @@ select {
         width: 59%;
     }
 
+    .section_title {
+        font-size: 2em;
+        line-height: 60px;
+    }
+
+    .bot {
+        width: 93%;
+    }
+
+    .join_text,
+    .text_weight {
+        width: 95%;
+    }
+
+    .vision_heading {
+        font-size: 2.04em;
+    }
 
     .name,
     .email_label,
@@ -2029,16 +2111,26 @@ select {
         width: 100%;
     }
 
+    .section_head {
+        margin-bottom: 3.5em;
+    }
+
     .keyHead {
-        font-size: 2em;
+        font-size: 1.8em;
     }
 
     .keyIllustation {
-        height: 34em;
+        height: 18em;
+        object-fit: fill;
+    }
+
+    .keyHead_disc {
+        font-size: 1.1em;
+        margin: 2em 0em;
     }
 
     .key {
-        padding: 40px 30px;
+        padding: 10px 15px;
         margin: 20px 0px;
     }
 }
@@ -2112,9 +2204,44 @@ select {
         width: 45%;
     }
 
+    .transition_feature {
+        display: none;
+    }
+
+    .show_mobCards {
+        position: sticky;
+        display: block;
+        top: 10%;
+        top: 70%;
+        padding: 0em 1em;
+    }
+
+    .mobile_sticky-middle {
+        position: sticky;
+        top: 8%;
+    }
+
+    .feature-head {
+        font-size: 1em;
+        margin-bottom: 5px;
+    }
+
+    .disc {
+        font-size: 0.9em;
+    }
+
+    .text_wid {
+        text-align: center;
+        width: 100%;
+    }
+
     .hero_socialIcons {
         margin-top: 4rem;
         justify-content: center;
+    }
+
+    .transition_feature {
+        display: none;
     }
 
     #joinUs_btn {
@@ -2388,7 +2515,8 @@ select {
     .location_inputCity,
     #location_inputState,
     #country,
-    #countery {
+    #countery,
+    #InputCity {
         width: 50%;
     }
 
@@ -2402,17 +2530,27 @@ select {
         height: 100%
     }
 
+    .section_head {
+        margin-bottom: 2.5em;
+    }
+
     .keyHead {
-        font-size: 2em;
+        font-size: 1.7em;
+        padding-bottom: 20px;
+    }
+
+    .keyHead_disc {
+        font-size: 0.9em;
+        line-height: 28px;
     }
 
     .keyIllustation {
-        height: 22em;
-        margin: 20px 0px;
+        height: 20em;
+        margin: 0px auto 20px;
     }
 
     .key {
-        padding: 40px 10px;
-        margin: 20px 0px;
+        padding: 20px 10px;
+        margin: 20px 0px 5px;
     }
 }
