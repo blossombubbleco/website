@@ -2211,8 +2211,7 @@ select {
     .show_mobCards {
         position: sticky;
         display: block;
-        top: 10%;
-        top: 70%;
+        top: 75%;
         padding: 0em 1em;
     }
 
