@@ -566,6 +566,11 @@ select {
     position: absolute;
     opacity: 0;
     transition: 500ms;
+    background-color: var(--transition_lightMode);
+}
+
+.last_card {
+    background: none;
 }
 
 .section_heading {
@@ -2359,7 +2364,7 @@ select {
     }
 
     .input_form {
-        padding: 65px 15px !important;
+        padding: 65px 20px !important;
         height: 36em;
         border-radius: 20px;
     }
@@ -2541,15 +2546,18 @@ select {
     .keyHead_disc {
         font-size: 0.9em;
         line-height: 28px;
+        margin-bottom: 0em;
     }
 
     .keyIllustation {
-        height: 20em;
+        height: 14.5em;
         margin: 0px auto 20px;
+        object-fit: fill;
+        width: 100%;
     }
 
     .key {
-        padding: 20px 10px;
+        padding: 20px 20px 12px;
         margin: 20px 0px 5px;
     }
 }

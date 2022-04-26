@@ -199,3 +199,6 @@ observer08 = new IntersectionObserver((entries) => {
     })
 }, options08);
 observer08.observe(container_08);
+
+//observer only for the feature text Mobile
+
