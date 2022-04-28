@@ -3,7 +3,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js";
 import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-analytics.js";
 import { getFirestore, collection, addDoc } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-firestore.js";
-import { getAuth, onAuthStateChanged, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
+import { getAuth, signInWithPopup, GoogleAuthProvider, FacebookAuthProvider, sendSignInLinkToEmail, isSignInWithEmailLink, signInWithEmailLink } from "https://www.gstatic.com/firebasejs/9.6.10/firebase-auth.js";
 // TODO: Add SDKs for Firebase products that you want to use
 
 // Your web app's Firebase configuration
@@ -22,15 +22,15 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-// Initialize Cloud Firestore and get a reference to the service
-const db = getFirestore(app);
 // Initialize Firebase Authentication and get a reference to the service
 const auth = getAuth(app);
 //initialize the google authentication
 const provider1 = new GoogleAuthProvider();
 //initialize the facebook authentication
 const provider = new FacebookAuthProvider();
+const analytics = getAnalytics(app);
+// Initialize Cloud Firestore and get a reference to the service
+const db = getFirestore(app);
 
 
 showHidebtn.addEventListener('click', () => {
@@ -117,7 +117,6 @@ topForm.addEventListener('keypress', (e) => {
     }
 
 })
-
 bottomForm.addEventListener('keypress', (e) => {
     let keyPressed = e.keycode || e.which;
 
@@ -368,16 +367,51 @@ function sendEmail(email) {
     const actionCodeSettings = {
         // URL you want to redirect back to. The domain (www.example.com) for this
         // URL must be in the authorized domains list in the Firebase Console.
-        'url': window.location.href, // Here we redirect back to this same page.
-        'handleCodeInApp': true // This must be true.
+        // 'url': window.location.href, // Here we redirect back to this same page.
+        // 'handleCodeInApp': true // This must be true.
+        url: 'http://127.0.0.1:5502/',
+        // This must be true.
+        handleCodeInApp: true,
     };
     sendSignInLinkToEmail(auth, email, actionCodeSettings)
         .then(() => {
+            //form1 functionality
+            var name = GetInputVal('name_input');
+            var email = GetInputVal('email_input');
+            var locationCountry = GetInputVal('country');
+            var locationState = GetInputVal('location_input');
+            var locationCity = GetInputVal('location_inputCity');
+            var type = GetInputVal('type_input');
+
+            let nameLocally = window.localStorage.setItem('nameForm1', name);
+            let emailLocally = window.localStorage.setItem('emailForm1', email);
+            let CountryLocally = window.localStorage.setItem('countryForm1', locationCountry);
+            let StateLocally = window.localStorage.setItem('stateForm1', locationState);
+            let cityLocally = window.localStorage.setItem('cityForm1', locationCity);
+            let typeLocally = window.localStorage.setItem('typeForm1', type);
+
+
+            //form2 functionaliy
+            var name2 = document.querySelector('.name_input').value;
+            var email2 = document.querySelector('.email_input').value;
+            var locationCountry2 = GetInputVal('countery');
+            var locationState2 = GetInputVal('location_inputState');
+            var locationCity2 = document.querySelector('.location_inputCity').value;
+            var type2 = document.querySelector('.type_input').value
+
+            let nameLocally2 = window.localStorage.setItem('nameForm2', name2);
+            let emailLocally2 = window.localStorage.setItem('emailForm2', email2);
+            let CountryLocally2 = window.localStorage.setItem('countryForm2', locationCountry2);
+            let StateLocally2 = window.localStorage.setItem('stateForm2', locationState2);
+            let cityLocally2 = window.localStorage.setItem('cityForm2', locationCity2);
+            let typeLocally2 = window.localStorage.setItem('typeForm2', type2);
+
             // The link was successfully sent. Inform the user.
             // Save the email locally so you don't need to ask the user for it again
             // if they open the link on the same device.
             window.localStorage.setItem('emailForSignIn', email);
             // ...
+            console.log('email is being sent out to :' + email)
         })
         .catch((error) => {
             const errorCode = error.code;
@@ -385,83 +419,93 @@ function sendEmail(email) {
             console.error(error)
             // ...
         });
-    onAuthStateChanged(function (user) {
-        if (isSignInWithEmailLink(auth, window.location.href)) {
-            // Additional state parameters can also be passed via URL.
-            // This can be used to continue the user's intended action before triggering
-            // the sign-in operation.
-            // Get the email if available. This should be available if the user completes
-            // the flow on the same device where they started it.
-            let email = window.localStorage.getItem('emailForSignIn');
-            form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
-            //for the form Second
-            form2.style.transform = "translateX(-200em)";
-            num2.style.transform = 'translateY(-12em)';
-            // ...
-
-            showRun();
-            runAfterAuth();
-            runAfterAuth2();
-            if (!email) {
-                // User opened the link on a different device. To prevent session fixation
-                // attacks, ask the user to provide the associated email again. For example:
-                email = window.prompt('Please provide your email for confirmation');
-            }
-            // The client SDK will parse the code from the link for you.
-            signInWithEmailLink(auth, email, window.location.href)
-                .then((result) => {
-                    // Clear email from storage.
-                    window.localStorage.removeItem('emailForSignIn');
-                    // You can access the new user via result.user
-                    // Additional user info profile not available via:
-                    // result.additionalUserInfo.profile == null
-                    // You can check if the user is new or existing:
-                    // result.additionalUserInfo.isNewUser
-                    console.log('it is working')
-                })
-                .catch((error) => {
-                    console.log(error.code);
-                    // Some error occurred, you can inspect the code: error.code
-                    // Common errors could be invalid email and invalid or expired OTPs.
-                });
-        }
-    })
-
 }
-
-//function for the google authentication
-function signInWithGoogle() {
-
-    signInWithPopup(auth, provider1)
+if (isSignInWithEmailLink(auth, window.location.href)) {
+    // Additional state parameters can also be passed via URL.
+    // This can be used to continue the user's intended action before triggering
+    // the sign-in operation.
+    // Get the email if available. This should be available if the user completes
+    // the flow on the same device where they started it.
+    let email = window.localStorage.getItem('emailForSignIn');
+    if (!email) {
+        // User opened the link on a different device. To prevent session fixation
+        // attacks, ask the user to provide the associated email again. For example:
+        email = window.prompt('Please provide your email for confirmation');
+    }
+    // The client SDK will parse the code from the link for you.
+    signInWithEmailLink(auth, email, window.location.href)
         .then((result) => {
-            // This gives you a Google Access Token. You can use it to access the Google API.
-            const credential = GoogleAuthProvider.credentialFromResult(result);
-            const token = credential.accessToken;
-            // The signed-in user info.
-            const user = result.user;
-            //for the form first 
-            form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
-            //for the form Second
-            form2.style.transform = "translateX(-200em)";
-            num2.style.transform = 'translateY(-12em)';
-            // ...
+            // Clear email from storage.
+            window.localStorage.removeItem('emailForSignIn');
+            console.log('it is working after email sent');
+
+
+            valueOfForm1();
+            valueOfForm2();
 
             showRun();
             runAfterAuth();
             runAfterAuth2();
-        }).catch((error) => {
-            // Handle Errors here.
-            const errorCode = error.code;
-            const errorMessage = error.message;
-            // The email of the user's account used.
-            const email = error.email;
-            // The AuthCredential type that was used.
-            const credential = GoogleAuthProvider.credentialFromError(error);
-            // ...
-        });
 
+            // You can access the new user via result.user
+            // Additional user info profile not available via:
+            // result.additionalUserInfo.profile == null
+            // You can check if the user is new or existing:
+            // result.additionalUserInfo.isNewUser
+        })
+        .catch((error) => {
+            console.log('error occured after email is sent' + error);
+            // Some error occurred, you can inspect the code: error.code
+            // Common errors could be invalid email and invalid or expired OTPs.
+        });
+}
+function valueOfForm1() {
+
+    form.style.transform = "translateX(-200em)";
+    num.style.transform = 'translateY(-12em)';
+    showRun();
+    runAfterAuth();
+    runAfterAuth2();
+
+    //gets the input filed of the form1
+    let nameValueForm1 = document.querySelector('#name_input');
+    let emailValueFrom1 = document.querySelector('#email_input');
+    let countryValueFrom1 = document.querySelector('#country');
+    let stateValueFrom1 = document.querySelector('#location_input');
+    let cityValueFrom1 = document.querySelector('#location_inputCity');
+    let typeValueFrom1 = document.querySelector('#type_input');
+
+    //gets the user filled details and put them inside the form 
+    nameValueForm1.value = localStorage.getItem('nameForm1');
+    emailValueFrom1.value = localStorage.getItem('emailForm1');
+    countryValueFrom1.value = localStorage.getItem('countryForm1');
+    stateValueFrom1.value = localStorage.getItem('stateForm1');
+    cityValueFrom1.value = localStorage.getItem('cityForm1');
+    typeValueFrom1.value = localStorage.getItem('typeForm1');
+}
+function valueOfForm2() {
+
+    form.style.transform = "translateX(-200em)";
+    num.style.transform = 'translateY(-12em)';
+    showRun();
+    runAfterAuth();
+    runAfterAuth2();
+
+    //gets the input filed of the form1
+    let nameValueForm1 = document.querySelector('.name_input');
+    let emailValueFrom1 = document.querySelector('.email_input');
+    let countryValueFrom1 = document.querySelector('#countery');
+    let stateValueFrom1 = document.querySelector('#location_inputState');
+    let cityValueFrom1 = document.querySelector('#InputCity');
+    let typeValueFrom1 = document.querySelector('.type_input');
+
+    //gets the user filled details and put them inside the form 
+    nameValueForm1.value = localStorage.getItem('nameForm2');
+    emailValueFrom1.value = localStorage.getItem('emailForm2');
+    countryValueFrom1.value = localStorage.getItem('countryForm2');
+    stateValueFrom1.value = localStorage.getItem('stateForm2');
+    cityValueFrom1.value = localStorage.getItem('cityForm2');
+    typeValueFrom1.value = localStorage.getItem('typeForm2');
 }
 
 

@@ -233,7 +233,7 @@
 }
 
 .input_illustration.active {
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 .zero {

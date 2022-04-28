@@ -35,7 +35,7 @@ check.addEventListener('change', () => {
 
 options00 = {
     root: null,
-    threshold: 0.1
+    threshold: 0.15
 }
 observer00 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -48,7 +48,7 @@ observer00.observe(container_card);
 
 options01 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer01 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -66,7 +66,7 @@ observer01.observe(container_01);
 
 options02 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer02 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -85,7 +85,7 @@ observer02.observe(container_02);
 
 options03 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer03 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -104,7 +104,7 @@ observer03.observe(container_03);
 
 options04 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer04 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -122,7 +122,7 @@ observer04.observe(container_04);
 
 options05 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer05 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -142,7 +142,7 @@ observer05.observe(container_05);
 
 options06 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer06 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -162,7 +162,7 @@ observer06.observe(container_06);
 
 options07 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer07 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -182,7 +182,7 @@ observer07.observe(container_07);
 
 options08 = {
     root: null,
-    threshold: 0.2
+    threshold: 0.1
 }
 observer08 = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
