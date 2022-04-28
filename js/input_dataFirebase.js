@@ -369,7 +369,7 @@ function sendEmail(email) {
         // URL must be in the authorized domains list in the Firebase Console.
         // 'url': window.location.href, // Here we redirect back to this same page.
         // 'handleCodeInApp': true // This must be true.
-        url: 'http://127.0.0.1:5502/',
+        url: 'https://blossombubbleco.github.io/website/',
         // This must be true.
         handleCodeInApp: true,
     };
