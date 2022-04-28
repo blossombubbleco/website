@@ -434,6 +434,10 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
         showRun();
         runAfterAuth();
         runAfterAuth2();
+        form.style.transform = "translateX(-200em)";
+        num.style.transform = 'translateY(-12em)';
+        form.style.transform = "translateX(-200em)";
+        num.style.transform = 'translateY(-12em)';
     }
     // The client SDK will parse the code from the link for you.
     signInWithEmailLink(auth, email, window.location.href)
