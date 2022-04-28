@@ -431,6 +431,9 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
         // User opened the link on a different device. To prevent session fixation
         // attacks, ask the user to provide the associated email again. For example:
         email = window.prompt('Please provide your email for confirmation');
+        showRun();
+        runAfterAuth();
+        runAfterAuth2();
     }
     // The client SDK will parse the code from the link for you.
     signInWithEmailLink(auth, email, window.location.href)
