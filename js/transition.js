@@ -130,11 +130,11 @@ observer05 = new IntersectionObserver((entries) => {
             image[0].classList.remove('active');
             image[4].classList.remove('active');
             image[5].classList.add('active');
-            featureMobileCards[0].style.opacity = '1';
+            // featureMobileCards[0].style.opacity = '1';
         }
         else {
             image[5].classList.remove('active');
-            featureMobileCards[0].style.opacity = '0';
+            // featureMobileCards[0].style.opacity = '0';
         }
     })
 }, options05);
@@ -150,11 +150,11 @@ observer06 = new IntersectionObserver((entries) => {
             image[0].classList.remove('active');
             image[5].classList.remove('active');
             image[6].classList.add('active');
-            featureMobileCards[1].style.opacity = '1';
+            // featureMobileCards[1].style.opacity = '1';
         }
         else {
             image[6].classList.remove('active');
-            featureMobileCards[1].style.opacity = '0';
+            // featureMobileCards[1].style.opacity = '0';
         }
     })
 }, options06);
@@ -170,11 +170,11 @@ observer07 = new IntersectionObserver((entries) => {
             image[0].classList.remove('active');
             image[6].classList.remove('active');
             image[7].classList.add('active');
-            featureMobileCards[2].style.opacity = '1';
+            // featureMobileCards[2].style.opacity = '1';
         }
         else {
             image[7].classList.remove('active');
-            featureMobileCards[2].style.opacity = '0';
+            // featureMobileCards[2].style.opacity = '0';
         }
     })
 }, options07);
@@ -190,15 +190,63 @@ observer08 = new IntersectionObserver((entries) => {
             image[0].classList.remove('active');
             image[7].classList.remove('active');
             image[8].classList.add('active');
-            featureMobileCards[3].style.opacity = '1';
+            // featureMobileCards[3].style.opacity = '1';
         }
         else {
             image[8].classList.remove('active');
-            featureMobileCards[3].style.opacity = '0';
+            // featureMobileCards[3].style.opacity = '0';
         }
     })
 }, options08);
 observer08.observe(container_08);
 
 //observer only for the feature text Mobile
+options005 = {
+    root: null,
+    threshold: 0.5
+}
 
+observer005 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            featureMobileCards[0].style.opacity = '1';
+        }
+        else {
+            featureMobileCards[0].style.opacity = '0';
+        }
+    })
+}, options005);
+observer005.observe(container_05);
+observer006 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            featureMobileCards[1].style.opacity = '1';
+        }
+        else {
+            featureMobileCards[1].style.opacity = '0';
+        }
+    })
+}, options005);
+observer006.observe(container_06);
+observer007 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            featureMobileCards[2].style.opacity = '1';
+        }
+        else {
+            featureMobileCards[2].style.opacity = '0';
+        }
+    })
+}, options005);
+observer007.observe(container_07);
+observer008 = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            featureMobileCards[3].style.opacity = '1';
+        }
+        else {
+            featureMobileCards[3].style.opacity = '0';
+        }
+    })
+}, options005);
+observer008.observe(container_08);

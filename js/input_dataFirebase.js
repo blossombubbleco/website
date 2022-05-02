@@ -163,21 +163,12 @@ bottomForm.addEventListener('keypress', (e) => {
 
 
 submit.addEventListener('click', (e) => {
-    var name = GetInputVal('name_input');
-    var email = GetInputVal('email_input');
-    var location = GetInputVal('location_input');
-    var type = GetInputVal('type_input');
-
-    console.log(name, email, location, type)
 
     e.preventDefault();
     //call the function to save the values on submit
     var bool = true;
     if (e.which === 13) {
         bool = false;
-    }
-    else {
-        console.log('not');
     }
 
     addVal();
@@ -325,7 +316,7 @@ async function addVal() {
     var type = GetInputVal('type_input');
     try {
 
-        const docRef = await addDoc(collection(db, "website_user"), {
+        const docRef = await addDoc(collection(db, "Website_User"), {
             name: name,
             email: email,
             Country: locationCountry,
@@ -333,10 +324,17 @@ async function addVal() {
             city: locationCity,
             type: type
         });
-        console.log("Document written with ID: ", docRef.id);
+        // console.log("Document written with ID: ", docRef.id);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
+
+    localStorage.removeItem('nameForm1');
+    localStorage.removeItem('emailForm1');
+    localStorage.removeItem('countryForm1');
+    localStorage.removeItem('stateForm1');
+    localStorage.removeItem('cityForm1');
+    localStorage.removeItem('typeForm1');
 };
 async function addVal2() {
     var name = document.querySelector('.name_input').value;
@@ -347,7 +345,7 @@ async function addVal2() {
     var type = document.querySelector('.type_input').value
     try {
 
-        const docRef = await addDoc(collection(db, "website_user"), {
+        const docRef = await addDoc(collection(db, "Website_User"), {
             name: name,
             email: email,
             Country: locationCountry,
@@ -355,10 +353,16 @@ async function addVal2() {
             city: locationCity,
             type: type
         });
-        console.log("Document written with ID: ", docRef.id);
+        // console.log("Document written with ID: ", docRef.id);
     } catch (e) {
         console.error("Error adding document: ", e);
     }
+    localStorage.removeItem('nameForm2');
+    localStorage.removeItem('emailForm2');
+    localStorage.removeItem('countryForm2');
+    localStorage.removeItem('stateForm2');
+    localStorage.removeItem('cityForm2');
+    localStorage.removeItem('typeForm2');
 };
 //send email function
 const email_text = document.querySelectorAll('.email_auth');
@@ -369,7 +373,7 @@ function sendEmail(email) {
         // URL must be in the authorized domains list in the Firebase Console.
         // 'url': window.location.href, // Here we redirect back to this same page.
         // 'handleCodeInApp': true // This must be true.
-        url: 'https://blossombubbleco.github.io/website/',
+        url: 'http://127.0.0.1:5502/',
         // This must be true.
         handleCodeInApp: true,
     };
@@ -420,6 +424,55 @@ function sendEmail(email) {
             // ...
         });
 }
+setInterval(() => {
+    if (isSignInWithEmailLink(auth, window.location.href)) {
+        // Additional state parameters can also be passed via URL.
+        // This can be used to continue the user's intended action before triggering
+        // the sign-in operation.
+        // Get the email if available. This should be available if the user completes
+        // the flow on the same device where they started it.
+        console.log('if condition is working');
+        let email = window.localStorage.getItem('emailForSignIn');
+        if (!email) {
+            // User opened the link on a different device. To prevent session fixation
+            // attacks, ask the user to provide the associated email again. For example:
+            email = window.prompt('Please provide your email for confirmation');
+            showRun();
+            runAfterAuth();
+            runAfterAuth2();
+            form.style.transform = "translateX(-200em)";
+            num.style.transform = 'translateY(-12em)';
+            form.style.transform = "translateX(-200em)";
+            num.style.transform = 'translateY(-12em)';
+        }
+        // The client SDK will parse the code from the link for you.
+        signInWithEmailLink(auth, email, window.location.href)
+            .then((result) => {
+                // Clear email from storage.
+                window.localStorage.removeItem('emailForSignIn');
+                console.log('it is working after email sent');
+
+
+                valueOfForm1();
+                valueOfForm2();
+
+                showRun();
+                runAfterAuth();
+                runAfterAuth2();
+
+                // You can access the new user via result.user
+                // Additional user info profile not available via:
+                // result.additionalUserInfo.profile == null
+                // You can check if the user is new or existing:
+                // result.additionalUserInfo.isNewUser
+            })
+            .catch((error) => {
+                console.log('error occured after email is sent' + error);
+                // Some error occurred, you can inspect the code: error.code
+                // Common errors could be invalid email and invalid or expired OTPs.
+            });
+    }
+}, 2000)
 if (isSignInWithEmailLink(auth, window.location.href)) {
     // Additional state parameters can also be passed via URL.
     // This can be used to continue the user's intended action before triggering
@@ -513,6 +566,40 @@ function valueOfForm2() {
     stateValueFrom1.value = localStorage.getItem('stateForm2');
     cityValueFrom1.value = localStorage.getItem('cityForm2');
     typeValueFrom1.value = localStorage.getItem('typeForm2');
+}
+
+//function for the google authentication
+function signInWithGoogle() {
+
+    signInWithPopup(auth, provider1)
+        .then((result) => {
+            // This gives you a Google Access Token. You can use it to access the Google API.
+            const credential = GoogleAuthProvider.credentialFromResult(result);
+            const token = credential.accessToken;
+            // The signed-in user info.
+            const user = result.user;
+            //for the form first 
+            form.style.transform = "translateX(-200em)";
+            num.style.transform = 'translateY(-12em)';
+            //for the form Second
+            form2.style.transform = "translateX(-200em)";
+            num2.style.transform = 'translateY(-12em)';
+            // ...
+
+            showRun();
+            runAfterAuth();
+            runAfterAuth2();
+        }).catch((error) => {
+            // Handle Errors here.
+            const errorCode = error.code;
+            const errorMessage = error.message;
+            // The email of the user's account used.
+            const email = error.email;
+            // The AuthCredential type that was used.
+            const credential = GoogleAuthProvider.credentialFromError(error);
+            // ...
+        });
+
 }
 
 

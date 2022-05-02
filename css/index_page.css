@@ -401,7 +401,7 @@ select {
     position: relative;
 }
 
-.Email_signIn {
+.facebook_signIn {
     margin-bottom: 41px;
 }
 
@@ -525,6 +525,9 @@ select {
     margin-left: 0px;
 }
 
+.Email_signIn {
+    display: none;
+}
 
 /*******************Transition Section*******************/
 .mobile_previews {
@@ -2364,7 +2367,7 @@ select {
     }
 
     .input_form {
-        padding: 65px 20px !important;
+        padding: 65px 10px !important;
         height: 36em;
         border-radius: 20px;
     }
@@ -2539,7 +2542,7 @@ select {
     }
 
     .keyHead {
-        font-size: 1.7em;
+        font-size: 1.4em;
         padding-bottom: 20px;
     }
 
