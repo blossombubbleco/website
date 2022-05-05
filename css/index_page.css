@@ -2219,13 +2219,13 @@ select {
     .show_mobCards {
         position: sticky;
         display: block;
-        top: 75%;
+        top: 33em;
         padding: 0em 1em;
     }
 
     .mobile_sticky-middle {
         position: sticky;
-        top: 8%;
+        top: 1.5em;
     }
 
     .feature-head {
@@ -2295,11 +2295,11 @@ select {
 
     .phone-frame {
         width: 17rem;
-        height: 33rem;
+        height: 31rem;
     }
 
     .mobile_preview {
-        width: 14.1rem;
+        width: 13.24rem;
     }
 
     .feature_section {
@@ -2562,5 +2562,11 @@ select {
     .key {
         padding: 20px 20px 12px;
         margin: 20px 0px 5px;
+    }
+
+    .abs_container {
+        position: absolute;
+        top: 7px;
+        left: 31px;
     }
 }
