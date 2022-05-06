@@ -85,19 +85,19 @@ topForm.addEventListener('keypress', (e) => {
             if (question[0].value != '') {
                 nameAlert.style.display = 'none';
                 form.style.transform = "translateX(-40em)";
-                num.style.transform = 'translateY(-2.4em)';
+                num.style.transform = 'translateY(-36.8px)';
                 inputIllustrations[0].classList.remove('active');
                 inputIllustrations[1].classList.add('active');
                 if (question[1].value != '') {
                     emailAlert.style.display = 'none';
                     form.style.transform = "translateX(-80em)";
-                    num.style.transform = 'translateY(-4.8em)';
+                    num.style.transform = 'translateY(-76.8px)';
                     inputIllustrations[1].classList.remove('active');
                     inputIllustrations[2].classList.add('active');
                     if (question[2].value != '' && question[3].value != '' && question[4].value != '') {
                         locationAlert.style.display = 'none';
                         form.style.transform = "translateX(-120em)";
-                        num.style.transform = 'translateY(-7.2em)';
+                        num.style.transform = 'translateY(-115.2px)';
                         inputIllustrations[2].classList.remove('active');
                         inputIllustrations[3].classList.add('active');
                         quesDesc[0].style.display = 'block';
@@ -127,19 +127,19 @@ bottomForm.addEventListener('keypress', (e) => {
             if (question[0].value != '') {
                 nameAlert2.style.display = 'none';
                 form2.style.transform = "translateX(-40em)";
-                num2.style.transform = 'translateY(-2.4em)';
+                num2.style.transform = 'translateY(-36.8px)';
                 inputIllustrations[6].classList.remove('active');
                 inputIllustrations[7].classList.add('active');
                 if (question[1].value != '') {
                     emailAlert2.style.display = 'none';
                     form2.style.transform = "translateX(-80em)";
-                    num2.style.transform = 'translateY(-4.8em)';
+                    num2.style.transform = 'translateY(-76.8px)';
                     inputIllustrations[7].classList.remove('active');
                     inputIllustrations[8].classList.add('active');
                     if (question[2].value != '' && question[3].value != '' && question[4].value != '') {
                         locationAlert2.style.display = 'none';
                         form2.style.transform = "translateX(-120em)";
-                        num2.style.transform = 'translateY(-7.2em)';
+                        num2.style.transform = 'translateY(-115.2px)';
                         inputIllustrations[8].classList.remove('active');
                         inputIllustrations[9].classList.add('active');
                         quesDesc[1].style.display = 'block';

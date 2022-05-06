@@ -94,7 +94,7 @@ function runAfterAuth() {
 
 transFirstBack.addEventListener('click', () => {
     form.style.transform = "translateX(0em)";
-    num.style.transform = 'translateY(0em)';
+    num.style.transform = 'translateY(0px)';
     inputIllustrations[0].classList.add('active');
     inputIllustrations[1].classList.remove('active');
 })
