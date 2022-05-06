@@ -2219,7 +2219,8 @@ select {
     .show_mobCards {
         position: sticky;
         display: block;
-        top: 33em;
+        /* top: 33em; */
+        top: 60%;
         padding: 0em 1em;
     }
 
@@ -2229,12 +2230,12 @@ select {
     }
 
     .feature-head {
-        font-size: 1em;
+        font-size: 0.9em;
         margin-bottom: 5px;
     }
 
     .disc {
-        font-size: 0.9em;
+        font-size: 0.875em;
     }
 
     .text_wid {
@@ -2404,6 +2405,7 @@ select {
     #submitForm,
     #submitForm2 {
         width: 13rem;
+        border-radius: 5px !important;
     }
 
     .full_wid {
