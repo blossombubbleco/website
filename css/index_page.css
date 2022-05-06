@@ -569,7 +569,6 @@ select {
     position: absolute;
     opacity: 0;
     transition: 500ms;
-    background-color: var(--transition_lightMode);
 }
 
 .last_card {
@@ -2219,8 +2218,7 @@ select {
     .show_mobCards {
         position: sticky;
         display: block;
-        /* top: 33em; */
-        top: 60%;
+        top: 31.5em;
         padding: 0em 1em;
     }
 
