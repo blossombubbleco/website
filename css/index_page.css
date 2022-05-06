@@ -2332,9 +2332,14 @@ select {
         flex: 0 0 22rem;
     }
 
-    .submit {
-        width: 62%;
+    .formOverflow form {
+        width: 225rem;
+        padding-right: 10px;
     }
+
+    /* .submit {
+        width: 62%;
+    } */
 
 
     .feature_heading-desc {
@@ -2407,6 +2412,8 @@ select {
     #submitForm2 {
         width: 13rem;
         border-radius: 5px !important;
+        margin-left: 12px;
+        padding: 0px 20px;
     }
 
     .full_wid {
@@ -2442,7 +2449,8 @@ select {
     }
 
     .wid {
-        width: 49%;
+        width: 100%;
+        justify-content: flex-start;
     }
 
     .thankYou_head {
@@ -2509,6 +2517,10 @@ select {
     .authorize_container,
     .submit_container {
         height: 20.875em;
+    }
+
+    .submit_container {
+        flex: 0 0 26.3rem;
     }
 
 

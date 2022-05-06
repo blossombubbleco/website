@@ -42,7 +42,7 @@ transFirst.addEventListener('click', () => {
     } else {
         nameAlert.style.display = 'none';
         form.style.transform = "translateX(-40em)";
-        num.style.transform = 'translateY(-2.4em)';
+        num.style.transform = 'translateY(-36.8px)';
         inputIllustrations[0].classList.remove('active');
         inputIllustrations[1].classList.add('active');
     }
@@ -55,7 +55,7 @@ transSecond.addEventListener('click', () => {
     else {
         emailAlert.style.display = 'none';
         form.style.transform = "translateX(-80em)";
-        num.style.transform = 'translateY(-4.8em)';
+        num.style.transform = 'translateY(-76.8px)';
         inputIllustrations[1].classList.remove('active');
         inputIllustrations[2].classList.add('active');
     }
@@ -69,7 +69,7 @@ transThird.addEventListener('click', () => {
     } else {
         locationAlert.style.display = 'none';
         form.style.transform = "translateX(-120em)";
-        num.style.transform = 'translateY(-7.2em)';
+        num.style.transform = 'translateY(-115.2px)';
         inputIllustrations[2].classList.remove('active');
         inputIllustrations[3].classList.add('active');
         quesDesc[0].style.display = 'block';
@@ -77,7 +77,7 @@ transThird.addEventListener('click', () => {
 })
 transForth.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
-    num.style.transform = 'translateY(-9.6em)';
+    num.style.transform = 'translateY(-153.6px)';
     inputIllustrations[3].classList.remove('active');
     inputIllustrations[4].classList.add('active');
     quesDesc[0].style.display = 'none';
@@ -86,7 +86,7 @@ function runAfterAuth() {
     transFifth.style.background = 'var(--clr-secondry)';
     transFifth.addEventListener('click', () => {
         form.style.transform = "translateX(-200em)";
-        num.style.transform = 'translateY(-12em)';
+        num.style.transform = 'translateY(-192px)';
         inputIllustrations[4].classList.remove('active');
         inputIllustrations[5].classList.add('active');
     })
@@ -100,27 +100,27 @@ transFirstBack.addEventListener('click', () => {
 })
 transSecondBack.addEventListener('click', () => {
     form.style.transform = "translateX(-40em)";
-    num.style.transform = 'translateY(-2.4em)';
+    num.style.transform = 'translateY(-36.8px)';
     inputIllustrations[1].classList.add('active');
     inputIllustrations[2].classList.remove('active');
 })
 transThirdBack.addEventListener('click', () => {
     form.style.transform = "translateX(-80em)";
-    num.style.transform = 'translateY(-4.8em)';
+    num.style.transform = 'translateY(-76.8px)';
     inputIllustrations[2].classList.add('active');
     inputIllustrations[3].classList.remove('active');
     quesDesc[0].style.display = 'none';
 })
 transFourthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-120em)";
-    num.style.transform = 'translateY(-7.2em)';
+    num.style.transform = 'translateY(-115.2px)';
     inputIllustrations[3].classList.add('active');
     inputIllustrations[4].classList.remove('active');
     quesDesc[0].style.display = 'block';
 })
 transFifthBack.addEventListener('click', () => {
     form.style.transform = "translateX(-160em)";
-    num.style.transform = 'translateY(-9.6em)';
+    num.style.transform = 'translateY(-153.6px)';
     inputIllustrations[4].classList.add('active');
     inputIllustrations[5].classList.remove('active');
 })
@@ -158,7 +158,7 @@ transFirst2.addEventListener('click', () => {
     } else {
         nameAlert2.style.display = 'none';
         form2.style.transform = "translateX(-40em)";
-        num2.style.transform = 'translateY(-2.4em)';
+        num2.style.transform = 'translateY(-36.8px)';
         inputIllustrations[6].classList.remove('active');
         inputIllustrations[7].classList.add('active');
     }
@@ -171,7 +171,7 @@ transSecond2.addEventListener('click', () => {
     else {
         emailAlert2.style.display = 'none';
         form2.style.transform = "translateX(-80em)";
-        num2.style.transform = 'translateY(-4.8em)';
+        num2.style.transform = 'translateY(-76.8px)';
         inputIllustrations[7].classList.remove('active');
         inputIllustrations[8].classList.add('active');
     }
@@ -185,7 +185,7 @@ transThird2.addEventListener('click', () => {
     } else {
         locationAlert2.style.display = 'none';
         form2.style.transform = "translateX(-120em)";
-        num2.style.transform = 'translateY(-7.2em)';
+        num2.style.transform = 'translateY(-115.2px)';
         inputIllustrations[8].classList.remove('active');
         inputIllustrations[9].classList.add('active');
         quesDesc[1].style.display = 'block';
@@ -193,7 +193,7 @@ transThird2.addEventListener('click', () => {
 })
 transForth2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";
-    num2.style.transform = 'translateY(-9.6em)';
+    num2.style.transform = 'translateY(-153.6px)';
     inputIllustrations[9].classList.remove('active');
     inputIllustrations[10].classList.add('active');
     quesDesc[1].style.display = 'none';
@@ -201,8 +201,8 @@ transForth2.addEventListener('click', () => {
 function runAfterAuth2() {
     transFifth2.style.background = 'var(--clr-secondry)';
     transFifth2.addEventListener('click', () => {
-        num2.style.transform = 'translateY(-12em)';
         form2.style.transform = "translateX(-200em)";
+        num2.style.transform = 'translateY(-192px)';
         inputIllustrations[10].classList.remove('active');
         inputIllustrations[11].classList.add('active');
     })
@@ -216,27 +216,27 @@ transFirstBack2.addEventListener('click', () => {
 })
 transSecondBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-40em)";
-    num2.style.transform = 'translateY(-2.4em)';
+    num2.style.transform = 'translateY(-36.8px)';
     inputIllustrations[7].classList.add('active');
     inputIllustrations[8].classList.remove('active');
 })
 transThirdBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-80em)";
-    num2.style.transform = 'translateY(-4.8em)';
+    num2.style.transform = 'translateY(-76.8px)';
     inputIllustrations[8].classList.add('active');
     inputIllustrations[9].classList.remove('active');
     quesDesc[1].style.display = 'none';
 })
 transFourthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-120em)";
-    num2.style.transform = 'translateY(-7.2em)';
+    num2.style.transform = 'translateY(-115.2px)';
     inputIllustrations[9].classList.add('active');
     inputIllustrations[10].classList.remove('active');
     quesDesc[1].style.display = 'block';
 })
 transFifthBack2.addEventListener('click', () => {
     form2.style.transform = "translateX(-160em)";
-    num2.style.transform = 'translateY(-9.6em)';
+    num2.style.transform = 'translateY(-153.6px)';
     inputIllustrations[10].classList.add('active');
     inputIllustrations[11].classList.remove('active');
 })

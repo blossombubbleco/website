@@ -441,9 +441,9 @@ setInterval(() => {
             runAfterAuth();
             runAfterAuth2();
             form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
+            num.style.transform = 'translateY(-192px)';
             form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
+            num.style.transform = 'translateY(-192px)';
         }
         // The client SDK will parse the code from the link for you.
         signInWithEmailLink(auth, email, window.location.href)
@@ -488,9 +488,9 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
         runAfterAuth();
         runAfterAuth2();
         form.style.transform = "translateX(-200em)";
-        num.style.transform = 'translateY(-12em)';
+        num.style.transform = 'translateY(-192px)';
         form.style.transform = "translateX(-200em)";
-        num.style.transform = 'translateY(-12em)';
+        num.style.transform = 'translateY(-192px)';
     }
     // The client SDK will parse the code from the link for you.
     signInWithEmailLink(auth, email, window.location.href)
@@ -522,7 +522,7 @@ if (isSignInWithEmailLink(auth, window.location.href)) {
 function valueOfForm1() {
 
     form.style.transform = "translateX(-200em)";
-    num.style.transform = 'translateY(-12em)';
+    num.style.transform = 'translateY(-192px)';
     showRun();
     runAfterAuth();
     runAfterAuth2();
@@ -546,7 +546,7 @@ function valueOfForm1() {
 function valueOfForm2() {
 
     form.style.transform = "translateX(-200em)";
-    num.style.transform = 'translateY(-12em)';
+    num.style.transform = 'translateY(-192px)';
     showRun();
     runAfterAuth();
     runAfterAuth2();
@@ -580,10 +580,10 @@ function signInWithGoogle() {
             const user = result.user;
             //for the form first 
             form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
+            num.style.transform = 'translateY(-192px)';
             //for the form Second
             form2.style.transform = "translateX(-200em)";
-            num2.style.transform = 'translateY(-12em)';
+            num2.style.transform = 'translateY(-192px)';
             // ...
 
             showRun();
@@ -615,7 +615,7 @@ function signInWithFacebook() {
             const credential = FacebookAuthProvider.credentialFromResult(result);
             const accessToken = credential.accessToken;
             form.style.transform = "translateX(-200em)";
-            num.style.transform = 'translateY(-12em)';
+            num.style.transform = 'translateY(-192px)';
             showRun();
             runAfterAuth();
             runAfterAuth2();
